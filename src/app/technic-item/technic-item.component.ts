@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IAuto } from '../interfaces/i-auto';
 
 @Component({
   selector: 'app-technic-item',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./technic-item.component.scss']
 })
 export class TechnicItemComponent implements OnInit {
-
+  @Input() tech!: IAuto;
+  
   constructor() { }
 
   ngOnInit(): void {
