@@ -14,6 +14,7 @@ import { TechnicPageComponent } from './technic-page/technic-page.component';
 import { MissionPageComponent } from './mission-page/mission-page.component';
 import { TechnicListComponent } from './technic-list/technic-list.component';
 import { TechnicItemComponent } from './technic-item/technic-item.component';
+import { TechnicItemDetailComponent } from './technic-item-detail/technic-item-detail.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { TechnicItemComponent } from './technic-item/technic-item.component';
     MissionPageComponent,
     TechnicListComponent,
     TechnicItemComponent,
+    TechnicItemDetailComponent,
   ],
   imports: [
     BrowserModule,

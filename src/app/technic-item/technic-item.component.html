@@ -1,6 +1,6 @@
 <div [ngStyle]="{ 'background-image': 'url('+tech.image+')' }" class="content">
     <div class="description">
-        <p>{{tech.name}}</p>
+        <a routerLink="/technic/{{tech.id}}">{{tech.name}}</a>
     </div>
     
 </div>
