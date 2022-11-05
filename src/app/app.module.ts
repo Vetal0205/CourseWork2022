@@ -12,6 +12,8 @@ import { CommentsSectionComponent } from './comments-section/comments-section.co
 import { FooterComponent } from './footer/footer.component';
 import { TechnicPageComponent } from './technic-page/technic-page.component';
 import { MissionPageComponent } from './mission-page/mission-page.component';
+import { TechnicListComponent } from './technic-list/technic-list.component';
+import { TechnicItemComponent } from './technic-item/technic-item.component';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { MissionPageComponent } from './mission-page/mission-page.component';
     FooterComponent,
     TechnicPageComponent,
     MissionPageComponent,
+    TechnicListComponent,
+    TechnicItemComponent,
   ],
   imports: [
     BrowserModule,
