@@ -1,8 +1,6 @@
-<div>
-    <div class="image">
-        <!-- <img src="" alt="{{tech.title}}"> -->
+<div [ngStyle]="{ 'background-image': 'url('+tech.image+')' }" class="content">
+    <div class="description">
+        <p>{{tech.name}}</p>
     </div>
-    <div class="descr">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, facere.</p>
-    </div>
+    
 </div>
