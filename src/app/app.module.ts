@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,6 +16,7 @@ import { MissionPageComponent } from './mission-page/mission-page.component';
 import { TechnicListComponent } from './technic-list/technic-list.component';
 import { TechnicItemComponent } from './technic-item/technic-item.component';
 import { TechnicItemDetailComponent } from './technic-item-detail/technic-item-detail.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { TechnicItemDetailComponent } from './technic-item-detail/technic-item-d
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
