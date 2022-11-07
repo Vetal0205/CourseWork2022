@@ -1,5 +1,6 @@
 export interface IAuto {
     id:number;
+    type:string;
     name:string;
     power: string;
     fuel_tank:string;

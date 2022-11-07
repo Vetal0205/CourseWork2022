@@ -1,4 +1,26 @@
 {
+    "filters":[
+        {
+            "title": "Танки",
+            "filter": "tank",
+            "selected": false
+        },
+        {
+            "title": "БМП",
+            "filter": "IVF",
+            "selected": false
+        },
+        {
+            "title": "РСЗВ",
+            "filter": "RVFS",
+            "selected": false
+        },
+        {
+            "title": "Бронетранспортери",
+            "filter": "armored-car",
+            "selected": false
+        }
+    ],
     "automobiles":[
         {
             "id": 1,

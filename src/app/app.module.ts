@@ -17,6 +17,7 @@ import { TechnicListComponent } from './technic-list/technic-list.component';
 import { TechnicItemComponent } from './technic-item/technic-item.component';
 import { TechnicItemDetailComponent } from './technic-item-detail/technic-item-detail.component';
 import { FormsModule } from '@angular/forms';
+import { ButtonComponent } from './button/button.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { FormsModule } from '@angular/forms';
     TechnicListComponent,
     TechnicItemComponent,
     TechnicItemDetailComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,

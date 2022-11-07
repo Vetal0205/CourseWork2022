@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IAuto } from '../interfaces/i-auto';
+import { IFilter } from '../interfaces/ifilter';
 import { TechnicService } from '../services/technic.service';
 
 @Component({
@@ -9,19 +10,25 @@ import { TechnicService } from '../services/technic.service';
 })
 export class TechnicListComponent implements OnInit {
 
-  technicList:IAuto[]=[];
+  allTechnicList: IAuto[] = [];
+  listLength!: number;
+  filterList: IFilter[] = [];
 
-  constructor(private service:TechnicService) { }
+  constructor(private service: TechnicService) { }
 
   ngOnInit(): void {
-    this.updateTechnic();
+    this.service.getFilters().subscribe((filters) => { this.filterList = filters; });
+    this.service.getTechnic().subscribe((technics) => { this.allTechnicList = technics; this.listLength = this.allTechnicList.length; });
+    
   }
 
-  updateTechnic(){
-    this.service.getTechnic().subscribe(
-      (technics)=>{
-        this.technicList = technics;
-      }
-    );
+  update() {
+    this.service.getTechnic().subscribe((technics) => { this.allTechnicList = technics; });
+  }
+  listFilter(filter: IFilter) {
+    if (this.allTechnicList.length != this.listLength) {
+      this.update();
+    }
+    this.allTechnicList = this.allTechnicList.filter(type => type.type == filter.filter);
   }
 }

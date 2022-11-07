@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IAuto } from '../interfaces/i-auto';
 import { IMission } from '../interfaces/i-mission';
+import { IFilter } from '../interfaces/ifilter';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,17 +14,22 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TechnicService {
-  private apiurl:string = "http://localhost:3000/automobiles";
+  private apiurl:string = "http://localhost:3000";
 
 
   
   constructor(private http:HttpClient) { }
 
   getTechnic():Observable<IAuto[]>{
-    return this.http.get<IAuto[]>(this.apiurl);
+    const url = `${this.apiurl}/automobiles`
+    return this.http.get<IAuto[]>(url);
+  }
+  getFilters():Observable<IFilter[]>{
+    const url = `${this.apiurl}/filters`
+    return this.http.get<IFilter[]>(url);
   }
   getTechnicById(id:number):Observable<IAuto>{
-    const url = `${this.apiurl}/${id}`;
+    const url = `${this.apiurl}/automobiles/${id}`;
     return this.http.get<IAuto>(url);
   }
   addMission(mission: IMission): Observable<Task> {

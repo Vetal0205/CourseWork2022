@@ -1,3 +1,7 @@
 <div class="container">
-    <app-technic-item *ngFor="let tech of technicList" [tech]="tech"></app-technic-item>
+    <app-technic-item *ngFor="let tech of allTechnicList" [tech]="tech"></app-technic-item>
+</div>
+<div class="filters">
+    <app-button *ngFor="let filter of filterList" [filterIn]='filter' (filterOut)="listFilter(filter)"></app-button>
+    <button (click)="update()">Прибрати фільтри</button>
 </div>
