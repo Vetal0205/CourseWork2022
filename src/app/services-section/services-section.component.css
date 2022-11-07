@@ -3,7 +3,7 @@
   margin: 0;
   position: relative;
   height: 1300px;
-  background: url("../../assets/content_background.png");
+  background: url("../../assets/content_background.png") top/cover no-repeat;
   z-index: 2;
 }
 
