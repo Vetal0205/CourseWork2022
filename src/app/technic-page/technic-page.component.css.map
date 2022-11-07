@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"technic-page.component.css"}
+{"version":3,"sources":["technic-page.component.scss","technic-page.component.css"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,kDAAA;EACA,aAAA;EACA,YAAA;ACCJ","file":"technic-page.component.css"}

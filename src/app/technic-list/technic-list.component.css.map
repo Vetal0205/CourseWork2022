@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"technic-list.component.css"}
+{"version":3,"sources":["technic-list.component.scss","technic-list.component.css"],"names":[],"mappings":"AAAA;EACI,uBAAA;EACA,WAAA;EACA,cAAA;ACCJ","file":"technic-list.component.css"}
