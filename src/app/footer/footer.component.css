@@ -1,0 +1,47 @@
+footer {
+  top: -110px;
+  position: relative;
+  height: 800px;
+  width: 100%;
+  background-color: #fff;
+  color: #0b1d26;
+}
+
+.footer-image {
+  background: url("../../assets/footer.png");
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.footer-image__content {
+  width: 1000px;
+  height: 500px;
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-right: 40px;
+}
+.footer-image__content h1 {
+  font-size: 38px;
+}
+.footer-image__content p {
+  padding-top: 20px;
+}
+.footer-image__content .footer-phoneNumber {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-image__content .footer-phoneNumber img {
+  width: 60px;
+}
+.footer-image__content .footer-phoneNumber h1 {
+  padding-top: 6px;
+  font-size: 38px;
+}
+.footer-image__content .footer-logos {
+  padding-top: 30px;
+}
+.footer-image__content h2 {
+  padding-top: 30px;
+}/*# sourceMappingURL=footer.component.css.map */

@@ -1,0 +1,108 @@
+$header_color: #363636;
+$font_white: #fff;
+$transparent_color: rgba(28,28,28,0);
+$btn_color: #2a333b;
+$bg_color: #0b1d26;
+$orange_color: #d5b23f;
+
+.Main{
+    min-height: 100%;
+}
+.parallax{
+    min-height: 103vh;
+}
+.parallax__body{
+    position: fixed;
+    width: 100%;
+    height: 1192px;
+    top: 0;
+    left: 0;
+}
+.parallax__container{
+    color: $header_color;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    background-size: cover;
+    width: 1100px;
+    margin-left: 23%;
+    .box-main{
+        margin-top: 550px;
+        height: 300px;
+        width: 300px;
+        background-color: $font_white;
+        img {
+            height: 80px;
+            width: auto;
+            padding-top: 20px;
+            padding-left: 120px;
+        }
+        h3 {
+            padding-top: 20px;
+            font-weight: 900;
+            text-align: center;
+        }
+        p {
+            padding-left: 15px; 
+            padding-right: 15px;
+            padding-top: 15px;
+            height: 80px;
+        }
+        button {
+            background-color: $btn_color;
+            width: 150px;
+            height: 44px;
+            border-radius: 6px;
+            border: 3px solid black;
+            margin-top: 20px;
+            margin-left: 75px;
+            color: $font_white;
+            cursor: pointer;
+        }
+    }
+}
+.parallax__label{
+    color: #fbd784;
+    display: flex;
+    font-size: 18px;
+    letter-spacing: 6px;
+    margin: 0px 0px 30px 0px;
+    align-items: center;
+}
+.parallax__title{
+    font-size: 88px;
+}
+.parallax__images{
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    z-index: 1;
+}
+.images-parallax__item{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.images-parallax__mountains {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/main_baclground.png') top / cover no-repeat;
+    top: 0;
+}
+.images-parallax__human {
+    position: absolute;
+    background: url('../../assets/PngItem_3749117.png') top / cover no-repeat;
+    top: 17%;
+    left: 40%;
+    height: 65%;
+    width: 20%;
+    z-index: 2;
+}
