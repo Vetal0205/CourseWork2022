@@ -15,12 +15,12 @@ export class TechnicItemDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private location: Location, private service:TechnicService) { }
 
   ngOnInit(): void {
-
+    this.gettech();
   }
 
   gettech(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    // this.<Сервис>.<Метод>(id).subscribe(tech => this.technique = tech);
+    this.service.getTechnicById(id).subscribe(tech => this.technique = tech);
     
     // this.service.getTechnicById(id).subscribe(
     //   (tech)=>{
