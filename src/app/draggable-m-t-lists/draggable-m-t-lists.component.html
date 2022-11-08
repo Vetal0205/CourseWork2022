@@ -1,0 +1,21 @@
+<section>
+    <div class="mission-container">
+        <h2>MISSION FORM</h2>
+        <div cdkDropList #missionList="cdkDropList" [cdkDropListData]="technicForMissionList"
+        [cdkDropListConnectedTo]="[technicList]" class="technic-list" (cdkDropListDropped)="drop($event)">
+        <div class="technic-box" *ngFor="let tech of technicForMissionList">
+            <img src="{{tech.image}}" alt="{{tech.name}}" cdkDrag>
+        </div>
+        <img src="assets\placeholder.png" alt="lox" >
+        </div>
+    </div>
+    <div class="technic-container">
+        <h2>TECH LIST</h2>
+        <div cdkDropList #technicList="cdkDropList" [cdkDropListData]="allTechnicList" class="technic-list"
+            (cdkDropListDropped)="drop($event)" [cdkDropListConnectedTo]="[missionList]">
+            <div class="technic-box" *ngFor="let tech of allTechnicList">
+                <img src="{{tech.image}}" alt="{{tech.name}}" cdkDrag>
+            </div>
+        </div>
+    </div>
+</section>

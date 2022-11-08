@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,6 +19,7 @@ import { TechnicItemComponent } from './technic-item/technic-item.component';
 import { TechnicItemDetailComponent } from './technic-item-detail/technic-item-detail.component';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './button/button.component';
+import { DraggableMTListsComponent } from './draggable-m-t-lists/draggable-m-t-lists.component';
 
 
 @NgModule({
@@ -36,12 +38,14 @@ import { ButtonComponent } from './button/button.component';
     TechnicItemComponent,
     TechnicItemDetailComponent,
     ButtonComponent,
+    DraggableMTListsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
