@@ -1,0 +1,96 @@
+@use 'sass:map';
+
+$header_color: #363636;
+$font_white: #fff;
+$transparent_color: rgba(28,28,28,0);
+$btn_color: #2a333b;
+$bg_color: #0b1d26;
+$orange_color: #d5b23f;
+
+
+@mixin for-medium-1 {
+    @media (min-width: 1400px) { @content; }
+}
+@mixin for-big-4 {
+    @media (min-width: 1500px) { @content; }
+}
+@mixin for-big-3 {
+    @media (min-width: 1600px) { @content; }
+}
+@mixin for-big-2 {
+    @media (min-width: 1700px) { @content; }
+}
+@mixin for-big-1 {
+    @media (min-width: 1800px) { @content; }
+}
+
+header {
+    background-color: $header_color;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 200px; padding-right: 200px;
+    position: fixed;
+    width: 100%;
+    z-index: 1500;
+
+    .logo {
+        padding-top: 31px;
+        color: $font_white;
+        font-size: 38px;
+    }
+
+    .navbar {
+        @include for-medium-1 {
+            padding-left: 22vw;
+        }
+        @include for-big-4 {    
+            padding-left: 24vw; 
+        }
+        @include for-big-3 {    
+            padding-left: 26vw; 
+        }
+        @include for-big-2 {    
+            padding-left: 28vw; 
+        }
+        @include for-big-1 {    
+            padding-left: 30vw; 
+        }
+        padding-top: 40px;
+    }
+
+    a{
+        color: $font_white;
+        text-decoration: none;
+        padding-right: 40px;
+        font-size: 20px;
+    }
+    .icon_btns{
+        @include for-medium-1 {
+            padding-left: 12vw;
+        }
+        @include for-big-4 {    
+            padding-left: 14vw; 
+        }
+        @include for-big-3 {    
+            padding-left: 16vw; 
+        }
+        @include for-big-2 {    
+            padding-left: 18vw; 
+        }
+        @include for-big-1 {    
+            padding-left: 20vw; 
+        }
+        padding-top: 35px;
+        button{
+            height: 30px;
+            width: 30px;
+            background-color: $transparent_color;
+            border: none;
+            background-size: cover;
+            margin-right: 16px;
+            cursor: pointer;
+        }
+    }
+}
+

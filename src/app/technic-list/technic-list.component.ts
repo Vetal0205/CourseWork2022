@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IAuto } from '../interfaces/i-auto';
+import { IFilter } from '../interfaces/ifilter';
+import { TechnicService } from '../services/technic.service';
 
 @Component({
   selector: 'app-technic-list',
@@ -8,31 +10,25 @@ import { IAuto } from '../interfaces/i-auto';
 })
 export class TechnicListComponent implements OnInit {
 
-  constructor() { }
+  allTechnicList: IAuto[] = [];
+  listLength!: number;
+  filterList: IFilter[] = [];
 
-  technique: IAuto[] = [
-    {
-        id: 1,
-        name: 'Козак-2м1',
-        image: "/assets/Kozak-2m1.png",
-        power:'', tank:'', fuel_consumption:'', speed:''
-
-    },
-    {
-        id: 2,
-        name: 'HMMWV',
-        image: "/assets/HMMWV.png",
-        power:'', tank:'', fuel_consumption:'', speed:''
-    },
-    {
-        id: 3,
-        name: 'Дозор-Б',
-        image: "/assets/Dozor-B.png",
-        power:'', tank:'', fuel_consumption:'', speed:''
-    },
-];
+  constructor(private service: TechnicService) { }
 
   ngOnInit(): void {
+    this.service.getFilters().subscribe((filters) => { this.filterList = filters; });
+    this.service.getTechnic().subscribe((technics) => { this.allTechnicList = technics; this.listLength = this.allTechnicList.length; });
+    
   }
 
+  update() {
+    this.service.getTechnic().subscribe((technics) => { this.allTechnicList = technics; });
+  }
+  listFilter(filter: IFilter) {
+    if (this.allTechnicList.length != this.listLength) {
+      this.update();
+    }
+    this.allTechnicList = this.allTechnicList.filter(type => type.type == filter.filter);
+  }
 }

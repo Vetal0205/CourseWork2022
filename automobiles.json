@@ -104,7 +104,7 @@
             "crew":"2 особи та до 10-ти пасажирів",
             "speed":"до 80 км/г",
             "production":"Кременчуцький автомобільний завод за ліцензією компанії Streit Group",
-            "image":"/src/assets/Kraz-Cougar.png"
+            "image":"/src/assets/Kraz-Shrek.png"
         },
         {
             "id": 7,
@@ -168,7 +168,7 @@
             "gun-caliber":"125мм",
             "gun-fire":"12 пострілів/хв",
             "fire-range":"до 5 км",
-            "image":"/src/assets/Kraz-Cougar.png"
+            "image":"/src/assets/T80-BV.png"
         }
     ]
 }
