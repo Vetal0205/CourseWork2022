@@ -25,9 +25,10 @@ $orange_color: #d5b23f;
     text-transform: uppercase;
     color: $bg_color;
     width: 500px;
-    @include for-size(for-big-6) {margin-left: 460px;}
-    @include for-size(for-big-5) {margin-left: 500px;}
-    @include for-size(for-big-4) {margin-left: 560px;}
+    @include for-size(for-big-6) {margin-left: 450px;}
+    @include for-size(for-big-5) {margin-left: 480px;}
+    @include for-size(for-big-4) {margin-left: 540px;}
+    @include for-size(for-laptops) {margin-left: 540px;}
     @include for-size(for-big-3) {margin-left: 600px;}
     @include for-size(for-big-2) {margin-left: 640px;}
     @include for-size(for-big-1) {margin-left: 680px;}
@@ -42,6 +43,7 @@ $orange_color: #d5b23f;
     @include for-size(for-big-6) {margin-left: 92.5px;}
     @include for-size(for-big-5) {margin-left: 112.5px;}
     @include for-size(for-big-4) {margin-left: 132.5px;}
+    @include for-size(for-laptops) {margin-left: 102.5px;}
     @include for-size(for-big-3) {margin-left: 172.5px;}
     @include for-size(for-big-2) {margin-left: 212.5px;}
     @include for-size(for-big-1) {margin-left: 252.5px;}

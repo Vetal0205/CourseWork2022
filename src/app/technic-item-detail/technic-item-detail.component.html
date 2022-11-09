@@ -1,6 +1,8 @@
-<div *ngIf="technique">
-    <h2>{{technique.name | uppercase}} деталі</h2>
-    <img src="{{technique.image}}" alt="{{technique.name}}">
+<div *ngIf="technique" class="technic-item__detail">
+    <div class="technic-item__detail-box">
+        <h2>{{technique.name | uppercase}} деталі</h2>
+        <img src="{{technique.image}}" alt="{{technique.name}}">
+    </div>
     <div class="content">
         <p>Дальність їзди на повний бак топлива: {{technique.fuel_range}}</p>
         <p>Витрата палива: {{technique.fuel_consumption}}</p>
@@ -11,6 +13,8 @@
         <p>Потужність: {{technique.power}}</p>
         <p>Вага: {{technique.weight}}</p>
         <p>Місце виробництва: {{technique.production}}</p>
+        <div class="line"></div>
+        <button type="button" (click)="goBack()">Назад</button>
     </div>
 </div>
-<button type="button" (click)="goBack()">Back</button>
+

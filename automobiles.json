@@ -33,7 +33,7 @@
             "crew":"3 особи, до 8-ми пасажирів(залежно від комплектації)",
             "speed":"до 113 км/г",
             "production":"Завод імені В.О. Малишева Львівський бронетанковий ремонтний завод",
-            "image":"/assets/Dozor-B.png"
+            "image":"/assets/Dozor-B.jpg"
         },
         {
             "id": 2,
@@ -47,7 +47,7 @@
             "crew":"2 особи, до 8-ми пасажирів(залежно від комплектації)",
             "speed":"до 105 км/г",
             "production":"AM General(USA)",
-            "image":"/assets/HMMWV.png"
+            "image":"/assets/HMMWV.jpg"
         },
         {
             "id": 3,
@@ -61,7 +61,7 @@
             "crew":"2 особи та до 6-ти пасажирів(залежно від комплектації)",
             "speed":"до 110 км/г",
             "production":"НПО 'Практика'",
-            "image":"/assets/Kozak-2m1.png"
+            "image":"/assets/Kozak-2m1.jpg"
         },
         {
             "id": 4,
@@ -75,7 +75,7 @@
             "crew":"2 особи та до 6-ми пасажирів",
             "speed":"до 110 км/г",
             "production":"Кременчуцький автомобільний завод за ліцензією компанії Streit Group",
-            "image":"/assets/Kraz-Spartan.png"
+            "image":"/assets/Kraz-Spartan.jpg"
         },
         {
             "id": 5,
@@ -89,7 +89,7 @@
             "crew":"2 особи та до 6-ми пасажирів",
             "speed":"до 105 км/г",
             "production":"Кременчуцький автомобільний завод за ліцензією компанії Streit Group",
-            "image":"/assets/Kraz-Cougar.png"
+            "image":"/assets/Kraz-Cougar.jpg"
         },
         {
             "id": 6,
@@ -103,7 +103,7 @@
             "crew":"2 особи та до 10-ти пасажирів",
             "speed":"до 80 км/г",
             "production":"Кременчуцький автомобільний завод за ліцензією компанії Streit Group",
-            "image":"/assets/Kraz-Shrek.png"
+            "image":"/assets/Kraz-Shrek.jpg"
         },
         {
             "id": 7,
@@ -119,7 +119,7 @@
             "gun-caliber":"125мм",
             "gun-fire":"8 пострілів/хв",
             "fire-range":"до 5 км",
-            "image":"/assets/T-64BV.png"
+            "image":"/assets/T-64BV.jpg"
         },
         {
             "id": 8,
@@ -135,7 +135,7 @@
             "gun-caliber":"125мм",
             "gun-fire":"8 пострілів/хв",
             "fire-range":"до 5 км",
-            "image":"/assets/T-72AMT.png"
+            "image":"/assets/T-72AMT.jpg"
         },
         {
             "id": 9,
@@ -151,7 +151,7 @@
             "gun-caliber":"125мм",
             "gun-fire":"8 пострілів/хв",
             "fire-range":"до 5 км",
-            "image":"/assets/PT-91.png"
+            "image":"/assets/PT-91.jpg"
         },
         {
             "id": 10,
@@ -167,7 +167,7 @@
             "gun-caliber":"125мм",
             "gun-fire":"12 пострілів/хв",
             "fire-range":"до 5 км",
-            "image":"/assets/T80-BV.png"
+            "image":"/assets/T80-BV.jpg"
         }
     ]
 }

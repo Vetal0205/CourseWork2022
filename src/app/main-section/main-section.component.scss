@@ -28,14 +28,13 @@ $orange_color: #d5b23f;
     gap: 50px;
     background-size: cover;
     width: 1100px;
-    margin-left: 28%;
+    @include for-size(for-big-4) {margin-left: 22%;}
+    @include for-size(for-laptops) {margin-left: 23%;}
+    @include for-size(for-big-3) {margin-left: 24%;}
+    @include for-size(for-big-2) {margin-left: 26%;}
+    @include for-size(for-big-1) {margin-left: 28%;}
     .box-main{
-        @include for-height(for-height-6) {margin-top: 63vh;}
-        @include for-height(for-height-5) {margin-top: 64vh;}
-        @include for-height(for-height-4) {margin-top: 65vh;}
-        @include for-height(for-height-3) {margin-top: 66vh;}
-        @include for-height(for-height-2) {margin-top: 67vh;}
-        @include for-height(for-height-1) {margin-top: 68vh;}
+        margin-top: 68vh;
         height: 300px;
         width: 300px;
         background-color: $font_white;
