@@ -1,0 +1,10 @@
+img{
+    width: 100px;
+    height: 100px;
+}
+.mission-container,.technic-container
+{
+    border: 3px red solid;
+    display: flex;
+    justify-content: start;
+}

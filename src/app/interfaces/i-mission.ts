@@ -5,5 +5,6 @@ export interface IMission {
     route:string;
     fuel:number;
     price:number;
+    distance:number;
     technique:IAuto[];
 }

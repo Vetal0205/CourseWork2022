@@ -20,6 +20,7 @@ import { TechnicItemDetailComponent } from './technic-item-detail/technic-item-d
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './button/button.component';
 import { DraggableMTListsComponent } from './draggable-m-t-lists/draggable-m-t-lists.component';
+import { AddMissionFormComponent } from './add-mission-form/add-mission-form.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { DraggableMTListsComponent } from './draggable-m-t-lists/draggable-m-t-l
     TechnicItemDetailComponent,
     ButtonComponent,
     DraggableMTListsComponent,
+    AddMissionFormComponent,
   ],
   imports: [
     BrowserModule,

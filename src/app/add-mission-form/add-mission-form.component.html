@@ -1,0 +1,18 @@
+<form #missionForm="ngForm"(ngSubmit)="onSubmit()" class="add-form">
+    <div class="technic-box" *ngFor="let tech of techForMission">
+        <img src="{{tech.image}}" alt="{{tech.name}}" cdkDrag>
+        <br>
+        <label for="amount">Кількість Техніки</label>
+        <br>
+        <input type="number" name="amount" [(ngModel)]="tech.amount" id="{{tech.name}}_amount" min="1" value="1"
+            placeholder="Введіть Кількість"> </div>
+
+        <img src="assets\placeholder.png">
+        <br>
+        <p *ngIf="totalFuel">Загальний обсяг топлива на 100 км: {{totalFuel}}</p>
+        <p *ngIf="totalFuel">Ціна топлива: {{totalSum}}</p>
+        <br>
+        <input type="submit" name="submit" value="Save Mission" class="btn btn-submit">
+        <br>
+    </form>
+    
