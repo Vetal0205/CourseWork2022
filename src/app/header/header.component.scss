@@ -1,4 +1,5 @@
 @use 'sass:map';
+@import "../../styles.scss";
 
 $header_color: #363636;
 $font_white: #fff;
@@ -6,23 +7,6 @@ $transparent_color: rgba(28,28,28,0);
 $btn_color: #2a333b;
 $bg_color: #0b1d26;
 $orange_color: #d5b23f;
-
-
-@mixin for-medium-1 {
-    @media (min-width: 1400px) { @content; }
-}
-@mixin for-big-4 {
-    @media (min-width: 1500px) { @content; }
-}
-@mixin for-big-3 {
-    @media (min-width: 1600px) { @content; }
-}
-@mixin for-big-2 {
-    @media (min-width: 1700px) { @content; }
-}
-@mixin for-big-1 {
-    @media (min-width: 1800px) { @content; }
-}
 
 header {
     background-color: $header_color;
@@ -41,21 +25,12 @@ header {
     }
 
     .navbar {
-        @include for-medium-1 {
-            padding-left: 22vw;
-        }
-        @include for-big-4 {    
-            padding-left: 24vw; 
-        }
-        @include for-big-3 {    
-            padding-left: 26vw; 
-        }
-        @include for-big-2 {    
-            padding-left: 28vw; 
-        }
-        @include for-big-1 {    
-            padding-left: 30vw; 
-        }
+        @include for-size(for-big-6) {padding-left: 18vw;}
+        @include for-size(for-big-5) {padding-left: 20vw;}
+        @include for-size(for-big-4) {padding-left: 22vw;}
+        @include for-size(for-big-3) {padding-left: 24vw;}
+        @include for-size(for-big-2) {padding-left: 26vw;}
+        @include for-size(for-big-1) {padding-left: 28vw;}
         padding-top: 40px;
     }
 
@@ -66,21 +41,12 @@ header {
         font-size: 20px;
     }
     .icon_btns{
-        @include for-medium-1 {
-            padding-left: 12vw;
-        }
-        @include for-big-4 {    
-            padding-left: 14vw; 
-        }
-        @include for-big-3 {    
-            padding-left: 16vw; 
-        }
-        @include for-big-2 {    
-            padding-left: 18vw; 
-        }
-        @include for-big-1 {    
-            padding-left: 20vw; 
-        }
+        @include for-size(for-big-6) {padding-left: 11vw;}
+        @include for-size(for-big-5) {padding-left: 13vw;}
+        @include for-size(for-big-4) {padding-left: 15vw;}
+        @include for-size(for-big-3) {padding-left: 17vw;}
+        @include for-size(for-big-2) {padding-left: 19vw;}
+        @include for-size(for-big-1) {padding-left: 21vw;}
         padding-top: 35px;
         button{
             height: 30px;

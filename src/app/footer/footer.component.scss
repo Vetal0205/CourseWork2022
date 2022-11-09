@@ -1,3 +1,5 @@
+@import "../../styles.scss";
+
 $header_color: #363636;
 $font_white: #fff;
 $transparent_color: rgba(28,28,28,0);
@@ -24,7 +26,10 @@ footer{
     padding-top: 100px;
     padding-left: 200px; padding-right: 40px;
     h1{
-        font-size: 38px;
+        @include for-size(for-big-1) {    
+            font-size: 38px; 
+        }
+         
     }
     p{
         padding-top: 20px;
