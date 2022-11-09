@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 $header_color: #363636;
 $font_white: #fff;
 $transparent_color: rgba(28,28,28,0);
@@ -22,7 +24,12 @@ $orange_color: #d5b23f;
     text-transform: uppercase;
     color: $font_white;
     width: 500px;
-    margin-left: 680px;
+    @include for-size(for-big-6) {margin-left: 460px;}
+    @include for-size(for-big-5) {margin-left: 500px;}
+    @include for-size(for-big-4) {margin-left: 560px;}
+    @include for-size(for-big-3) {margin-left: 600px;}
+    @include for-size(for-big-2) {margin-left: 640px;}
+    @include for-size(for-big-1) {margin-left: 680px;}
     padding-top: 50px;
     font-size: 80px;
     .comments-title__colored{
@@ -32,13 +39,22 @@ $orange_color: #d5b23f;
 .comments-box{
     display: flex;
     flex-wrap: wrap;
-    gap: 65px;
-    margin-left: 172.5px;
+    
+    @include for-size(for-big-6) {margin-left: 72.5px; gap: 35px;}
+    @include for-size(for-big-5) {margin-left: 82.5px; gap: 45px;}
+    @include for-size(for-big-4) {margin-left: 102.5px; gap: 65px;}
+    @include for-size(for-big-3) {margin-left: 102.5px; gap: 65px;}
+    @include for-size(for-big-2) {margin-left: 122.5px; gap: 65px;}
+    @include for-size(for-big-1) {margin-left: 172.5px; gap: 65px;}
     padding-top: 50px;
     .comments-box__content{
         padding: 52px 43px 43px 23px;
-        width: 450px;
-        height: 400px;
+        @include for-size(for-big-6) {width: 380px; height: 400px;}
+        @include for-size(for-big-5) {width: 400px; height: 400px;}
+        @include for-size(for-big-4) {width: 400px; height: 400px;}
+        @include for-size(for-big-3) {width: 450px; height: 400px;}
+        @include for-size(for-big-1) {width: 450px; height: 400px;}
+        
         background-color: $font_white;
         border-radius: 12px;
         color: $bg_color;
@@ -50,8 +66,12 @@ $orange_color: #d5b23f;
             font-size: 22px;
         }
         img{
+            @include for-size(for-big-6) {padding-left: 110px;}
+            @include for-size(for-big-5) {padding-left: 130px;}
+            @include for-size(for-big-4) {padding-left: 130px;}
+            @include for-size(for-big-3) {padding-left: 150px;}
+            @include for-size(for-big-1) {padding-left: 150px;}
             padding-top: 30px;
-            padding-left: 150px;
         }
         h1{
             font-size: 30px;

@@ -25,11 +25,8 @@ footer{
     height: 500px;
     padding-top: 100px;
     padding-left: 200px; padding-right: 40px;
-    h1{
-        @include for-size(for-big-1) {    
-            font-size: 38px; 
-        }
-         
+    h1{   
+        font-size: 38px;          
     }
     p{
         padding-top: 20px;
