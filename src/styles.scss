@@ -33,6 +33,13 @@ body{
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
+$header_color: #363636;
+$font_white: #fff;
+$transparent_color: rgba(28,28,28,0);
+$btn_color: #2a333b;
+$bg_color: #0b1d26;
+$orange_color: #d5b23f;
+
 @mixin for-size($size) {
     @if $size == for-big-13   {
         @media (max-width: 600px) { @content; }
