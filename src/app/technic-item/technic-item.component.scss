@@ -1,4 +1,21 @@
+@import '../../styles.scss';
 *{
     background-repeat: no-repeat;
     background-size: contain;
+}
+.content{
+    margin-bottom: 20px;
+    width: 250px;
+    height: 200px;
+}
+.description{
+    width: 250px;
+    height: 10px;
+    text-align: center;
+    a{
+        font-size: 30px;
+        color: $font_white;
+        padding: 0;
+        margin: 0;
+    }
 }
