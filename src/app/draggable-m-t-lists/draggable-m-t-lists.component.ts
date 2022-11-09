@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { TechnicService } from '../services/technic.service';
-import { IAuto } from '../interfaces/i-auto';
-import { IMission } from '../interfaces/i-mission';
+import { ITechForMission } from '../interfaces/itech-for-mission';
 
 @Component({
   selector: 'app-draggable-m-t-lists',
@@ -12,19 +11,27 @@ import { IMission } from '../interfaces/i-mission';
 export class DraggableMTListsComponent implements OnInit {
 
   constructor(private service: TechnicService) { }
-  allTechnicList: IAuto[] = [];
-  technicForMissionList: IAuto[] = [];
-  missionformlist: IMission[] = [];
+  technicForMissionList: ITechForMission[] = [];
+  allTechnicList: ITechForMission[] = [];
 
-  
+
   ngOnInit(): void {
     this.getTechnic();
   }
   getTechnic() {
-    this.service.getTechnic().subscribe((technics) => { this.allTechnicList = technics; });
+    this.service.getTechnic().subscribe((technics) => {
+      technics.forEach((tech, index) => {
+        let { id, type, name, fuel_tank, image, fuel_consumption, speed } = tech;
+        let el: ITechForMission = {
+          ...tech,
+          amount: 1
+        }
+        this.allTechnicList.push(el);
+      });
+    });
   }
 
-  drop(event: CdkDragDrop<IAuto[]>) {
+  drop(event: CdkDragDrop<ITechForMission[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
