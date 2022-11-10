@@ -18,6 +18,7 @@
         height: 1400px;
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         @include for-size(for-big-6) {gap: 5px;}
         @include for-size(for-big-5) {gap: 15px;}
         @include for-size(for-big-4) {gap: 25px;}
