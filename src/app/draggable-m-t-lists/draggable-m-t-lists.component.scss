@@ -1,18 +1,40 @@
+@import '../../styles.scss';
+
 img{
-    width: 100px;
-    height: 100px;
+    width: 280px;
+    height: 200px;
 }
-.mission-container,.technic-container
-{
-    border: 3px red solid;
-    display: flex;
-    justify-content: start;
+.mission-main{
+    padding-top: 100px;
+    background: url('../../assets/car_background.png');
+    height: 500px;
+    color: white;
+}
+.mission-block{
+    padding-left: 270px;
+    padding-right: 200px;
+    padding-top: 100px;
+    background: url('../../assets/Background_main.png')top/ cover no-repeat;
 }
 .mission-container{
+    height: 1200px;
+    width: 50%;
+    border: 2px solid $header_color;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 35px 35px 35px 35px;
+}
+.technic-container{
+    width: 45%;
 }
 section{
     padding-top: 100px;
     display: flex;
     justify-content: space-between;
     flex-flow: row;
+}
+.technic-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }

@@ -9,17 +9,24 @@
     .technic-item__detail-box{
         img{
             height: auto;
-            @include for-size(for-big-4) {width: 700px;}
-            @include for-size(for-laptops) {width: 700px;}
-            @include for-size(for-big-3) {width: 700px;}
+            @include for-size(for-big-6) {width: 500px;}
+            @include for-size(for-big-5) {width: 500px;}
+            @include for-size(for-big-4) {width: 500px;}
+            @include for-size(for-laptops) {width: 500px;}
+            @include for-size(for-big-3) {width: 600px;}
             @include for-size(for-big-2) {width: 700px;}
             @include for-size(for-big-1) {width: 700px;}
         } 
     }
     .content{
         padding-top: 40px;
-        font-size: 25px;
-        line-height: 45px;
+        @include for-size(for-big-6) {font-size: 20px; line-height: 30px;}
+        @include for-size(for-big-5) {font-size: 20px; line-height: 30px;}
+        @include for-size(for-big-4) {font-size: 20px; line-height: 30px;}
+        @include for-size(for-laptops) {font-size: 20px; line-height: 30px;}
+        @include for-size(for-big-3) {font-size: 25px; line-height: 45px;}
+        @include for-size(for-big-2) {font-size: 25px; line-height: 45px;}
+        @include for-size(for-big-1) {font-size: 25px; line-height: 45px;}
         .line{
             width: 100%;
             height: 3px;

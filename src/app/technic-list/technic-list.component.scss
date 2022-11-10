@@ -4,6 +4,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 100px;
+    @include for-size(for-big-6) {padding-left: 20px;}
+    @include for-size(for-big-5) {padding-left: 50px;}
     @include for-size(for-big-4) {padding-left: 100px;}
     @include for-size(for-laptops) {padding-left: 100px;}
     @include for-size(for-big-3) {padding-left: 200px;}
@@ -16,12 +18,15 @@
         height: 1400px;
         display: flex;
         flex-wrap: wrap;
-        gap: 25px;
+        @include for-size(for-big-6) {gap: 5px;}
+        @include for-size(for-big-5) {gap: 15px;}
+        @include for-size(for-big-4) {gap: 25px;}
+        @include for-size(for-laptops) {gap: 30px;}
+        @include for-size(for-big-3) {gap: 40px;}
+        @include for-size(for-big-2) {gap: 60px;}
+        @include for-size(for-big-1) {gap: 70px;}  
         app-technic-item{
-            @include for-size(for-big-4) {width: 250px; height: 200px;}
-            @include for-size(for-laptops) {width: 250px; height: 200px;}
-            @include for-size(for-big-3) {width: 250px; height: 250px;}
-            @include for-size(for-big-2) {width: 250px; height: 250px;}
+            @include for-size(for-big-6) {width: 250px; height: 200px;}
             @include for-size(for-big-1) {width: 250px; height: 250px;}  
         }
     }
@@ -40,6 +45,7 @@
         }
         button{
             width: 300px;
+            height: 80px;
             margin-left: 50px;
             cursor: pointer;
             border: 3px solid $header_color;
