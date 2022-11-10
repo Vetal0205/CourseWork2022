@@ -15,7 +15,7 @@ export class AddMissionFormComponent implements OnInit {
   @Output() onAddMission: EventEmitter<IMission> = new EventEmitter();
   @Input() techForMission!: ITechForMission[];
   regexfuel = new RegExp('[0-9]+');
-  
+
   lengthCounter: number = 0;
   totalFuel!: number;
   totalSum!: number;
@@ -30,28 +30,31 @@ export class AddMissionFormComponent implements OnInit {
   ngDoCheck() {
     if (this.techForMission.length == 0) {
       this.lengthCounter = 0;
-      this.totalSum, this.totalFuel= 0;
+      this.totalSum, this.totalFuel = 0;
     }
     if (this.techForMission.length > this.lengthCounter) {
-      this.totalFuel = this.fuelsum(this.techForMission, this.regexfuel);
-      this.totalSum = this.totalFuel * 50;
+      this.outputUpdate()
       this.lengthCounter++;
     }
-    if (this.techForMission.length < this.lengthCounter){
-      this.totalFuel = this.fuelsum(this.techForMission, this.regexfuel);
-      this.totalSum = this.totalFuel * 50;
+    if (this.techForMission.length < this.lengthCounter) {
+      this.outputUpdate()
       this.lengthCounter--;
     }
+  }
+  Console(tech: ITechForMission) {
+    console.log('testing')
+    console.log(tech)
+  }
+  outputUpdate() {
+    this.totalFuel = this.fuelsum(this.techForMission, this.regexfuel);
+    this.totalSum = this.totalFuel * 30;
   }
   fuelsum(tech: ITechForMission[], regex: RegExp): number {
     let sum: number = 0
     let amount: number;
     tech.forEach((t) =>{
-      console.log(t)
-      console.log(t.fuel_consumption)
       let str = t.fuel_consumption;
       amount = t.amount;
-      console.log(regex.exec(str));
       sum = sum + Number(regex.exec(str)) * amount;
     });
     return sum;
