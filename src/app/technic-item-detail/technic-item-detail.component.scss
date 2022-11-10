@@ -7,6 +7,11 @@
     flex-wrap: wrap;
     gap: 100px;
     .technic-item__detail-box{
+        h2{
+            font-size: 30px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
         img{
             height: auto;
             @include for-size(for-big-6) {width: 500px;}
@@ -19,7 +24,7 @@
         } 
     }
     .content{
-        padding-top: 40px;
+        padding-top: 120px;
         @include for-size(for-big-6) {font-size: 20px; line-height: 30px;}
         @include for-size(for-big-5) {font-size: 20px; line-height: 30px;}
         @include for-size(for-big-4) {font-size: 20px; line-height: 30px;}
