@@ -10,12 +10,11 @@
 
     <img src="assets\placeholder.png">
     <div class="technic-price">
-        <div>
-        <p *ngIf="totalFuel">Загальний обсяг топлива на 100 км: {{totalFuel}}</p>
-        <p *ngIf="totalFuel">Ціна топлива: {{totalSum}}</p>
+        <div class="technic-price__box">
+            <p *ngIf="totalFuel">Загальний обсяг топлива на 100 км: {{totalFuel}}</p>
+            <p *ngIf="totalFuel">Ціна топлива: {{totalSum}}</p>
         </div>
         <input type="submit" name="submit" value="Save Mission" class="btn btn-submit">
-        <br>
     </div>
 </form>
     

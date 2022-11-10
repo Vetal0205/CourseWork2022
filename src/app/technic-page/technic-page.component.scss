@@ -1,8 +1,20 @@
+@import '../../styles.scss';
 .main{
     padding-top: 100px;
     background: url('../../assets/car_background.png');
     height: 500px;
     color: white;
+    h1{
+        padding-top: 50px;
+        font-size: 40px;
+        padding-left: 150px;
+    }
+    h2{
+        font-size: 100px;
+        text-transform: uppercase;
+        color: $orange_color;
+        padding-left: 150px;
+    }
 }
 .technic-box{
     background: url('../../assets/Background_main.png') top/ cover no-repeat;
