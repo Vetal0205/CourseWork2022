@@ -8,13 +8,13 @@
             placeholder="Введіть Кількість"> 
     </div>
 
-    <img src="assets\placeholder.png">
+    <img src="assets\placeholder.png" class="mission-form__placeholder">
     <div class="technic-price">
         <div class="technic-price__box">
             <p *ngIf="totalFuel">Загальний обсяг топлива на 100 км: {{totalFuel}}</p>
             <p *ngIf="totalFuel">Ціна топлива: {{totalSum}}</p>
         </div>
-        <input type="submit" name="submit" value="Save Mission" class="btn btn-submit">
+        <input type="submit" name="submit" value="Розрахувати" class="btn btn-submit">
     </div>
 </form>
     

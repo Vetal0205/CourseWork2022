@@ -14,14 +14,15 @@ img{
         flex-wrap: wrap;
         width: 600px;
         input{
-            cursor: pointer;
+            background-color: $btn_color;
+            width: 150px;
+            height: 44px;
+            border-radius: 6px;
+            border: 3px solid black;
+            margin-top: 20px;
             margin-left: 75px;
-            height: 50px;
-            width: 120px;
-            margin-right: 30px;
-            background: none;
-            font-size: 20px;
-            border-bottom: 2px solid #000080;
+            color: $font_white;
+            cursor: pointer;
         }
         .technic-price__box{
             p{
@@ -31,6 +32,16 @@ img{
         }
     }
     .technic-box{
+        img{
+            @include for-size(for-big-6) {width: 250px;height: 210px;}
+            @include for-size(for-big-5) {width: 250px;height: 210px;}
+            @include for-size(for-big-4) {width: 250px;height: 210px;}
+            @include for-size(for-laptops) {width: 250px;height: 210px;}
+            @include for-size(for-big-3) {width: 250px;height: 210px;}
+            @include for-size(for-big-2) {width: 250px;height: 210px;}
+            @include for-size(for-big-1) {width: 250px;height: 210px;}
+            
+        }
         input{
             border: 2px solid $header_color;
             border-radius: 10px;
@@ -42,5 +53,14 @@ img{
             text-align: center;
             font-size: 25px;
         }
+    }
+    .mission-form__placeholder{
+        @include for-size(for-big-6) {width: 250px;height: 210px;}
+        @include for-size(for-big-5) {width: 250px;height: 210px;}
+        @include for-size(for-big-4) {width: 250px;height: 210px;}
+        @include for-size(for-laptops) {width: 250px;height: 210px;}
+        @include for-size(for-big-3) {width: 250px;height: 210px;}
+        @include for-size(for-big-2) {width: 250px;height: 210px;}
+        @include for-size(for-big-1) {width: 250px;height: 210px;}        
     }
 }
