@@ -102,6 +102,14 @@ $orange_color: #d5b23f;
                 font-size: 40px;
                 color: $bg_color;
                 letter-spacing: 1px;
+
+                -webkit-transition-duration: 0.6s;
+                transition-duration: 0.6s;
+
+            }
+            a:hover {
+                color: $orange_color;
+                letter-spacing: 1.15px;
             }
         }
     }
