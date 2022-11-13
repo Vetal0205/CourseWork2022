@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './button/button.component';
 import { DraggableMTListsComponent } from './draggable-m-t-lists/draggable-m-t-lists.component';
 import { AddMissionFormComponent } from './add-mission-form/add-mission-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { AddMissionFormComponent } from './add-mission-form/add-mission-form.com
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     DragDropModule,
