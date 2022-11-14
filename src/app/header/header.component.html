@@ -6,8 +6,8 @@
         <a routerLink="missions">Наряди</a>
     </div>
     <div class="icon_btns">
-        <button style="background-image:url('../../assets/search.png')"></button>
-        <button style="background-image:url('../../assets/toolbox.png')"></button>
-        <button style="background-image:url('../../assets/user.png')"></button>
+        <button (mouseenter) ="mouseEnter_icon_1()" [@rubberBand]="header_icon_1" style="background-image:url('../../assets/Comments-header__icon.png')"></button>
+        <button (mouseenter) ="mouseEnter_icon_2()" [@rubberBand]="header_icon_2" style="background-image:url('../../assets/Toolbox-header__icon.png')"></button>
+        <button (mouseenter) ="mouseEnter_icon_3()" [@rubberBand]="header_icon_3" style="background-image:url('../../assets/User-header__icon.png')"></button>
     </div>
 </header>

@@ -41,12 +41,24 @@ header {
         
     }
 
-    a{
+    a {
         color: $font_white;
         text-decoration: none;
         padding-right: 40px;
         font-size: 20px;
+
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
     }
+    
+    a:hover {
+        color: $orange_color;
+        background-size: 60% 2px;
+    }
+        
     .icon_btns{
         @include for-size(for-big-6) {padding-left: 11vw; padding-top: 22.5px;}
         @include for-size(for-big-5) {padding-left: 13vw; padding-top: 22.5px;}
@@ -63,6 +75,13 @@ header {
             background-size: cover;
             margin-right: 16px;
             cursor: pointer;
+            filter: brightness(0) invert(1);
+
+            -webkit-transition-duration: 0.9s;
+            transition-duration: 0.9s;
+        }
+        button:hover{
+            filter: none;
         }
     }
 }
