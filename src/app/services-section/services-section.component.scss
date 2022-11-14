@@ -48,6 +48,9 @@ $orange_color: #d5b23f;
     @include for-size(for-big-2) {margin-left: 212.5px;}
     @include for-size(for-big-1) {margin-left: 252.5px;}
     .services-box__content{
+        opacity: 0.25;
+        transform: translateY(0%);
+
         display: flex;
         flex-wrap: wrap;
         gap: 65px;
@@ -115,5 +118,11 @@ $orange_color: #d5b23f;
                 background-size: 68% 2px;
             }
         }
+        
     }
+    .services-box__content.element-show{
+        opacity: 1;
+        transition: all 1s;
+        transform: translateY(0%);
+      }
 }

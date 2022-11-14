@@ -2,11 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 //import animatons from angular-animations
 import {
-  rubberBandAnimation,
   jelloAnimation,
-  flipAnimation,
-  hueRotateAnimation,
-  bounceAnimation,
+  bounceInOnEnterAnimation
 } from 'angular-animations';
 
 @Component({
@@ -15,10 +12,7 @@ import {
   styleUrls: ['./services-section.component.scss'],
   animations: [
     jelloAnimation(),
-    flipAnimation(),
-    hueRotateAnimation(),
-    bounceAnimation({duration: 1000}),
-    rubberBandAnimation({duration: 600}),
+    bounceInOnEnterAnimation({ anchor: 'enter', delay: 100 }),
   ]
 })
 export class ServicesSectionComponent implements OnInit {
@@ -30,6 +24,8 @@ export class ServicesSectionComponent implements OnInit {
   services_icon_4 = false;
   services_icon_5 = false;
   services_icon_6 = false;
+
+  services_icons = false;
 
   //functions of declared objects
   mouseEnter_icon_1(){
@@ -57,9 +53,28 @@ export class ServicesSectionComponent implements OnInit {
     setTimeout(() => { this.services_icon_6 = true; }, 1);
   }
 
+  Show_icons(){
+    this.services_icons = false;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+    function onEntry(entry: any[]) {
+      entry.forEach(change => {
+        if (change.isIntersecting) {
+          change.target.classList.add('element-show');
+        }
+      });
+    }
+    let options = { threshold: [0.5] };
+    let observer = new IntersectionObserver(onEntry, options);
+    let elements = document.querySelectorAll('.services-box__content');
+    for (let elm of elements) {
+      observer.observe(elm);
+    }
   }
 
 }
+
+

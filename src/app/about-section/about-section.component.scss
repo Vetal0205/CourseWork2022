@@ -8,8 +8,10 @@ $bg_color: #0b1d26;
 $orange_color: #d5b23f;
 
 .About{
+    transform: translateY(0%);
     position: relative;
     background-color: $bg_color;
+    margin-top: 130px;
     z-index: 2;
     @include for-size(for-big-6) {height: 550px;}
     @include for-size(for-big-5) {height: 600px;}
@@ -26,6 +28,9 @@ $orange_color: #d5b23f;
     left: 0;
 }
 .about__container{
+    opacity: 0.5;
+    transform: translateY(0%);
+
     color: $font_white;
     display: flex;
     flex-wrap: wrap;
@@ -60,7 +65,8 @@ $orange_color: #d5b23f;
             letter-spacing: 3px;
         }
         .h1__colored{
-            color: $orange_color;
+          
+          color: $orange_color;
         }
         .about__btn{
             @include for-size(for-big-6) {width: 140px; height: 60px;}
@@ -149,4 +155,10 @@ $orange_color: #d5b23f;
           }
         }
     }
+}
+
+.about__container.element-show{
+  opacity: 1;
+  transition: all 1s;
+  transform: translateY(0%);
 }

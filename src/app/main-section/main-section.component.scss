@@ -12,9 +12,9 @@ $orange_color: #d5b23f;
 }
 .Main{
     min-height: 100%;
-    height: 1200px;
+    height: 1058px;
     width: 100%;
-    background: url('../../assets/main_baclground.png')top/cover no-repeat;
+    background: url('../../assets/main_background.png')top/cover no-repeat;
     z-index: 2;
 }
 .main-parallax__human{
@@ -26,14 +26,14 @@ $orange_color: #d5b23f;
     @include for-size(for-big-2) {padding-left: 39%;}
     @include for-size(for-big-1) {padding-left: 40%;}
     position: absolute;
-    padding-top: 140px;
+    padding-top: 0px;
     height: 1200px;
     width: 500;
     z-index: 1;
 }
 .main-parallax__smoke{
     position: absolute;
-    padding-top: 870px;
+    padding-top: 860px;
     height: 100%;
     width: 100%;
     z-index: 7;
@@ -42,7 +42,7 @@ $orange_color: #d5b23f;
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    padding-top: 570px;
+    padding-top: 500px;
     @include for-size(for-big-6) {padding-left: 150px;}
     @include for-size(for-big-5) {padding-left: 200px;}
     @include for-size(for-big-4) {padding-left: 250px;}
