@@ -1,13 +1,13 @@
 <header>
-    <div class="logo">LOGO</div>
+    <div class="logo" [@enter]>LOGO</div>
     <div class="navbar">   
         <a routerLink="home">Головна</a>
         <a routerLink="technic">Техніка</a>
         <a routerLink="missions">Наряди</a>
     </div>
     <div class="icon_btns">
-        <button (mouseenter) ="mouseEnter_icon_1()" [@rubberBand]="header_icon_1" style="background-image:url('../../assets/Comments-header__icon.png')"></button>
-        <button (mouseenter) ="mouseEnter_icon_2()" [@rubberBand]="header_icon_2" style="background-image:url('../../assets/Toolbox-header__icon.png')"></button>
-        <button (mouseenter) ="mouseEnter_icon_3()" [@rubberBand]="header_icon_3" style="background-image:url('../../assets/User-header__icon.png')"></button>
+        <button [@enter] (mouseenter) ="mouseEnter_icon_1()" [@rubberBand]="header_icon_1" [@click]="header_icon_1_click" (click)="mouseClick_icon_1()" style="background-image:url('../../assets/Comments-header__icon.png')"></button>
+        <button [@enter] (mouseenter) ="mouseEnter_icon_2()" [@rubberBand]="header_icon_2" [@click]="header_icon_2_click" (click)="mouseClick_icon_2()"  style="background-image:url('../../assets/Toolbox-header__icon.png')"></button>
+        <button [@enter] (mouseenter) ="mouseEnter_icon_3()" [@rubberBand]="header_icon_3" [@click]="header_icon_3_click" (click)="mouseClick_icon_3()" style="background-image:url('../../assets/User-header__icon.png')"></button>
     </div>
 </header>

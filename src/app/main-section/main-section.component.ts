@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 //import animatons from angular-animations
 import {
   rubberBandAnimation,
+  bounceInOnEnterAnimation,
+  fadeInOnEnterAnimation,
 } from 'angular-animations';
 
 @Component({
@@ -11,6 +13,8 @@ import {
   styleUrls: ['./main-section.component.scss'],
   animations: [
     rubberBandAnimation({duration: 600}),
+    bounceInOnEnterAnimation({ anchor: 'enter', delay: 100 }),
+    fadeInOnEnterAnimation({ anchor: 'enter_human', delay: 100 }),
   ]
 })
 export class MainSectionComponent implements OnInit {

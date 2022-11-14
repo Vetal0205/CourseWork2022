@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 //import animatons from angular-animations
 import {
+  rubberBandAnimation,
   jelloAnimation,
   flipAnimation,
   hueRotateAnimation,
@@ -17,6 +18,7 @@ import {
     flipAnimation(),
     hueRotateAnimation(),
     bounceAnimation({duration: 1000}),
+    rubberBandAnimation({duration: 600}),
   ]
 })
 export class ServicesSectionComponent implements OnInit {
