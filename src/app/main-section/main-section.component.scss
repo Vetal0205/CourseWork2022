@@ -74,15 +74,53 @@ $orange_color: #d5b23f;
         padding: 15px 15px 15px 15px;
         text-align: center;
     }
-    .btn{
-        background-color: $btn_color;
-        width: 150px;
-        height: 44px;
-        border-radius: 6px;
-        border: 3px solid black;
-        margin-top: 20px;
-        margin-left: 75px;
+
+    .btn {
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
         color: $font_white;
-        cursor: pointer;
+        text-transform: capitalize;
+        background-color: $header_color;
+        font: {
+          size: 18px;
+        }
+        margin-left: 50px;
+        margin-top: 20px;
+        padding-top: 16px;
+        width: 200px;
+        height: 50px;
+        border-radius: 7px;
+        overflow: hidden;
+      }
+
+    .btn__main-section{
+        transition: all 0.2s linear 0s;
+        &:before {
+            content: url('../../assets/Arrow.png');
+            font-family: FontAwesome;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0px;
+            height: 100%;
+            width: 30px;
+            background-color: rgba(#6b6a6a,0.3);
+            border-radius: 0 50% 50% 0;
+            transform: scale(0,1);
+            transform-origin: left center;
+            transition: all 0.2s linear 0s;
+        }
+        &:hover {
+            text-indent: 30px;
+            
+            &:before {
+            transform: scale(1,1);
+            text-indent: 0;
+            }
+        }
     }
 }

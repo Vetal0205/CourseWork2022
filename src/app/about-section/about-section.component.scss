@@ -85,17 +85,14 @@ $orange_color: #d5b23f;
             margin-top: 55px;
             padding: 1em 2em;
             cursor: pointer;
-            
-            // Using inset box-shadow instead of border for sizing simplicity
             box-shadow: inset 0 0 0 2px $orange_color;
             color: $orange_color;
             font-size: inherit;
             font-weight: 700;
-          
-            // Required, since we're setting absolute on pseudo-elements
+            font-family: 'PT Sans Narrow', sans-serif;
+            letter-spacing: 0.75px;
             position: relative;
             vertical-align: middle;
-          
             &::before,
             &::after {
               box-sizing: inherit;
@@ -110,20 +107,15 @@ $orange_color: #d5b23f;
         
           &::before,
           &::after {
-            // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
             border: 2px solid transparent;
             border-radius: 2px;
             width: 0;
             height: 0;
           }
-        
-          // This covers the top & right borders (expands right, then down)
           &::before {
             top: 0;
             left: 0;
           }
-        
-          // And this the bottom & left borders (expands left, then up)
           &::after {
             bottom: 0;
             right: 0;
@@ -133,7 +125,6 @@ $orange_color: #d5b23f;
             color: $font_white;
           }
         
-          // Hover styles
           &:hover::before,
           &:hover::after {
             width: 100%;
@@ -141,20 +132,20 @@ $orange_color: #d5b23f;
           }
         
           &:hover::before {
-            border-top-color: $font_white; // Make borders visible
+            border-top-color: $font_white; 
             border-right-color: $font_white;
             transition:
-              width 0.25s ease-out, // Width expands first
-              height 0.25s ease-out 0.25s; // And then height
+              width 0.25s ease-out, 
+              height 0.25s ease-out 0.25s; 
           }
         
           &:hover::after {
-            border-bottom-color: $font_white; // Make borders visible
+            border-bottom-color: $font_white; 
             border-left-color: $font_white;
             transition:
-              border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
-              width 0.25s ease-out 0.5s, // And then exanding width
-              height 0.25s ease-out 0.75s; // And finally height
+              border-color 0s ease-out 0.5s,
+              width 0.25s ease-out 0.5s,
+              height 0.25s ease-out 0.75s; 
           }
         }
     }

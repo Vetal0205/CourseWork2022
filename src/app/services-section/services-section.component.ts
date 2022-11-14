@@ -16,7 +16,7 @@ import {
     jelloAnimation(),
     flipAnimation(),
     hueRotateAnimation(),
-    bounceAnimation({duration: 600}),
+    bounceAnimation({duration: 1000}),
   ]
 })
 export class ServicesSectionComponent implements OnInit {
