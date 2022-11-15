@@ -6,6 +6,8 @@ import {
   jelloAnimation
 } from 'angular-animations';
 
+import * as Aos from 'aos';
+
 @Component({
   selector: 'app-comments-section',
   templateUrl: './comments-section.component.html',
@@ -56,6 +58,7 @@ export class CommentsSectionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    Aos.init();
   }
 
 }

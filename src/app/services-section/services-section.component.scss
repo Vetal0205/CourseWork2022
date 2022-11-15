@@ -52,9 +52,6 @@ $orange_color: #d5b23f;
     @include for-size(for-large-4) {margin-left: 302.5px;}
     @include for-size(for-large-2) {margin-left: 352.5px;}
     .services-box__content{
-        opacity: 0.25;
-        transform: translateY(0%);
-
         display: flex;
         flex-wrap: wrap;
         gap: 65px;
@@ -124,9 +121,4 @@ $orange_color: #d5b23f;
         }
         
     }
-    .services-box__content.element-show{
-        opacity: 1;
-        transition: all 1s;
-        transform: translateY(0%);
-      }
 }

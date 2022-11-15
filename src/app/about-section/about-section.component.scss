@@ -28,9 +28,6 @@ $orange_color: #d5b23f;
     left: 0;
 }
 .about__container{
-    opacity: 0.5;
-    transform: translateY(0%);
-
     color: $font_white;
     display: flex;
     flex-wrap: wrap;
@@ -155,10 +152,4 @@ $orange_color: #d5b23f;
           }
         }
     }
-}
-
-.about__container.element-show{
-  opacity: 1;
-  transition: all 1s;
-  transform: translateY(0%);
 }

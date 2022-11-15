@@ -6,6 +6,8 @@ import {
   bounceInOnEnterAnimation
 } from 'angular-animations';
 
+import * as Aos from 'aos';
+
 @Component({
   selector: 'app-services-section',
   templateUrl: './services-section.component.html',
@@ -60,19 +62,7 @@ export class ServicesSectionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    function onEntry(entry: any[]) {
-      entry.forEach(change => {
-        if (change.isIntersecting) {
-          change.target.classList.add('element-show');
-        }
-      });
-    }
-    let options = { threshold: [0.5] };
-    let observer = new IntersectionObserver(onEntry, options);
-    let elements = document.querySelectorAll('.services-box__content');
-    for (let elm of elements) {
-      observer.observe(elm);
-    }
+    Aos.init();
   }
 
 }
