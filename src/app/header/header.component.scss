@@ -16,18 +16,38 @@ header {
     @include for-size(for-large-2) {height: 100px;}
     display: flex;
     flex-wrap: wrap;
-    padding-left: 200px; padding-right: 200px;
+    padding-left: 150px; padding-right: 150px;
     position: fixed;
     width: 100%;
     z-index: 1500;
 
     .logo {
-        @include for-size(for-big-6) {padding-top: 18.5px; font-size: 38px;}
-        @include for-size(for-laptops) {padding-top: 18.5px; font-size: 38px;}
-        @include for-size(for-big-3) {padding-top: 31px; font-size: 38px;}
-        @include for-size(for-big-1) {padding-top: 31px; font-size: 38px;}
-        color: $font_white;
-        
+        width: 150px;
+        display: flex;
+        flex: wrap;
+        gap: 10px;
+        img{
+            @include for-size(for-big-6) {margin-top: 15px; height: 70px;}
+            @include for-size(for-laptops) {margin-top: 15px; height: 70px;}
+            @include for-size(for-big-3) {margin-top: 15px; height: 70px;}
+            @include for-size(for-large-1) {margin-top: 15px; height: 70px;}
+            width: auto;
+            color: $font_white;
+        }
+        h2{
+            padding-top: 10px;
+            color: $font_white;
+            font-size: 25px;
+            opacity: 0;
+
+            -webkit-transition-duration: 0.6s;
+            transition-duration: 0.6s;
+        }
+    }
+    .logo:hover{
+        h2{
+            opacity: 1;
+        }
     }
 
     .navbar {
