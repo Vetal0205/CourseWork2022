@@ -48,8 +48,10 @@ $orange_color: #d5b23f;
     @include for-size(for-big-4) {padding-left: 250px;}
     @include for-size(for-laptops) {padding-left: 250px;}
     @include for-size(for-big-3) {padding-left: 350px;}
-    @include for-size(for-big-2) {padding-left: 400px;}
+    @include for-size(for-big-2) {padding-left: 350px;}
     @include for-size(for-big-1) {padding-left: 450px;}
+    @include for-size(for-large-4) {padding-left: 450px;}
+    @include for-size(for-large-2) {padding-left: 500px;}
 }
 .box-main{
     width: 300px;

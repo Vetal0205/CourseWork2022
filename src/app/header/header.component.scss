@@ -13,7 +13,7 @@ header {
     @include for-size(for-big-6) {height: 75px;}
     @include for-size(for-laptops) {height: 75px;}
     @include for-size(for-big-3) {height: 100px;}
-    @include for-size(for-big-1) {height: 100px;}
+    @include for-size(for-large-2) {height: 100px;}
     display: flex;
     flex-wrap: wrap;
     padding-left: 200px; padding-right: 200px;
@@ -22,12 +22,12 @@ header {
     z-index: 1500;
 
     .logo {
-        @include for-size(for-big-6) {padding-top: 18.5px;}
-        @include for-size(for-laptops) {padding-top: 18.5px;}
-        @include for-size(for-big-3) {padding-top: 31px;}
-        @include for-size(for-big-1) {padding-top: 31px;}
+        @include for-size(for-big-6) {padding-top: 18.5px; font-size: 38px;}
+        @include for-size(for-laptops) {padding-top: 18.5px; font-size: 38px;}
+        @include for-size(for-big-3) {padding-top: 31px; font-size: 38px;}
+        @include for-size(for-big-1) {padding-top: 31px; font-size: 38px;}
         color: $font_white;
-        font-size: 38px;
+        
     }
 
     .navbar {
@@ -42,6 +42,10 @@ header {
     }
 
     a {
+        @include for-size(for-big-6) {font-size: 20px;}
+        @include for-size(for-big-1) {font-size: 20px;}
+        @include for-size(for-large-4) {font-size: 22px;}
+        @include for-size(for-large-2) {font-size: 25px;}
         color: $font_white;
         text-decoration: none;
         padding-right: 40px;

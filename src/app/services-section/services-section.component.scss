@@ -32,6 +32,8 @@ $orange_color: #d5b23f;
     @include for-size(for-big-3) {margin-left: 600px;}
     @include for-size(for-big-2) {margin-left: 640px;}
     @include for-size(for-big-1) {margin-left: 680px;}
+    @include for-size(for-large-4) {margin-left: 740px;}
+    @include for-size(for-large-2) {margin-left: 800px;}
     padding-top: 120px;
     .services-title__colored{
         color: $orange_color;
@@ -47,6 +49,8 @@ $orange_color: #d5b23f;
     @include for-size(for-big-3) {margin-left: 172.5px;}
     @include for-size(for-big-2) {margin-left: 212.5px;}
     @include for-size(for-big-1) {margin-left: 252.5px;}
+    @include for-size(for-large-4) {margin-left: 302.5px;}
+    @include for-size(for-large-2) {margin-left: 352.5px;}
     .services-box__content{
         opacity: 0.25;
         transform: translateY(0%);

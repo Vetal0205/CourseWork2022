@@ -30,6 +30,8 @@ $orange_color: #d5b23f;
     @include for-size(for-big-3) {margin-left: 600px;}
     @include for-size(for-big-2) {margin-left: 640px;}
     @include for-size(for-big-1) {margin-left: 680px;}
+    @include for-size(for-large-4) {margin-left: 720px}
+    @include for-size(for-large-2) {margin-left: 760px}
     padding-top: 50px;
     font-size: 80px;
     .comments-title__colored{
@@ -46,6 +48,8 @@ $orange_color: #d5b23f;
     @include for-size(for-big-3) {margin-left: 102.5px; gap: 65px;}
     @include for-size(for-big-2) {margin-left: 122.5px; gap: 65px;}
     @include for-size(for-big-1) {margin-left: 172.5px; gap: 65px;}
+    @include for-size(for-large-4) {margin-left: 202.5px; gap: 65px;}
+    @include for-size(for-large-2) {margin-left: 252.5px; gap: 65px;}
     padding-top: 50px;
     .comments-box__content{
         padding: 52px 43px 43px 23px;

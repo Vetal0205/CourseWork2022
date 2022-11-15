@@ -69,6 +69,14 @@ $orange_color: #d5b23f;
         @media (min-width: 1700px) { @content; }
     } @else if $size == for-big-1  {
         @media (min-width: 1800px) { @content; }
+    } @else if $size == for-large-4  {
+        @media (min-width: 1900px) { @content; }
+    } @else if $size == for-large-3  {
+        @media (min-width: 1920px) { @content; }
+    } @else if $size == for-large-2  {
+        @media (min-width: 2000px) { @content; }
+    } @else if $size == for-large-1  {
+        @media (min-width: 2100px) { @content; }
     }
 }
 
