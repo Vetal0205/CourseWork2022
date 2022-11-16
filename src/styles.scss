@@ -41,9 +41,13 @@ $bg_color: #0b1d26;
 $orange_color: #d5b23f;
 
 @mixin for-size($size) {
-    @if $size == for-big-13   {
-        @media (max-width: 600px) { @content; }
-    } @else if $size == for-big-12  {
+    @if $size == for-big-15   {
+        @media (max-width: 500px) { @content; }
+    } @else if $size == for-big-14  {
+        @media (min-width: 520px) { @content; }
+    }@else if $size == for-big-13  {
+        @media (min-width: 550px) { @content; }
+    }@else if $size == for-big-12  {
         @media (min-width: 700px) { @content; }
     } @else if $size == for-big-11  {
         @media (min-width: 800px) { @content; }
@@ -77,21 +81,5 @@ $orange_color: #d5b23f;
         @media (min-width: 2000px) { @content; }
     } @else if $size == for-large-1  {
         @media (min-width: 2100px) { @content; }
-    }
-}
-
-@mixin for-height($height) {
-    @if $height == for-height-6   {
-        @media (max-height: 775px) { @content; }
-    } @else if $height == for-height-5  {
-        @media (min-height: 800px) { @content; }
-    } @else if $height == for-height-4  {
-        @media (min-height: 825px) { @content; }
-    } @else if $height == for-height-3  {
-        @media (min-height: 850px) { @content; }
-    } @else if $height == for-height-2 {
-        @media (min-height: 875px) { @content; }
-    } @else if $height == for-height-1  {
-        @media (min-height: 900px) { @content; }
     }
 }
