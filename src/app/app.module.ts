@@ -22,6 +22,7 @@ import { ButtonComponent } from './button/button.component';
 import { DraggableMTListsComponent } from './draggable-m-t-lists/draggable-m-t-lists.component';
 import { AddMissionFormComponent } from './add-mission-form/add-mission-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ButtonComponent,
     DraggableMTListsComponent,
     AddMissionFormComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
