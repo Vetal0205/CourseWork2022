@@ -48,9 +48,9 @@ $orange_color: #d5b23f;
         @include for-size(for-big-1) {width: 700px; margin-top: 50px;}
         p{
             margin-top: 50px;
-            @include for-size(for-big-5) {font-size: 20px;}
-            @include for-size(for-big-3) {font-size: 22px;}
-            @include for-size(for-big-1) {font-size: 24px;}
+            @include for-size(for-big-5) {font-size: 14px;}
+            @include for-size(for-big-3) {font-size: 16px;}
+            @include for-size(for-big-1) {font-size: 18px;}
         }
         .h1__colored, h1{
             text-transform: uppercase;

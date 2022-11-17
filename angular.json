@@ -31,7 +31,9 @@
               "src/styles.scss",
               "node_modules/aos/dist/aos.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/chart.js/dist/chart.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -109,6 +111,3 @@
     "analytics": false
   }
 }
-
-
-

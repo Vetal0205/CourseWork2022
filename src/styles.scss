@@ -82,4 +82,4 @@ $orange_color: #d5b23f;
     } @else if $size == for-large-1  {
         @media (min-width: 2100px) { @content; }
     }
-}
+}@import '~mdb-angular-ui-kit/assets/scss/mdb.scss';

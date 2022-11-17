@@ -24,6 +24,8 @@ import { AddMissionFormComponent } from './add-mission-form/add-mission-form.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapComponent } from './map/map.component';
 
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+
 
 @NgModule({
   declarations: [
@@ -52,6 +54,7 @@ import { MapComponent } from './map/map.component';
     HttpClientModule,
     FormsModule,
     DragDropModule,
+    MdbCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

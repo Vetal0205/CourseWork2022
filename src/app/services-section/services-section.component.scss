@@ -71,25 +71,16 @@ $orange_color: #d5b23f;
                 @include for-size(for-big-1) {padding-left: 150px;}
                 padding-top: 30px;
             }
-            .services-box__dots{
-                @include for-size(for-big-6) {padding-left: 10px;}
-                @include for-size(for-big-5) {padding-left: 10px;}
-                @include for-size(for-big-4) {padding-left: 50px;}
-                @include for-size(for-big-1) {padding-left: 50px;}
-                width: 350px;
-                height: auto;
-                padding-bottom: 10px;
-            }
             h1{
                 text-align: center;
                 padding-top: 30px;
                 padding-bottom: 30px;
                 color: $bg_color;
-                font-size: 30px;
+                font-size: 20px;
                 font-weight: 900;
             }
             .services-box__paragraph-box{
-                height: 50px;
+                height: 100px;
                 p{
                     padding-left: 10px;
                     padding-right: 10px;
@@ -99,12 +90,12 @@ $orange_color: #d5b23f;
                 }
             }
             a{
-                @include for-size(for-big-6) {padding-left: 80px;}
-                @include for-size(for-big-5) {padding-left: 80px;}
-                @include for-size(for-big-4) {padding-left: 110px;}
-                @include for-size(for-big-1) {padding-left: 110px;}
+                @include for-size(for-big-6) {padding-left: 70px;}
+                @include for-size(for-big-5) {padding-left: 70px;}
+                @include for-size(for-big-4) {padding-left: 90px;}
+                @include for-size(for-big-1) {padding-left: 90px;}
 
-                font-size: 40px;
+                font-size: 35px;
                 color: $bg_color;
                 letter-spacing: 1px;
 

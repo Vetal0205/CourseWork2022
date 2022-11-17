@@ -75,6 +75,9 @@ $orange_color: #d5b23f;
         height: 80px;
         padding: 15px 15px 15px 15px;
         text-align: center;
+        p{
+            font-size: 12px;
+        }
     }
 
     .btn {
@@ -86,7 +89,7 @@ $orange_color: #d5b23f;
         text-transform: capitalize;
         background-color: $header_color;
         font: {
-          size: 18px;
+          size: 13px;
         }
         margin-left: 50px;
         margin-top: 20px;

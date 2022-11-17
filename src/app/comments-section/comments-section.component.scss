@@ -52,7 +52,7 @@ $orange_color: #d5b23f;
     @include for-size(for-large-2) {margin-left: 252.5px; gap: 65px;}
     padding-top: 50px;
     .comments-box__content{
-        padding: 52px 43px 43px 23px;
+        padding: 23px 23px 23px 23px;
         @include for-size(for-big-6) {width: 380px; height: 400px;}
         @include for-size(for-big-5) {width: 400px; height: 400px;}
         @include for-size(for-big-4) {width: 400px; height: 400px;}
@@ -63,11 +63,11 @@ $orange_color: #d5b23f;
         border-radius: 12px;
         color: $bg_color;
         div{
-            height: 120px;
+            height: 160px;
         }
         p{
             text-align: center;
-            font-size: 22px;
+            font-size: 18px;
         }
         img{
             @include for-size(for-big-6) {padding-left: 110px;}
