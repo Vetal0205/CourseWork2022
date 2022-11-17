@@ -1,63 +1,95 @@
 <div class="filler-block"></div>
-<div class="Main">
-    <section class="main-parallax">
-        <div class="main-parallax__smoke"><img src="../../assets/black_smoke(1).png" alt=""></div>
-        <div class="main-parallax__human" [@enter_human]><img src="../../assets/PngItem_3749117.png" alt="" [@enter]></div>
-        <div class="main-parallax__container">
-            <div class="box-main">
-                <img [@enter] (mouseenter) ="mouseEnter_icon_1()" [@rubberBand]="main_icon_1" src="../../assets/icons8-medal-64.png" alt="">
-                <h3>НАШІ ДОСЯГНЕННЯ</h3>
-                <div class="box-main__p-container"><p>Ми є найбільшим логістичним відділом ЗСУ. Співпрацюємо з Головним командуванням. Маємо кращих логістичних спеціалістів.</p></div>
-                <a class="btn btn__main-section" href="#">Дізнатися Більше</a>
-            </div>
-            <div class="box-main">
-                <img [@enter] (mouseenter) ="mouseEnter_icon_2()" [@rubberBand]="main_icon_2" src="../../assets/icons8-tank-50.png" alt="">
-                <h3>ТЕХНІКА</h3>
-                <div class="box-main__p-container"><p>У нашій базі 80% від усього передового автопарку бронемашин, танків та РСЗО ЗСУ</p></div>
-                <a class="btn btn__main-section" href="#">Дізнатися Більше</a>
-            </div>
-            <div class="box-main">
-                <img [@enter] (mouseenter) ="mouseEnter_icon_3()" [@rubberBand]="main_icon_3" src="../../assets/icons8-fuel-gas-64.png" alt="">
-                <h3>РОЗРАХУНОК</h3>
-                <div class="box-main__p-container"><p>Проводимо розрахунок витрати палива для кожного автомобіля в залежності від його типу та складності маршруту</p></div>
-                <a class="btn btn__main-section" href="#">Дізнатися Більше</a>
-            </div>
-        </div>
-    </section>
-</div>
+
 
 <mdb-carousel [indicators]="true" [animation]="'slide'">
-    <mdb-carousel-item>
+  <mdb-carousel-item>
+    <div style="height: 1000px;">
+        <img
+          src="../../assets/Main_1.png"
+          class="d-block w-100"
+          alt="..."
+          style="position:absolute ; width:100%; height: auto;"
+        />
+        <div class="main-parallax__container">
+          <div class="box-main">
+              <img [@enter] (mouseenter) ="mouseEnter_icon_1()" [@rubberBand]="main_icon_1" src="../../assets/icons8-medal-64.png" alt="">
+              <h3>НАШІ ДОСЯГНЕННЯ</h3>
+              <div class="box-main__p-container"><p>Ми є найбільшим логістичним відділом ЗСУ. Співпрацюємо з Головним командуванням. Маємо кращих логістичних спеціалістів.</p></div>
+              <a class="btn btn__main-section" href="#">Дізнатися Більше</a>
+          </div>
+          <div class="box-main">
+              <img [@enter] (mouseenter) ="mouseEnter_icon_2()" [@rubberBand]="main_icon_2" src="../../assets/icons8-tank-50.png" alt="">
+              <h3>ТЕХНІКА</h3>
+              <div class="box-main__p-container"><p>У нашій базі 80% від усього передового автопарку бронемашин, танків та РСЗО ЗСУ</p></div>
+              <a class="btn btn__main-section" href="#">Дізнатися Більше</a>
+          </div>
+          <div class="box-main">
+              <img [@enter] (mouseenter) ="mouseEnter_icon_3()" [@rubberBand]="main_icon_3" src="../../assets/icons8-fuel-gas-64.png" alt="">
+              <h3>РОЗРАХУНОК</h3>
+              <div class="box-main__p-container"><p>Проводимо розрахунок витрати палива для кожного автомобіля в залежності від його типу та складності маршруту</p></div>
+              <a class="btn btn__main-section" href="#">Дізнатися Більше</a>
+          </div>
+      </div>
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div style="height: 1000px;">
       <img
-        src="../../assets/Car_1.jpg"
+        src="../../assets/Main_2.png"
         class="d-block w-100"
         alt="..."
+        style="position:absolute ; width:100%; height: auto;"
       />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </div>
-    </mdb-carousel-item>
-    <mdb-carousel-item>
+      <div class="main-parallax__container">
+        <div class="box-main">
+            <img [@enter] (mouseenter) ="mouseEnter_icon_1()" [@rubberBand]="main_icon_1" src="../../assets/icons8-medal-64.png" alt="">
+            <h3>НАШІ ДОСЯГНЕННЯ</h3>
+            <div class="box-main__p-container"><p>Ми є найбільшим логістичним відділом ЗСУ. Співпрацюємо з Головним командуванням. Маємо кращих логістичних спеціалістів.</p></div>
+            <a class="btn btn__main-section" href="#">Дізнатися Більше</a>
+        </div>
+        <div class="box-main">
+            <img [@enter] (mouseenter) ="mouseEnter_icon_2()" [@rubberBand]="main_icon_2" src="../../assets/icons8-tank-50.png" alt="">
+            <h3>ТЕХНІКА</h3>
+            <div class="box-main__p-container"><p>У нашій базі 80% від усього передового автопарку бронемашин, танків та РСЗО ЗСУ</p></div>
+            <a class="btn btn__main-section" href="#">Дізнатися Більше</a>
+        </div>
+        <div class="box-main">
+            <img [@enter] (mouseenter) ="mouseEnter_icon_3()" [@rubberBand]="main_icon_3" src="../../assets/icons8-fuel-gas-64.png" alt="">
+            <h3>РОЗРАХУНОК</h3>
+            <div class="box-main__p-container"><p>Проводимо розрахунок витрати палива для кожного автомобіля в залежності від його типу та складності маршруту</p></div>
+            <a class="btn btn__main-section" href="#">Дізнатися Більше</a>
+        </div>
+    </div>
+  </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div style="height: 1000px;">
       <img
-        src="../../assets/Car_2.jpg"
+        src="../../assets/Main_3.png"
         class="d-block w-100"
         alt="..."
+        style="position:absolute ; width:100%; height: auto;"
       />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </mdb-carousel-item>
-    <mdb-carousel-item>
-      <img
-        src="../../assets/Car_3.jpg"
-        class="d-block w-100"
-        alt="..."
-      />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div>
-    </mdb-carousel-item>
-  </mdb-carousel>
+      <div class="main-parallax__container">
+        <div class="box-main">
+            <img [@enter] (mouseenter) ="mouseEnter_icon_1()" [@rubberBand]="main_icon_1" src="../../assets/icons8-medal-64.png" alt="">
+            <h3>НАШІ ДОСЯГНЕННЯ</h3>
+            <div class="box-main__p-container"><p>Ми є найбільшим логістичним відділом ЗСУ. Співпрацюємо з Головним командуванням. Маємо кращих логістичних спеціалістів.</p></div>
+            <a class="btn btn__main-section" href="#">Дізнатися Більше</a>
+        </div>
+        <div class="box-main">
+            <img [@enter] (mouseenter) ="mouseEnter_icon_2()" [@rubberBand]="main_icon_2" src="../../assets/icons8-tank-50.png" alt="">
+            <h3>ТЕХНІКА</h3>
+            <div class="box-main__p-container"><p>У нашій базі 80% від усього передового автопарку бронемашин, танків та РСЗО ЗСУ</p></div>
+            <a class="btn btn__main-section" href="#">Дізнатися Більше</a>
+        </div>
+        <div class="box-main">
+            <img [@enter] (mouseenter) ="mouseEnter_icon_3()" [@rubberBand]="main_icon_3" src="../../assets/icons8-fuel-gas-64.png" alt="">
+            <h3>РОЗРАХУНОК</h3>
+            <div class="box-main__p-container"><p>Проводимо розрахунок витрати палива для кожного автомобіля в залежності від його типу та складності маршруту</p></div>
+            <a class="btn btn__main-section" href="#">Дізнатися Більше</a>
+        </div>
+    </div>
+  </div>
+  </mdb-carousel-item>
+</mdb-carousel>

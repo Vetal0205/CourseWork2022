@@ -39,6 +39,7 @@ $orange_color: #d5b23f;
     z-index: 7;
 }
 .main-parallax__container{
+    position: absolute;
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
