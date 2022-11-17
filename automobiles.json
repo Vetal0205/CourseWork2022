@@ -215,7 +215,7 @@
             "gun-caliber":"20мм",
             "gun-fire":"750 пострілів/хв",
             "fire-range":"до 2,3 км",
-            "image":"/assets/bmp-m80.jpg"
+            "image":"/assets/m80.jpg"
         },
         {
             "id": 14,
@@ -311,7 +311,7 @@
             "gun-caliber":"227 мм снаряди М30/31  ",
             "gun-fire":"6 пострілів/хв",
             "fire-range":"до 84 км",
-            "image":"/assets/Himars.jpg"
+            "image":"/assets/HIMARS.jpg"
         },
         {
             "id": 19,
