@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 # api keys
-environment.ts
+.env

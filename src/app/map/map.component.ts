@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DistanceService } from '../distance/distance.service';
 import { Loader } from '@googlemaps/js-api-loader';
 import { environment } from 'src/environments/environment';
+import { getLocaleDateFormat } from '@angular/common';
 
 @Component({
   selector: 'app-map',
@@ -16,51 +17,79 @@ export class MapComponent implements OnInit {
     this.initMap();
   }
 
-  initMap(): void{
+  initMap(): any{
     let loader = new Loader({
     apiKey: environment.GOOGLE_MAPS_API_KEY_FOR_JS_INIT,
     version: "weekly"
     });
-
-    let originLat: number | undefined = 50.447731;
-    let originLng: number | undefined = 30.542721;
-    let destinationLat: number | undefined = 49.993500;
-    let destinationLng: number | undefined = 36.230385;
 
     loader.load().then(() => {
       let map = new google.maps.Map(document.getElementById("map") as HTMLElement,{
         zoom: 6,
         center: {lat: 49.19547672777136, lng: 32.41458017684137}
       });
-      let markerOrigin = new google.maps.Marker(
-        {
-          title: "Початок",
-          map: map,
-          draggable: true,
-          animation: google.maps.Animation.DROP,
-          position: {lat: 50.447731, lng: 30.542721}
-        });
-      let markerDestination = new google.maps.Marker(
-        {
-          title: "Кінець",
-          map: map,
-          draggable: true,
-          animation: google.maps.Animation.DROP,
-          position: {lat: 49.993500, lng: 36.230385}
-        });
-        google.maps.event.addListener(markerOrigin, 'dragend', function() 
-        {
-            originLat = markerOrigin.getPosition()?.lat();
-            originLng = markerOrigin.getPosition()?.lng();
-            console.log(originLat, originLng);
-        });
-        google.maps.event.addListener(markerDestination, 'dragend', function() 
-        {
-            destinationLat = markerDestination.getPosition()?.lat();
-            destinationLng = markerDestination.getPosition()?.lng();
-            console.log(destinationLat, destinationLng);
-        });
-        //this.service.getDistance(originLat, originLng, destinationLat, destinationLng).subscribe((data) => {console.log(data)})
+      this.initMarkers(map);
     })
   };
+
+  initMarkers(map: google.maps.Map):void{
+
+    let origin = { lat: 50.447731, lng: 30.542721 };
+    let destination = {lat: 49.993500, lng: 36.230385};
+
+    let data;
+    let request = this.buildRequest(origin, destination);
+
+    let markerOrigin = new google.maps.Marker(
+      {
+        title: "Початок",
+        label: "П",
+        map: map,
+        draggable: true,
+        animation: google.maps.Animation.DROP,
+        position: origin
+      });
+    let markerDestination = new google.maps.Marker(
+      {
+        title: "Кінець",
+        label: "К",
+        map: map,
+        draggable: true,
+        animation: google.maps.Animation.DROP,
+        position: destination
+      });
+      google.maps.event.addListener(markerOrigin, 'dragend', () => 
+      {
+          origin.lat = markerOrigin.getPosition()?.lat()!;
+          origin.lng = markerOrigin.getPosition()?.lng()!;
+          //console.log(origin.lat, origin.lng);
+          request = this.buildRequest(origin, destination);
+          data = this.service.getDistance(request);
+          //console.log(data);
+      });
+      google.maps.event.addListener(markerDestination, 'dragend', () => 
+      {
+          destination.lat = markerDestination.getPosition()?.lat()!;
+          destination.lng = markerDestination.getPosition()?.lng()!;
+          //console.log(destination.lat, destination.lng);
+          request = this.buildRequest(origin, destination);
+          data = this.service.getDistance(request);
+          //console.log(data);
+      });
+  }
+
+  buildRequest(origin:any, destination:any):any{
+    let request = {
+      origins: [origin],
+      destinations: [destination],
+      travelMode: google.maps.TravelMode.DRIVING,
+      unitSystem: google.maps.UnitSystem.METRIC,
+      avoidHighways: false,
+      avoidTolls: false,
+    };
+    return request;
+  }
+
 }
+
+
