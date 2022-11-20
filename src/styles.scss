@@ -1,4 +1,3 @@
-@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
 *,
 *::before,
@@ -42,12 +41,14 @@ $bg_color: #0b1d26;
 $orange_color: #d5b23f;
 
 @mixin for-size($size) {
-    @if $size == for-big-15   {
+    @if $size == for-big-16   {
         @media (max-width: 500px) { @content; }
-    } @else if $size == for-big-14  {
+    } @else if $size == for-big-15 {
         @media (min-width: 520px) { @content; }
-    }@else if $size == for-big-13  {
+    }@else if $size == for-big-14  {
         @media (min-width: 550px) { @content; }
+    }@else if $size == for-big-13  {
+        @media (min-width: 600px) { @content; }
     }@else if $size == for-big-12  {
         @media (min-width: 700px) { @content; }
     } @else if $size == for-big-11  {
@@ -83,7 +84,7 @@ $orange_color: #d5b23f;
     } @else if $size == for-large-1  {
         @media (min-width: 2100px) { @content; }
     }
-}
+}@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
 
 
 
