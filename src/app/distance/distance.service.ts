@@ -5,13 +5,12 @@ import { IDistance } from 'src/app/interfaces/idistance'
 })
 export class DistanceService {
   result!: IDistance;
-  getDistance(request: google.maps.DistanceMatrixRequest): Promise<google.maps.DistanceMatrixResponse> {
-
-    const service = new google.maps.DistanceMatrixService();
-    return new Promise((resove, reject) => {
-      service.getDistanceMatrix(request, function (response: any, status: any) {
+  getRoute(request:google.maps.DirectionsRequest): Promise<google.maps.DirectionsResult> {
+    const service = new google.maps.DirectionsService();
+    return new Promise((resolve, reject) => {
+      service.route(request, function (response: any, status: any){
         if (status == 'OK') {
-          resove(response);
+          resolve(response);
         }
         else {
           reject(response);

@@ -11,7 +11,7 @@
     <img src="assets\placeholder.png" class="mission-form__placeholder">
     <div class="technic-price">
         <div class="technic-price__box">
-            <p *ngIf="totalFuel" (onChange)="outputUpdate()">Загальна відстань: {{distanceEl.distance_str}}</p>
+            <p *ngIf="totalFuel">Загальна відстань: {{distanceEl.distance}} км</p>
             <p *ngIf="totalFuel">Загальний обсяг топлива: {{totalFuel}} літрів</p>
             <p *ngIf="totalFuel">Ціна топлива: {{totalSum}} гривень (для ЗСУ за курсом {{this.fuelPrice}} грн за літр)</p>
         </div>

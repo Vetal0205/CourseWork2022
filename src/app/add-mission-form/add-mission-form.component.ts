@@ -56,7 +56,7 @@ export class AddMissionFormComponent implements OnInit {
       let str = t.fuel_consumption;
       amount = t.amount;
       if (this.distanceEl) {
-        sum = Math.round(sum + (Number(regex.exec(str)) * amount) * (this.distanceEl.distance_num / 1000) / 100);
+        sum = Math.round(sum + (Number(regex.exec(str)) * amount) * this.distanceEl.distance / 100);
       }
       else {
         sum = sum + (Number(regex.exec(str)) * amount)
