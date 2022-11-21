@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { DistanceService } from '../distance/distance.service';
 import { Loader } from '@googlemaps/js-api-loader';
 import { environment } from 'src/environments/environment';
-import { getLocaleDateFormat } from '@angular/common';
 
 @Component({
   selector: 'app-map',
@@ -37,7 +36,7 @@ export class MapComponent implements OnInit {
     let origin = { lat: 50.447731, lng: 30.542721 };
     let destination = {lat: 49.993500, lng: 36.230385};
 
-    let data;
+    let data: any;
     let request = this.buildRequest(origin, destination);
 
     let markerOrigin = new google.maps.Marker(
@@ -76,6 +75,8 @@ export class MapComponent implements OnInit {
           data = this.service.getDistance(request);
           //console.log(data);
       });
+      request = this.buildRequest(origin, destination);
+      data = this.service.getDistance(request);
   }
 
   buildRequest(origin:any, destination:any):any{
@@ -89,7 +90,7 @@ export class MapComponent implements OnInit {
     };
     return request;
   }
-
+  
 }
 
 

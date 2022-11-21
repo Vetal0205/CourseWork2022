@@ -17,9 +17,11 @@ export class DistanceService {
 
     loader.load().then(() => {
       const service = new google.maps.DistanceMatrixService();
-      service.getDistanceMatrix(request, function(response: any, status: any){
-        console.log(response);
-      })
+      service.getDistanceMatrix(request, this.callback)
   })
+  }
+
+  callback(response: any, status:any):any{
+    console.log(response);
   }
 }
