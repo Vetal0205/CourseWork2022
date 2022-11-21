@@ -11,7 +11,12 @@ $orange_color: #d5b23f;
     top: -110px;
     margin: 0;
     position: relative;
-    height: 1300px;
+    @include for-size(for-big-15) {height: 3350px;}
+    @include for-size(for-big-12) {height: 3350px;}
+    @include for-size(for-big-11) {height: 1800px;}
+    @include for-size(for-big-7) {height: 1800px;}
+    @include for-size(for-big-6) {height: 1300px;}
+    @include for-size(for-big-1) {height: 1300px;}
     background: url('../../assets/content_background.png') top / cover no-repeat;
     z-index: 2;
 }
@@ -25,10 +30,16 @@ $orange_color: #d5b23f;
     text-transform: uppercase;
     color: $bg_color;
     width: 500px;
-    @include for-size(for-big-6) {margin-left: 450px;}
-    @include for-size(for-big-5) {margin-left: 480px;}
-    @include for-size(for-big-4) {margin-left: 540px;}
-    @include for-size(for-laptops) {margin-left: 540px;}
+    @include for-size(for-big-15) {margin-left: 32%;}
+    @include for-size(for-big-13) {margin-left: 32%;}
+    @include for-size(for-big-12) {margin-left: 33%;}
+    @include for-size(for-big-11) {margin-left: 33%;}
+    @include for-size(for-big-10) {margin-left: 34%;}
+    @include for-size(for-big-9) {margin-left: 34%;}
+    @include for-size(for-big-8) {margin-left: 35%;}
+    @include for-size(for-big-7) {margin-left: 36%;}
+    @include for-size(for-big-6) {margin-left: 38%;}
+    @include for-size(for-laptops) {margin-left: 38%;}
     @include for-size(for-big-3) {margin-left: 600px;}
     @include for-size(for-big-2) {margin-left: 640px;}
     @include for-size(for-big-1) {margin-left: 680px;}
@@ -41,22 +52,37 @@ $orange_color: #d5b23f;
 }
 .services-box{
     margin-top: 70px;
-    width: 1545px;
-    @include for-size(for-big-6) {margin-left: 92.5px;}
-    @include for-size(for-big-5) {margin-left: 112.5px;}
-    @include for-size(for-big-4) {margin-left: 132.5px;}
-    @include for-size(for-laptops) {margin-left: 102.5px;}
+    @include for-size(for-big-15) {margin-left: 6%; width: 645px;}
+    @include for-size(for-big-14) {margin-left: 12%; width: 645px;}
+    @include for-size(for-big-13) {margin-left: 18%; width: 645px;}
+    @include for-size(for-big-12) {margin-left: 22%; width: 645px;}
+    @include for-size(for-big-11) {margin-left: 3%; width: 1045px;}
+    @include for-size(for-big-10) {margin-left: 7%; width: 1045px;}
+    @include for-size(for-big-9) {margin-left: 8%; width: 1045px;}
+    @include for-size(for-big-8) {margin-left: 5%; width: 1045px;}
+    @include for-size(for-big-7) {margin-left: 7%; width: 1545px;}
+    @include for-size(for-big-6) {margin-left: 6%;}
+    @include for-size(for-big-5) {margin-left: 10%;}
+    @include for-size(for-big-4) {margin-left: 10%;}
+    @include for-size(for-laptops) {margin-left: 7%;}
     @include for-size(for-big-3) {margin-left: 172.5px;}
     @include for-size(for-big-2) {margin-left: 212.5px;}
     @include for-size(for-big-1) {margin-left: 252.5px;}
     @include for-size(for-large-4) {margin-left: 302.5px;}
-    @include for-size(for-large-2) {margin-left: 352.5px;}
+    @include for-size(for-large-2) {margin-left: 352.5px; width: 1545px;}
     .services-box__content{
         display: flex;
         flex-wrap: wrap;
         gap: 65px;
         .services-box__block{
             background-color: $font_white;
+            @include for-size(for-big-15) {width: 450px; height: 400px;}
+            @include for-size(for-big-12) {width: 450px; height: 400px;}
+            @include for-size(for-big-11) {width: 350px; height: 400px;}
+            @include for-size(for-big-10) {width: 350px; height: 400px;}
+            @include for-size(for-big-9) {width: 400px; height: 400px;}
+            @include for-size(for-big-8) {width: 450px; height: 400px;}
+            @include for-size(for-big-7) {width: 500px; height: 400px;}
             @include for-size(for-big-6) {width: 350px; height: 400px;}
             @include for-size(for-big-5) {width: 350px; height: 400px;}
             @include for-size(for-big-4) {width: 400px; height: 400px;}
@@ -65,6 +91,13 @@ $orange_color: #d5b23f;
             box-shadow: rgba(0, 0, 0, 0.5) 0px 15px 15px 0px;
             margin-bottom: 65px;
             .services-box__icon{
+                @include for-size(for-big-15) {padding-left: 190px;}
+                @include for-size(for-big-12) {padding-left: 190px;}
+                @include for-size(for-big-11) {padding-left: 130px;}
+                @include for-size(for-big-10) {padding-left: 130px;}
+                @include for-size(for-big-9) {padding-left: 150px;}
+                @include for-size(for-big-8) {padding-left: 190px;}
+                @include for-size(for-big-7) {padding-left: 205px;}
                 @include for-size(for-big-6) {padding-left: 130px;}
                 @include for-size(for-big-5) {padding-left: 130px;}
                 @include for-size(for-big-4) {padding-left: 150px;}
@@ -90,6 +123,13 @@ $orange_color: #d5b23f;
                 }
             }
             a{
+                @include for-size(for-big-15) {padding-left: 130px;}
+                @include for-size(for-big-12) {padding-left: 130px;}
+                @include for-size(for-big-11) {padding-left: 70px;}
+                @include for-size(for-big-10) {padding-left: 70px;}
+                @include for-size(for-big-9) {padding-left: 90px;}
+                @include for-size(for-big-8) {padding-left: 130px;}
+                @include for-size(for-big-7) {padding-left: 140px;}
                 @include for-size(for-big-6) {padding-left: 70px;}
                 @include for-size(for-big-5) {padding-left: 70px;}
                 @include for-size(for-big-4) {padding-left: 90px;}

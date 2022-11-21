@@ -104,7 +104,7 @@ export class MapComponent implements OnInit {
     };
     return request;
   }
-
+  
 }
 
 
