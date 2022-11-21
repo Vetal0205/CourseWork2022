@@ -1,9 +1,7 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewChild, ElementRef } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { IMission } from '../interfaces/i-mission';
-import { FormControl, FormGroup, FormArray, Validators } from '@angular/forms';
-import { FormBuilder } from '@angular/forms';
-import { elementAt } from 'rxjs';
 import { ITechForMission } from '../interfaces/itech-for-mission';
+import { IDistance } from '../interfaces/idistance';
 
 @Component({
   selector: 'app-add-mission-form',
@@ -14,6 +12,8 @@ export class AddMissionFormComponent implements OnInit {
 
   @Output() onAddMission: EventEmitter<IMission> = new EventEmitter();
   @Input() techForMission!: ITechForMission[];
+  @Input() distanceEl!: IDistance;
+  fuelPrice: number = 30;
   regexfuel = new RegExp('[0-9]+');
 
   lengthCounter: number = 0;
@@ -47,7 +47,7 @@ export class AddMissionFormComponent implements OnInit {
   }
   outputUpdate() {
     this.totalFuel = this.fuelsum(this.techForMission, this.regexfuel);
-    this.totalSum = this.totalFuel * 30;
+    this.totalSum = Math.round(this.totalFuel * this.fuelPrice);
   }
   fuelsum(tech: ITechForMission[], regex: RegExp): number {
     let sum: number = 0
@@ -55,7 +55,12 @@ export class AddMissionFormComponent implements OnInit {
     tech.forEach((t) =>{
       let str = t.fuel_consumption;
       amount = t.amount;
-      sum = sum + Number(regex.exec(str)) * amount;
+      if (this.distanceEl) {
+        sum = Math.round(sum + (Number(regex.exec(str)) * amount) * (this.distanceEl.distance_num / 1000) / 100);
+      }
+      else {
+        sum = sum + (Number(regex.exec(str)) * amount)
+      }
     });
     return sum;
   }
