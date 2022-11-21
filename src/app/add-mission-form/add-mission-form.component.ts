@@ -27,6 +27,11 @@ export class AddMissionFormComponent implements OnInit {
   ngOnInit(): void {
     console.log("init");
   }
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['distanceEl'].currentValue != changes['distanceEl'].previousValue) {
+      this.outputUpdate();
+    }
+  }
   ngDoCheck() {
     if (this.techForMission.length == 0) {
       this.lengthCounter = 0;
@@ -52,7 +57,7 @@ export class AddMissionFormComponent implements OnInit {
   fuelsum(tech: ITechForMission[], regex: RegExp): number {
     let sum: number = 0
     let amount: number;
-    tech.forEach((t) =>{
+    tech.forEach((t) => {
       let str = t.fuel_consumption;
       amount = t.amount;
       if (this.distanceEl) {
