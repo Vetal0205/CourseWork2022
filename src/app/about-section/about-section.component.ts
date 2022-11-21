@@ -15,7 +15,10 @@ export class AboutSectionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    Aos.init();
+    Aos.init({
+      startEvent: 'load',
+      once: false
+    });
   }
 
 }
