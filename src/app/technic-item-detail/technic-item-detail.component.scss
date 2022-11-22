@@ -6,6 +6,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 100px;
+    background: url('../../assets/content_background.png') top / cover no-repeat;
     .technic-item__detail-box{
         h2{
             font-size: 30px;

@@ -2,8 +2,11 @@
     <h1>Головна | Наряди</h1>
     <h2>Наряди</h2>
 </div>
-<app-map (onGetDistance)="onDistanceGet($event)"></app-map>
+
 <section class="mission-block">
+    <div class="map-box">
+        <app-map (onGetDistance)="onDistanceGet($event)"></app-map>
+    </div>
     <div class="mission-container">
         <div cdkDropList #missionList="cdkDropList" [cdkDropListData]="technicForMissionList"
         [cdkDropListConnectedTo]="[technicList]" class="technic-list" (cdkDropListDropped)="drop($event)">
@@ -14,7 +17,7 @@
         <div cdkDropList #technicList="cdkDropList" [cdkDropListData]="allTechnicList" class="technic-list"
             (cdkDropListDropped)="drop($event)" [cdkDropListConnectedTo]="[missionList]">
             <div class="technic-box" *ngFor="let tech of allTechnicList">
-                <img src="{{tech.image}}" alt="{{tech.name}}" cdkDrag>
+                <div class="technic-box__item" [ngStyle]="{'background-image': 'url(' +tech.image+ ')', 'background-size':'cover'}" cdkDrag></div>
             </div>
         </div>
     </div>

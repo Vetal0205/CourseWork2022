@@ -7,15 +7,14 @@
         <input type="number" name="amount" [(ngModel)]="tech.amount" (change)="outputUpdate()" id="{{tech.name}}_amount" min="1" value="tech.amount"
             placeholder="Введіть Кількість"> 
     </div>
-
     <img src="assets\placeholder.png" class="mission-form__placeholder">
+
     <div class="technic-price">
         <div class="technic-price__box">
-            <p *ngIf="totalFuel">Загальна відстань: {{distanceEl.distance}} км</p>
-            <p *ngIf="totalFuel">Загальний обсяг топлива: {{totalFuel}} літрів</p>
-            <p *ngIf="totalFuel">Ціна топлива: {{totalSum}} гривень (для ЗСУ за курсом {{this.fuelPrice}} грн за літр)</p>
+            <p>Загальна відстань: {{distanceEl.distance}} км</p>
+            <p>Загальний обсяг топлива: {{totalFuel}} літрів</p>
+            <p>Ціна топлива: {{totalSum}} гривень (для ЗСУ за курсом {{this.fuelPrice}} грн за літр)</p>
         </div>
         <input type="submit" name="submit" value="Відправити Наряд" class="btn btn-submit">
     </div>
 </form>
-    
