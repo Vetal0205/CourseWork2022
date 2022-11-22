@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -54,6 +57,8 @@ import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
     HttpClientModule,
     FormsModule,
     DragDropModule,
+    MatTableModule,
+    MatPaginatorModule,
     MdbCarouselModule,
   ],
   providers: [],
