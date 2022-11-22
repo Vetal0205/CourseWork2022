@@ -21,16 +21,26 @@ footer{
     width: 100%;
 }
 .footer-image__content{
-    width: 1000px;
+    
     height: 500px;
+    @include for-size(for-big-15) {width: 520px; padding-left: 40px;}
+    @include for-size(for-big-14) {width: 520px; padding-left: 40px;}
+    @include for-size(for-big-13) {width: 620px; padding-left: 40px;}
+    @include for-size(for-big-12) {width: 700px; padding-left: 100px;}
+    @include for-size(for-big-11) {width: 800px; padding-left: 100px;}
+    @include for-size(for-big-10) {width: 800px; padding-left: 100px;}
+    @include for-size(for-big-9) {width: 1000px; padding-left: 200px;}
+    @include for-size(for-large-1) {width: 1000px; padding-left: 200px;}
     padding-top: 80px;
-    padding-left: 200px; padding-right: 40px;
+    padding-right: 40px;
     .footer-title{   
         font-size: 38px;  
     }
     p{
         padding-top: 10px;
-        @include for-size(for-big-6) {font-size: 15px;}
+        @include for-size(for-big-15) {font-size: 13px;}
+        @include for-size(for-big-13) {font-size: 13px;}
+        @include for-size(for-big-12) {font-size: 15px;}
         @include for-size(for-big-1) {font-size: 15px;}
         @include for-size(for-large-4) {font-size: 15px;}
         @include for-size(for-large-2) {font-size: 15px;}
