@@ -1,18 +1,14 @@
 @import '../../styles.scss';
 
-img{
-    width: 300px;
-    height: 220px;
-    padding-bottom: 20px;
-}
 .add-form{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    height: 315px;
+    width: 1500px;
+    width: auto;
     .technic-price{
-        display: flex;
-        flex-wrap: wrap;
-        width: 600px;
+        width: 300px;
+        height: 498px;
         input{
             background-color: $btn_color;
             width: 150px;
@@ -23,44 +19,28 @@ img{
             margin-left: 75px;
             color: $font_white;
             cursor: pointer;
+            font-size: 10px;
         }
         .technic-price__box{
             p{
-                font-size: 25px;
+                font-size: 20px;
                 padding-bottom: 20px;
             }
         }
     }
     .technic-box{
+        width: 120px;
         img{
-            @include for-size(for-big-6) {width: 250px;height: 210px;}
-            @include for-size(for-big-5) {width: 250px;height: 210px;}
-            @include for-size(for-big-4) {width: 250px;height: 210px;}
-            @include for-size(for-laptops) {width: 250px;height: 210px;}
-            @include for-size(for-big-3) {width: 250px;height: 210px;}
-            @include for-size(for-big-2) {width: 250px;height: 210px;}
-            @include for-size(for-big-1) {width: 250px;height: 210px;}
-            
-        }
-        input{
-            border: 2px solid $header_color;
-            border-radius: 10px;
-            height: 30px;
-            padding-left: 10px;
+            width: 95px; height: 80px;
         }
         label{
-            width: 300px;
-            text-align: center;
-            font-size: 25px;
+            font-size: 12px;
+        }
+        input{
+            width: 50px;
         }
     }
-    .mission-form__placeholder{
-        @include for-size(for-big-6) {width: 250px;height: 210px;}
-        @include for-size(for-big-5) {width: 250px;height: 210px;}
-        @include for-size(for-big-4) {width: 250px;height: 210px;}
-        @include for-size(for-laptops) {width: 250px;height: 210px;}
-        @include for-size(for-big-3) {width: 250px;height: 210px;}
-        @include for-size(for-big-2) {width: 250px;height: 210px;}
-        @include for-size(for-big-1) {width: 250px;height: 210px;}        
+    .mission-form__placeholder{    
+        width: 95px; height: 80px;   
     }
 }
