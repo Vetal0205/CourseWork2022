@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { TechnicService } from '../services/technic.service';
 import { ITechForMission } from '../interfaces/itech-for-mission';
+import { IDistance } from '../interfaces/idistance';
 
 @Component({
   selector: 'app-draggable-m-t-lists',
@@ -9,12 +10,14 @@ import { ITechForMission } from '../interfaces/itech-for-mission';
   styleUrls: ['./draggable-m-t-lists.component.scss']
 })
 export class DraggableMTListsComponent implements OnInit {
-
   constructor(private service: TechnicService) { }
   technicForMissionList: ITechForMission[] = [];
   allTechnicList: ITechForMission[] = [];
 
-
+  distanceEl!: IDistance;
+  onDistanceGet(distance:IDistance){
+    this.distanceEl = distance
+  }
   ngOnInit(): void {
     this.getTechnic();
   }

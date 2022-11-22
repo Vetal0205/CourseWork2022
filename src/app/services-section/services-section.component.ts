@@ -62,7 +62,10 @@ export class ServicesSectionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    Aos.init();
+  Aos.init({
+    startEvent: 'load',
+    once: false
+  });
   }
 
 }

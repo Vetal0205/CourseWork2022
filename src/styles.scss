@@ -77,9 +77,9 @@ $orange_color: #d5b23f;
 
 @mixin for-size($size) {
     @if $size == for-big-16   {
-        @media (max-width: 500px) { @content; }
+        @media (max-width: 498px) { @content; }
     } @else if $size == for-big-15 {
-        @media (min-width: 520px) { @content; }
+        @media (min-width: 499px) { @content; }
     }@else if $size == for-big-14  {
         @media (min-width: 550px) { @content; }
     }@else if $size == for-big-13  {

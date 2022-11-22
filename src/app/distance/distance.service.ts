@@ -1,27 +1,21 @@
-//import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Loader } from '@googlemaps/js-api-loader';
-import { environment } from 'src/environments/environment';
-
+import { IDistance } from 'src/app/interfaces/idistance'
 @Injectable({
   providedIn: 'root'
 })
 export class DistanceService {
-
-  getDistance(request: any):any{
-    let loader = new Loader({
-      apiKey: environment.GOOGLE_MAPS_API_KEY_FOR_JS_INIT,
-      version: "weekly"
-    });
-
-    loader.load().then(() => {
-      const service = new google.maps.DistanceMatrixService();
-      service.getDistanceMatrix(request, this.callback)
-  })
-  }
-
-  callback(response: any, status:any):any{
-    console.log(response);
+  result!: IDistance;
+  getRoute(request:google.maps.DirectionsRequest): Promise<google.maps.DirectionsResult> {
+    const service = new google.maps.DirectionsService();
+    return new Promise((resolve, reject) => {
+      service.route(request, function (response: any, status: any){
+        if (status == 'OK') {
+          resolve(response);
+        }
+        else {
+          reject(response);
+        }
+      })
+    })
   }
 }

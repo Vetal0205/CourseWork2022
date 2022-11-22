@@ -2,11 +2,12 @@
     <h1>Головна | Наряди</h1>
     <h2>Наряди</h2>
 </div>
+<app-map (onGetDistance)="onDistanceGet($event)"></app-map>
 <section class="mission-block">
     <div class="mission-container">
         <div cdkDropList #missionList="cdkDropList" [cdkDropListData]="technicForMissionList"
         [cdkDropListConnectedTo]="[technicList]" class="technic-list" (cdkDropListDropped)="drop($event)">
-        <app-add-mission-form [techForMission]="technicForMissionList"></app-add-mission-form>
+        <app-add-mission-form [distanceEl]="distanceEl" [techForMission]="technicForMissionList"></app-add-mission-form>
         </div>
     </div>
     <div class="technic-container">
