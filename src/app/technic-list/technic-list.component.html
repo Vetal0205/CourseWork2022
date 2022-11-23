@@ -1,7 +1,13 @@
 <div class="technic-block">
     <div class="container">
         <app-technic-item *ngFor="let tech of allTechnicList" [tech]="tech"></app-technic-item>
+        <mat-paginator 
+              [pageLength]="21"
+              [pageSize]="9"
+              aria-label="container">
+        </mat-paginator>
     </div>
+    
     <div class="filters">
         <h1>Категорії</h1>
         <app-button *ngFor="let filter of filterList" [filterIn]='filter' (filterOut)="listFilter(filter)"></app-button>
