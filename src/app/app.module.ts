@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import {DragDropModule} from '@angular/cdk/drag-drop';
-import { MatTableModule} from '@angular/material/table';
-import {MatPaginatorModule} from '@angular/material/paginator';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,7 +18,6 @@ import { MissionPageComponent } from './mission-page/mission-page.component';
 import { TechnicListComponent } from './technic-list/technic-list.component';
 import { TechnicItemComponent } from './technic-item/technic-item.component';
 import { TechnicItemDetailComponent } from './technic-item-detail/technic-item-detail.component';
-import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './button/button.component';
 import { DraggableMTListsComponent } from './draggable-m-t-lists/draggable-m-t-lists.component';
 import { AddMissionFormComponent } from './add-mission-form/add-mission-form.component';
@@ -55,11 +52,9 @@ import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule,
     DragDropModule,
-    MatTableModule,
-    MatPaginatorModule,
     MdbCarouselModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
