@@ -12,7 +12,7 @@ export class AddMissionFormComponent implements OnInit {
 
   @Output() onAddMission: EventEmitter<IMission> = new EventEmitter();
   @Input() techForMission!: ITechForMission[];
-  @Input() distanceEl!: IDistance;
+  distanceEl!: IDistance;
   fuelPrice: number = 30;
   regexfuel = new RegExp('[0-9]+');
 
@@ -24,15 +24,23 @@ export class AddMissionFormComponent implements OnInit {
 
   constructor() { }
 
+  onDistanceGet(distance:IDistance){
+    this.distanceEl = distance
+  }
   ngOnInit(): void {
     console.log("init");
   }
   ngOnChanges(changes: SimpleChanges) {
-    if (changes['distanceEl'].currentValue != changes['distanceEl'].previousValue) {
+    if (changes['distanceEl'].currentValue) {
+      if (changes['distanceEl'].currentValue!= changes['distanceEl'].previousValue){
+        this.outputUpdate();
+      }
+    }
+    if (changes['techForMission'].currentValue != changes['techForMission'].previousValue) {
       this.outputUpdate();
     }
   }
-  ngDoCheck() {
+  ngDoCheck(changes: SimpleChanges) {
     if (this.techForMission.length == 0) {
       this.lengthCounter = 0;
       this.totalSum, this.totalFuel = 0;
@@ -70,15 +78,18 @@ export class AddMissionFormComponent implements OnInit {
     return sum;
   }
   onSubmit() {
-    if (!this.newMission) {
-      alert("Заповніть всі поля, та виберіть хоча б один вид техніки");
+    try {
+      this.newMission = { 
+        route:`${this.distanceEl.from} - ${this.distanceEl.from}`,
+        fuel: this.totalFuel,
+        price:this.totalSum,
+        technique:this.techForMission,
+        distance:this.distanceEl.distance
+       }
+    } catch (error) {
+      alert("Виберіть техніку на виїзд наряду, також виберіть відправну та кінцеві точки поїздки на карті");
       return;
     }
     this.onAddMission.emit(this.newMission);
-    this.newMission.id = -1;
-    this.newMission.fuel = 0;
-    this.newMission.price = 0;
-    this.newMission.route = "";
-    this.newMission.technique = [];
   }
 }

@@ -3,6 +3,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 import { TechnicService } from '../services/technic.service';
 import { ITechForMission } from '../interfaces/itech-for-mission';
 import { IDistance } from '../interfaces/idistance';
+import { IMission } from '../interfaces/i-mission';
 
 @Component({
   selector: 'app-draggable-m-t-lists',
@@ -14,10 +15,7 @@ export class DraggableMTListsComponent implements OnInit {
   technicForMissionList: ITechForMission[] = [];
   allTechnicList: ITechForMission[] = [];
 
-  distanceEl!: IDistance;
-  onDistanceGet(distance:IDistance){
-    this.distanceEl = distance
-  }
+  
   ngOnInit(): void {
     this.getTechnic();
   }
@@ -33,7 +31,10 @@ export class DraggableMTListsComponent implements OnInit {
       });
     });
   }
-
+  addMission(mission: IMission){
+    // console.log(mission);
+    this.service.addMission(mission).subscribe((res) =>{console.log(res)})
+  }
   drop(event: CdkDragDrop<ITechForMission[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);

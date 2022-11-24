@@ -1,10 +1,10 @@
-import { IAuto } from "./i-auto";
-
+import { ITechForMission } from "./itech-for-mission";
 export interface IMission {
     id?:number;
     route:string;
     fuel:number;
     price:number;
     distance:number;
-    technique:IAuto[];
+    duration?:string;
+    technique:ITechForMission[];
 }

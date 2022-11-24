@@ -1,16 +1,9 @@
+<div class="map-box">
+    <app-map (onGetDistance)="onDistanceGet($event)"></app-map>
+</div>
 <form #missionForm="ngForm"(ngSubmit)="onSubmit()" class="add-form">
-    <div class="technic-box" *ngFor="let tech of techForMission">
-        <img src="{{tech.image}}" alt="{{tech.name}}" cdkDrag>
-        <br>
-        <label for="amount">Кількість Техніки</label>
-        <br>
-        <input type="number" name="amount" [(ngModel)]="tech.amount" (change)="outputUpdate()" id="{{tech.name}}_amount" min="1" value="tech.amount"
-            placeholder="Введіть Кількість"> 
-    </div>
-    <img src="assets\placeholder.png" class="mission-form__placeholder">
-
     <div class="technic-price">
-        <div class="technic-price__box">
+        <div *ngIf="totalFuel" class="technic-price__box">
             <p>Загальна відстань: {{distanceEl.distance}} км</p>
             <p>Загальний обсяг топлива: {{totalFuel}} літрів</p>
             <p>Ціна топлива: {{totalSum}} гривень (для ЗСУ за курсом {{this.fuelPrice}} грн за літр)</p>

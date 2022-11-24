@@ -32,8 +32,9 @@ export class TechnicService {
     const url = `${this.apiurl}/automobiles/${id}`;
     return this.http.get<IAuto>(url);
   }
-  addMission(mission: IMission): Observable<Task> {
-    return this.http.post<Task>(this.apiurl, mission, httpOptions);
+  addMission(mission: IMission): Observable<IMission> {
+    const url = `${this.apiurl}/missions`;
+    return this.http.post<IMission>(url, mission, httpOptions);
   }
   deleteMission(mission: IMission): Observable<Task> {
     const url = `${this.apiurl}/${mission.id}`

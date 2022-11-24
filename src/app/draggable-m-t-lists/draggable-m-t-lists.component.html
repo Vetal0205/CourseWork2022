@@ -4,13 +4,19 @@
 </div>
 
 <section class="mission-block">
-    <div class="map-box">
-        <app-map (onGetDistance)="onDistanceGet($event)"></app-map>
-    </div>
+    
+    <app-add-mission-form  [techForMission]="technicForMissionList" (onAddMission)="addMission($event)"></app-add-mission-form>
     <div class="mission-container">
         <div cdkDropList #missionList="cdkDropList" [cdkDropListData]="technicForMissionList"
         [cdkDropListConnectedTo]="[technicList]" class="technic-list" (cdkDropListDropped)="drop($event)">
-        <app-add-mission-form [distanceEl]="distanceEl" [techForMission]="technicForMissionList"></app-add-mission-form>
+        <div class="technic-box" *ngFor="let tech of technicForMissionList">
+            <img src="{{tech.image}}" alt="{{tech.name}}" cdkDrag>
+            <label for="amount">Кількість Техніки</label>
+            <input type="number" name="amount" [(ngModel)]="tech.amount" id="{{tech.name}}_amount" min="1" value="tech.amount"
+                placeholder="Введіть Кількість"> 
+        </div>
+        <!-- (change)="outputUpdate() -->
+        <img src="assets\placeholder.png" class="mission-form__placeholder">
         </div>
     </div>
     <div class="technic-container">

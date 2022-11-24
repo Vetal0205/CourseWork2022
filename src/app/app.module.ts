@@ -18,6 +18,7 @@ import { MissionPageComponent } from './mission-page/mission-page.component';
 import { TechnicListComponent } from './technic-list/technic-list.component';
 import { TechnicItemComponent } from './technic-item/technic-item.component';
 import { TechnicItemDetailComponent } from './technic-item-detail/technic-item-detail.component';
+import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './button/button.component';
 import { DraggableMTListsComponent } from './draggable-m-t-lists/draggable-m-t-lists.component';
 import { AddMissionFormComponent } from './add-mission-form/add-mission-form.component';
@@ -52,6 +53,7 @@ import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
     DragDropModule,
     MdbCarouselModule,
     NgxPaginationModule,
