@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { TechnicService } from '../services/technic.service';
 import { ITechForMission } from '../interfaces/itech-for-mission';
-import { IDistance } from '../interfaces/idistance';
 import { IMission } from '../interfaces/i-mission';
 
 @Component({
@@ -15,7 +14,35 @@ export class DraggableMTListsComponent implements OnInit {
   technicForMissionList: ITechForMission[] = [];
   allTechnicList: ITechForMission[] = [];
 
-  
+  pageMission = 1;
+  pageAlltech = 1;
+  pageSizeA = 6;
+  pageSizeM = 12;
+  pageSizes = [6, 9, 12];
+  pageAllListLength!: number;
+  pageMissionListLength: number = this.technicForMissionList.length;
+
+  handlePageChange(event: number, checker: string): void {
+    if (checker == "M"){
+      this.pageMission = event;
+    }
+    if (checker == "A"){
+      this.pageAlltech = event;
+    }
+  }
+
+  handlePageSizeChange(event: any, checker: string): void {
+    if (checker == "M"){
+      this.pageMission = event;
+      this.pageSizeM = event.target.value;
+      this.pageMission = 1;
+    }
+    if (checker == "A"){
+      this.pageAlltech = event;
+      this.pageSizeA = event.target.value;
+      this.pageAlltech = 1;
+    }
+  }
   ngOnInit(): void {
     this.getTechnic();
   }
@@ -29,11 +56,12 @@ export class DraggableMTListsComponent implements OnInit {
         }
         this.allTechnicList.push(el);
       });
+      this.pageAllListLength = this.allTechnicList.length;
+      console.log(this.pageAllListLength);
     });
   }
-  addMission(mission: IMission){
-    // console.log(mission);
-    this.service.addMission(mission).subscribe((res) =>{console.log(res)})
+  addMission(mission: IMission) {
+    this.service.addMission(mission).subscribe((res) => { console.log(res) })
   }
   drop(event: CdkDragDrop<ITechForMission[]>) {
     if (event.previousContainer === event.container) {
@@ -46,5 +74,7 @@ export class DraggableMTListsComponent implements OnInit {
         event.currentIndex,
       );
     }
+    this.pageAllListLength = this.allTechnicList.length;
+    this.pageMissionListLength= this.technicForMissionList.length;
   }
 }

@@ -26,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapComponent } from './map/map.component';
 
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { DraggableMTItemComponent } from './draggable-m-t-item/draggable-m-t-item.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
     DraggableMTListsComponent,
     AddMissionFormComponent,
     MapComponent,
+    DraggableMTItemComponent,
   ],
   imports: [
     BrowserModule,

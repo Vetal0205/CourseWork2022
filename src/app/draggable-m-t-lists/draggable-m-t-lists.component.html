@@ -4,27 +4,49 @@
 </div>
 
 <section class="mission-block">
-    
-    <app-add-mission-form  [techForMission]="technicForMissionList" (onAddMission)="addMission($event)"></app-add-mission-form>
+
+    <app-add-mission-form [techForMission]="technicForMissionList" (onAddMission)="addMission($event)">
+    </app-add-mission-form>
     <div class="mission-container">
         <div cdkDropList #missionList="cdkDropList" [cdkDropListData]="technicForMissionList"
-        [cdkDropListConnectedTo]="[technicList]" class="technic-list" (cdkDropListDropped)="drop($event)">
-        <div class="technic-box" *ngFor="let tech of technicForMissionList">
-            <img src="{{tech.image}}" alt="{{tech.name}}" cdkDrag>
-            <label for="amount">Кількість Техніки</label>
-            <input type="number" name="amount" [(ngModel)]="tech.amount" id="{{tech.name}}_amount" min="1" value="tech.amount"
-                placeholder="Введіть Кількість"> 
+            [cdkDropListConnectedTo]="[technicList]" class="technic-list" (cdkDropListDropped)="drop($event)">
+            <app-draggable-m-t-item *ngFor="let tech of technicForMissionList | paginate: 
+            { 
+                id:'forMission',
+                itemsPerPage: pageSizeM,
+                currentPage: pageMission,
+                totalItems: pageMissionListLength 
+            }" [tech]="tech" [all]="true">
+            </app-draggable-m-t-item>
+            <img src="assets\placeholder.png" class="mission-form__placeholder">
         </div>
-        <!-- (change)="outputUpdate() -->
-        <img src="assets\placeholder.png" class="mission-form__placeholder">
+        <div *ngIf="technicForMissionList.length > 0" class="pagination">
+            <pagination-controls id="forMission" previousLabel="Prev" nextLabel="Next" [responsive]="true"
+                (pageChange)="handlePageChange($event, 'M')"></pagination-controls>
+            <select (change)="handlePageSizeChange($event, 'M')">
+                <option *ngFor="let size of pageSizes" [ngValue]="pageSizeM">{{size}}</option>
+            </select>
         </div>
     </div>
     <div class="technic-container">
         <div cdkDropList #technicList="cdkDropList" [cdkDropListData]="allTechnicList" class="technic-list"
             (cdkDropListDropped)="drop($event)" [cdkDropListConnectedTo]="[missionList]">
-            <div class="technic-box" *ngFor="let tech of allTechnicList">
-                <div class="technic-box__item" [ngStyle]="{'background-image': 'url(' +tech.image+ ')', 'background-size':'cover'}" cdkDrag></div>
-            </div>
+            <app-draggable-m-t-item *ngFor="let tech of allTechnicList | paginate: 
+            { 
+                id:'forAllTech',
+                itemsPerPage: pageSizeA,
+                currentPage: pageAlltech,
+                totalItems: pageAllListLength
+            }" [tech]="tech" [all]="false">
+            </app-draggable-m-t-item>
+        </div>
+        
+        <div *ngIf="allTechnicList.length > 0" class="pagination">
+            <pagination-controls id="forAllTech" previousLabel="Prev" nextLabel="Next" [responsive]="true"
+                (pageChange)="handlePageChange($event, 'A')"></pagination-controls>
+                <select (change)="handlePageSizeChange($event, 'A')">
+                    <option *ngFor="let size of pageSizes" [ngValue]="pageSizeA">{{size}}</option>
+                </select>
         </div>
     </div>
 </section>
