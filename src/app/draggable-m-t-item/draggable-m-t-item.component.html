@@ -1,6 +1,5 @@
 <div  class="technic-item__background">
     <div [ngStyle]="{ 'background': 'url('+tech.image+') top/cover' }" class="content" cdkDrag></div>
-    <label *ngIf="all == true" for="amount">Кількість Техніки</label>
     <input *ngIf="all == true" type="number" name="amount" [(ngModel)]="tech.amount" id="{{tech.name}}_amount" min="1" value="tech.amount"
         placeholder="Введіть Кількість">
 </div>

@@ -27,10 +27,10 @@
     @include for-size(for-big-3) {padding-left: 180px; padding-right: 100px;} 
     @include for-size(for-big-2) {padding-left: 240px; padding-right: 150px;}  
     @include for-size(for-big-1) {padding-left: 200px; padding-right: 200px;}  
-    padding-top: 100px;
+    padding-top: 50px;
     background: url('../../assets/Background_main.png')top/ cover no-repeat;
     display: block;
-    height: 2200px;
+    height: 1800px;
 }
 .map-box{
     width: 1500px;
@@ -43,7 +43,7 @@
     width: 100%;
     border: 2px solid $header_color;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 .technic-container{
     width: 100%;
@@ -66,10 +66,21 @@ section{
 .technic-list{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    padding: 10px 10px 10px 10px;
     gap: 40px 20px;
 }
 img{
     width: 220px;
     height: 190px;
+}
+.pagination__footer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 35%;
+    padding-top: 50px;
+}
+.selector__count{
+    margin-top: -15px;
 }

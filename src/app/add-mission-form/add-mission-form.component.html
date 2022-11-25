@@ -3,7 +3,7 @@
 </div>
 <form #missionForm="ngForm"(ngSubmit)="onSubmit()" class="add-form">
     <div class="technic-price">
-        <div *ngIf="totalFuel" class="technic-price__box">
+        <div class="technic-price__box">
             <p>Загальна відстань: {{distanceEl.distance}} км</p>
             <p>Загальний обсяг топлива: {{totalFuel}} літрів</p>
             <p>Ціна топлива: {{totalSum}} гривень (для ЗСУ за курсом {{this.fuelPrice}} грн за літр)</p>
