@@ -61,8 +61,7 @@ export class DraggableMTListsComponent implements OnInit {
     }
     this.pageAllListLength = this.allTechnicList.length;
   }
-  enterPredicate(drag: CdkDrag, drop: CdkDropList):boolean {
-    if (drop.data.length == 6 ) {alert("Максимум 6 видів техніки може бути відправлено на наряд!")}
-    return drop.data.length <= 6 ;
+  enterPredicate(drag: CdkDrag, drop: CdkDropList): boolean {
+    return drop.data.length < 7;
   }
 }
