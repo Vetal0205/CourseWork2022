@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { TechnicService } from '../services/technic.service';
 import { ITechForMission } from '../interfaces/itech-for-mission';
 import { IMission } from '../interfaces/i-mission';
@@ -14,34 +14,19 @@ export class DraggableMTListsComponent implements OnInit {
   technicForMissionList: ITechForMission[] = [];
   allTechnicList: ITechForMission[] = [];
 
-  pageMission = 1;
   pageAlltech = 1;
   pageSizeA = 6;
-  pageSizeM = 12;
   pageSizes = [6, 9, 12];
   pageAllListLength!: number;
-  pageMissionListLength: number = this.technicForMissionList.length;
 
-  handlePageChange(event: number, checker: string): void {
-    if (checker == "M"){
-      this.pageMission = event;
-    }
-    if (checker == "A"){
-      this.pageAlltech = event;
-    }
+  handlePageChange(event: number): void {
+    this.pageAlltech = event;
+
   }
-
-  handlePageSizeChange(event: any, checker: string): void {
-    if (checker == "M"){
-      this.pageMission = event;
-      this.pageSizeM = event.target.value;
-      this.pageMission = 1;
-    }
-    if (checker == "A"){
-      this.pageAlltech = event;
-      this.pageSizeA = event.target.value;
-      this.pageAlltech = 1;
-    }
+  handlePageSizeChange(event: any): void {
+    this.pageAlltech = event;
+    this.pageSizeA = event.target.value;
+    this.pageAlltech = 1;
   }
   ngOnInit(): void {
     this.getTechnic();
@@ -75,6 +60,9 @@ export class DraggableMTListsComponent implements OnInit {
       );
     }
     this.pageAllListLength = this.allTechnicList.length;
-    this.pageMissionListLength= this.technicForMissionList.length;
+  }
+  enterPredicate(drag: CdkDrag, drop: CdkDropList):boolean {
+    if (drop.data.length == 6 ) {alert("Максимум 6 видів техніки може бути відправлено на наряд!")}
+    return drop.data.length <= 6 ;
   }
 }
