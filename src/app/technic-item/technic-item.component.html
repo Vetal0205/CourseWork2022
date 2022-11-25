@@ -1,5 +1,5 @@
 <div class="technic-item__background">
-    <div [ngStyle]="{ 'background': 'url('+tech.image+') top/cover' }" class="content"></div>
+    <div routerLink="/technic/{{tech.id}}" [ngStyle]="{ 'background': 'url('+tech.image+') top/cover' }" class="content"></div>
 </div>
 <div class="description">
     <a routerLink="/technic/{{tech.id}}">{{tech.name}}</a>

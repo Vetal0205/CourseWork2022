@@ -11,6 +11,6 @@
     <div class="filters">
         <h1>Категорії</h1>
         <app-button *ngFor="let filter of filterList" [filterIn]='filter' (filterOut)="listFilter(filter)"></app-button>
-        <button (click)="update()">Прибрати фільтри</button>
+        <button (click)="update()" class="Filters">Прибрати фільтри</button>
     </div>
 </div>
