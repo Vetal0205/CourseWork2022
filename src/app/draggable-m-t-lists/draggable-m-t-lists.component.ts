@@ -59,9 +59,14 @@ export class DraggableMTListsComponent implements OnInit {
       transferArrayItem(
         event.previousContainer.data,
         event.container.data,
-        event.previousIndex,
+        event.previousIndex + ((this.pageAlltech - 1) * this.pageSizeA),
         event.currentIndex,
       );
+      console.log(this.pageAlltech);
+      console.log(event.previousIndex + ((this.pageAlltech - 1) * this.pageSizeA));
+      console.log(event.currentIndex);
+      console.log(event.container.data);
+      console.log(event.previousContainer.data);
     }
     this.pageAllListLength = this.allTechnicList.length;
   }
