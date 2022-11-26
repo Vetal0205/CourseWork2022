@@ -28,7 +28,7 @@
     @include for-size(for-big-2) {padding-left: 240px; padding-right: 150px;}  
     @include for-size(for-big-1) {padding-left: 200px; padding-right: 200px;}  
     padding-top: 50px;
-    background: url('../../assets/Background_main.png')top/ cover no-repeat;
+    background: url('../../assets/Main_Back_PSD.png')top/ cover no-repeat;
     display: block;
     height: 1800px;
 }
@@ -39,7 +39,7 @@
 .mission-container{
     margin-top: 60px;
     margin-bottom: 60px;
-    height: 500px;
+    height: 250px;
     width: 100%;
     border: 2px solid $header_color;
     display: flex;
