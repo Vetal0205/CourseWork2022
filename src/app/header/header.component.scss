@@ -61,40 +61,6 @@ html, body {
   }
 }
 
-.icon_btns{
-  @include for-size(for-big-15) {padding-left: 9vw; padding-top: 15px;}
-  @include for-size(for-big-13) {padding-left: 4vw;}
-  @include for-size(for-big-12) {padding-left: 5vw;}
-  @include for-size(for-big-11) {padding-left: 0vw;}
-  @include for-size(for-big-10) {padding-left: 0vw;}
-  @include for-size(for-big-9) {padding-left: 9vw;}
-  @include for-size(for-big-8) {padding-left: 9vw;}
-  @include for-size(for-big-7) {padding-left: 9vw;}
-  @include for-size(for-big-6) {padding-left: 9vw;}
-  @include for-size(for-big-5) {padding-left: 9vw;}
-  @include for-size(for-big-4) {padding-left: 12vw;}
-  @include for-size(for-laptops) {padding-left: 10vw;}
-  @include for-size(for-big-3) {padding-left: 12vw;}
-  @include for-size(for-big-1) {padding-left: 12vw; padding-top: 20px;}
-
-  button{
-      height: 30px;
-      width: 30px;
-      background-color: rgba(28,28,28,0);
-      border: none;
-      background-size: cover;
-      margin-right: 16px;
-      cursor: pointer;
-      filter: brightness(0) invert(1);
-
-      -webkit-transition-duration: 0.9s;
-      transition-duration: 0.9s;
-  }
-  button:hover{ 
-      filter: none;
-  }
-}
-
 .top-nav {
   position: fixed;
   display: flex;

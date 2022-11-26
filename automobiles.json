@@ -371,10 +371,103 @@
           "fire-range": "до 2 км",
           "image": "/assets/brdm-2.png",
           "amount": 1
+        },
+        {
+          "id": 21,
+          "type": "RVFS",
+          "name": "MARS-II",
+          "power": "515к.с. ",
+          "weight": "25,2 тони",
+          "fuel_consumption": "100 л (по шосе)",
+          "fuel_range": "до 480 км",
+          "fuel_tank": "576 л",
+          "crew": "3 особи",
+          "speed": "до 64 км/г(шосе)",
+          "gun-caliber": "240 мм",
+          "gun-fire": "12 пострілів/1 хв",
+          "fire-range": "до 70 км",
+          "image": "/assets/MARS.png"
         }
       ],
       "distance": 492.161,
       "id": 1
+    },
+    {
+      "route": "Паркова дорога, 35, Київ, Украина, 02000 - Паркова дорога, 35, Київ, Украина, 02000",
+      "fuel": 4066,
+      "price": 121980,
+      "technique": [
+        {
+          "id": 16,
+          "type": "IVF",
+          "name": "БРДМ-2",
+          "power": "140к.с. ",
+          "weight": "13,8 тони",
+          "fuel_consumption": "70 л (по шосе)",
+          "fuel_range": "до 750 км",
+          "fuel_tank": "280 л",
+          "crew": "3 особи, до 7-ми пасажирів(залежно від комплектації)",
+          "speed": "до 90 км/г(шосе)",
+          "gun-caliber": "14,5мм",
+          "gun-fire": "600 пострілів/хв",
+          "fire-range": "до 2 км",
+          "image": "/assets/brdm-2.png",
+          "amount": 3
+        },
+        {
+          "id": 18,
+          "type": "RVFS",
+          "name": "M142 HIMARS",
+          "power": "290к.с. ",
+          "weight": "16,2 тони",
+          "fuel_consumption": "90 л (по шосе)",
+          "fuel_range": "до 480 км",
+          "fuel_tank": "430 л",
+          "crew": "3 особи",
+          "speed": "до 85 км/г(шосе)",
+          "gun-caliber": "227 мм снаряди М30/31  ",
+          "gun-fire": "6 пострілів/хв",
+          "fire-range": "до 84 км",
+          "image": "/assets/HIMARS.png",
+          "amount": 2
+        },
+        {
+          "id": 21,
+          "type": "RVFS",
+          "name": "MARS-II",
+          "power": "515к.с. ",
+          "weight": "25,2 тони",
+          "fuel_consumption": "100 л (по шосе)",
+          "fuel_range": "до 480 км",
+          "fuel_tank": "576 л",
+          "crew": "3 особи",
+          "speed": "до 64 км/г(шосе)",
+          "gun-caliber": "240 мм",
+          "gun-fire": "12 пострілів/1 хв",
+          "fire-range": "до 70 км",
+          "image": "/assets/MARS.png",
+          "amount": 1
+        },
+        {
+          "id": 15,
+          "type": "IVF",
+          "name": "БРМ-1К",
+          "power": "300к.с. ",
+          "weight": "13,2 тони",
+          "fuel_consumption": "112 л (по шосе)",
+          "fuel_range": "до 380 км",
+          "fuel_tank": "462 л",
+          "crew": "8 осіб ",
+          "speed": "до 65 км/г(шосе) до 40км/г(бездоріжжя)",
+          "gun-caliber": "73мм",
+          "gun-fire": "6-8 пострілів/хв",
+          "fire-range": "до 1300 м",
+          "image": "/assets/brm-1k.png",
+          "amount": 3
+        }
+      ],
+      "distance": 492.161,
+      "id": 2
     }
   ],
   "automobiles": [
@@ -701,6 +794,22 @@
       "gun-fire": "12 пострілів/16 хв",
       "fire-range": "до 90 км",
       "image": "/assets/BM-30Smerch.png"
+    },
+    {
+      "id": 21,
+      "type": "RVFS",
+      "name": "MARS-II",
+      "power": "515к.с. ",
+      "weight": "25,2 тони",
+      "fuel_consumption": "100 л (по шосе)",
+      "fuel_range": "до 480 км",
+      "fuel_tank": "576 л",
+      "crew": "3 особи",
+      "speed": "до 64 км/г(шосе)",
+      "gun-caliber": "240 мм",
+      "gun-fire": "12 пострілів/1 хв",
+      "fire-range": "до 70 км",
+      "image": "/assets/MARS.png"
     }
   ]
 }
