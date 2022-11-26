@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ITechForMission } from '../interfaces/itech-for-mission';
 
 @Component({
@@ -9,9 +9,13 @@ import { ITechForMission } from '../interfaces/itech-for-mission';
 export class DraggableMTItemComponent implements OnInit {
   @Input() tech!: ITechForMission;
   @Input() all!: boolean;
+  @Output() amountChanged: EventEmitter<Event> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  outputUpdate(event:Event) {
+    console.log(event)
+    this.amountChanged.emit(event);
+  }
 }

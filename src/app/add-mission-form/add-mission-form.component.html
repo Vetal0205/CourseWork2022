@@ -1,7 +1,7 @@
 <div class="map-box">
     <app-map (onGetDistance)="onDistanceGet($event)"></app-map>
 </div>
-<form #missionForm="ngForm"(ngSubmit)="onSubmit()" class="add-form">
+<form #missionForm="ngForm"(ngSubmit)="onSubmit()" class="add-form" *ngIf="distanceEl">
     <div class="technic-price">
         <div class="technic-price__box">
             <p>Загальна відстань: {{distanceEl.distance}} км</p>

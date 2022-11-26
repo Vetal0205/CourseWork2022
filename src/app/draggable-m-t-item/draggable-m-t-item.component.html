@@ -1,7 +1,7 @@
 <div  class="technic-item__background">
     <div [ngStyle]="{ 'background': 'url('+tech.image+') top/cover' }" class="content" cdkDrag></div>
     <input *ngIf="all == true" type="number" name="amount" [(ngModel)]="tech.amount" id="{{tech.name}}_amount" min="1" value="tech.amount"
-        placeholder="Введіть Кількість">
+        placeholder="Введіть Кількість" (change)="outputUpdate($event)">
 </div>
 <div class="description">
     <a routerLink="/technic/{{tech.id}}">{{tech.name}}</a>

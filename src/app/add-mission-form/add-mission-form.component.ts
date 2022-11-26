@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges, } from '@angular/core';
 import { IMission } from '../interfaces/i-mission';
 import { ITechForMission } from '../interfaces/itech-for-mission';
 import { IDistance } from '../interfaces/idistance';
@@ -8,13 +8,14 @@ import { IDistance } from '../interfaces/idistance';
   templateUrl: './add-mission-form.component.html',
   styleUrls: ['./add-mission-form.component.scss']
 })
-export class AddMissionFormComponent implements OnInit {
+export class AddMissionFormComponent implements  OnInit {
 
   @Output() onAddMission: EventEmitter<IMission> = new EventEmitter();
   @Input() techForMission!: ITechForMission[];
   distanceEl!: IDistance;
   fuelPrice: number = 30;
   regexfuel = new RegExp('[0-9]+');
+  @Input() eventChanged!:Event;
 
   lengthCounter: number = 0;
   totalFuel!: number;
@@ -24,23 +25,18 @@ export class AddMissionFormComponent implements OnInit {
 
   constructor() { }
 
-  onDistanceGet(distance:IDistance){
-    this.distanceEl = distance
+  onDistanceGet(distance: IDistance) {
+    this.distanceEl = distance;
+    this.outputUpdate();
   }
   ngOnInit(): void {
-    console.log("init");
   }
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes['distanceEl'].currentValue) {
-      if (changes['distanceEl'].currentValue!= changes['distanceEl'].previousValue){
-        this.outputUpdate();
-      }
-    }
-    if (changes['techForMission'].currentValue != changes['techForMission'].previousValue) {
+  ngOnChanges(changes:SimpleChanges){
+    if(changes['eventChanged'].currentValue != changes['eventChanged'].previousValue){
       this.outputUpdate();
     }
   }
-  ngDoCheck(changes: SimpleChanges) {
+  ngDoCheck() {
     if (this.techForMission.length == 0) {
       this.lengthCounter = 0;
       this.totalSum, this.totalFuel = 0;
@@ -53,10 +49,6 @@ export class AddMissionFormComponent implements OnInit {
       this.outputUpdate()
       this.lengthCounter--;
     }
-  }
-  Console(tech: ITechForMission) {
-    console.log('testing')
-    console.log(tech)
   }
   outputUpdate() {
     this.totalFuel = this.fuelsum(this.techForMission, this.regexfuel);
@@ -79,13 +71,13 @@ export class AddMissionFormComponent implements OnInit {
   }
   onSubmit() {
     try {
-      this.newMission = { 
-        route:`${this.distanceEl.from} - ${this.distanceEl.from}`,
+      this.newMission = {
+        route: `${this.distanceEl.from} - ${this.distanceEl.from}`,
         fuel: this.totalFuel,
-        price:this.totalSum,
-        technique:this.techForMission,
-        distance:this.distanceEl.distance
-       }
+        price: this.totalSum,
+        technique: this.techForMission,
+        distance: this.distanceEl.distance
+      }
     } catch (error) {
       alert("Виберіть техніку на виїзд наряду, також виберіть відправну та кінцеві точки поїздки на карті");
       return;

@@ -5,13 +5,13 @@
 
 <section class="mission-block">
 
-    <app-add-mission-form [techForMission]="technicForMissionList" (onAddMission)="addMission($event)">
+    <app-add-mission-form [techForMission]="technicForMissionList" [eventChanged]="eventChanged" (onAddMission)="addMission($event)">
     </app-add-mission-form>
     <div class="mission-container">
         <div cdkDropList #missionList="cdkDropList" [cdkDropListData]="technicForMissionList"
             [cdkDropListConnectedTo]="[technicList]" class="technic-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="enterPredicate">
             <app-draggable-m-t-item *ngFor="let tech of technicForMissionList"  [tech]=" tech" [all]="true"
-                class="technic_item__drag">
+                class="technic_item__drag" (amountChanged)="onAmountInputChange($event)">
             </app-draggable-m-t-item>
             <!-- <img src="assets\placeholder.png" class="mission-form__placeholder"> -->
         </div>

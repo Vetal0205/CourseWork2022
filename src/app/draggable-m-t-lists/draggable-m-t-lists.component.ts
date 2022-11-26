@@ -13,6 +13,7 @@ export class DraggableMTListsComponent implements OnInit {
   constructor(private service: TechnicService) { }
   technicForMissionList: ITechForMission[] = [];
   allTechnicList: ITechForMission[] = [];
+  eventChanged!:Event;
 
   pageAlltech = 1;
   pageSizeA = 6;
@@ -27,6 +28,9 @@ export class DraggableMTListsComponent implements OnInit {
     this.pageAlltech = event;
     this.pageSizeA = event.target.value;
     this.pageAlltech = 1;
+  }
+  onAmountInputChange(event:Event){
+    this.eventChanged = event
   }
   ngOnInit(): void {
     this.getTechnic();
