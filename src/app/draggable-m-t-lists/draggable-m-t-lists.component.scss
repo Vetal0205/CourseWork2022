@@ -4,33 +4,49 @@
 
 .mission-main{
     padding-top: 100px;
-    background: url('../../assets/car_background.png');
+    background: url('../../assets/car_background.png')top/ cover no-repeat;
     height: 500px;
     color: white;
     h1{
         padding-top: 50px;
-        font-size: 40px;
-        padding-left: 150px;
+        @include for-size(for-big-15) {font-size: 30px; padding-left: 50px;}
+        @include for-size(for-big-12) {font-size: 30px; padding-left: 50px;}
+        @include for-size(for-big-11) {font-size: 30px; padding-left: 150px;}
+        @include for-size(for-big-9) {font-size: 30px;}
+        @include for-size(for-big-8) {font-size: 40px; }
+        @include for-size(for-big-1) {font-size: 40px; padding-left: 150px;} 
+        
     }
     h2{
-        font-size: 100px;
         text-transform: uppercase;
         color: $orange_color;
-        padding-left: 150px;
+        @include for-size(for-big-15) {font-size: 50px; padding-left: 50px;}
+        @include for-size(for-big-12) {font-size: 50px; padding-left: 50px;}
+        @include for-size(for-big-11) {font-size: 70px; padding-left: 150px;}
+        @include for-size(for-big-9) {font-size: 70px;}
+        @include for-size(for-big-8) {font-size: 100px; }
+        @include for-size(for-big-1) {font-size: 100px; padding-left: 150px;}
+
     }
 }
 .mission-block{
-    @include for-size(for-big-6) {padding-left: 0px; padding-right: 0px;}  
+    @include for-size(for-big-15) {padding-left: 0px; padding-right: 0px; height: 1690px; background: url('../../assets/Main_Missions_mini.png')top/ cover no-repeat;} 
+    @include for-size(for-big-14) {padding-left: 0px; padding-right: 0px; height: 1690px;}  
+    @include for-size(for-big-13) {padding-left: 0px; padding-right: 0px; height: 1890px;} 
+    @include for-size(for-big-9) {padding-left: 0px; padding-right: 0px; height: 1890px; background: url('../../assets/Main_Missions_mini.png')top/ cover no-repeat;} 
+    @include for-size(for-big-8) {padding-left: 0px; padding-right: 0px; height: 1750px; background: url('../../assets/Main_Missions.png')top/ cover no-repeat;} 
+    @include for-size(for-big-7) {padding-left: 0px; padding-right: 0px; height: 1750px;}  
+    @include for-size(for-big-6) {padding-left: 0px; padding-right: 0px; height: 1600px;}  
     @include for-size(for-big-5) {padding-left: 50px; padding-right: 0px;} 
     @include for-size(for-big-4) {padding-left: 100px; padding-right: 0px;} 
     @include for-size(for-laptops) {padding-left: 100px; padding-right: 50px;} 
     @include for-size(for-big-3) {padding-left: 180px; padding-right: 100px;} 
     @include for-size(for-big-2) {padding-left: 240px; padding-right: 150px;}  
-    @include for-size(for-big-1) {padding-left: 200px; padding-right: 200px;}  
+    @include for-size(for-big-1) {padding-left: 200px; padding-right: 200px; height: 1600px; background: url('../../assets/Main_Missions.png')top/ cover no-repeat;}  
     padding-top: 50px;
-    background: url('../../assets/Main_Back_PSD.png')top/ cover no-repeat;
+    
     display: block;
-    height: 1800px;
+    
 }
 .map-box{
     width: 1500px;
@@ -39,11 +55,21 @@
 .mission-container{
     margin-top: 60px;
     margin-bottom: 60px;
-    height: 250px;
-    width: 100%;
     border: 2px solid $header_color;
     display: flex;
     flex-wrap: wrap;
+    @include for-size(for-big-15) {height: 400px; width: 100%; margin-left: 0px;}
+    @include for-size(for-big-14) {height: 400px; width: 100%; margin-left: 0px;}
+    @include for-size(for-big-13) {height: 500px; width: 100%; margin-left: 0px;}
+    @include for-size(for-big-12) {height: 500px; width: 90%; margin-left: 50px;}
+    @include for-size(for-big-11) {height: 500px; width: 90%; margin-left: 50px;}
+    @include for-size(for-big-10) {height: 500px; width: 80%; margin-left: 100px;}
+    @include for-size(for-big-9) {height: 500px; width: 70%; margin-left: 150px;}  
+    @include for-size(for-big-8) {height: 500px; width: 70%; margin-left: 200px;} 
+    @include for-size(for-big-7) {height: 500px; width: 70%; margin-left: 200px;} 
+    @include for-size(for-big-6) {height: 250px; width: 100%; margin-left: 0px;} 
+    @include for-size(for-big-1) {height: 250px; width: 100%; margin-left: 0px;}  
+
 }
 .technic-container{
     width: 100%;
@@ -66,9 +92,14 @@ section{
 .technic-list{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
     padding: 10px 10px 10px 10px;
-    gap: 40px 20px;
+    @include for-size(for-big-15) {grid-template-columns: repeat(auto-fit, minmax(100px, auto)); gap: 20px 20px;}
+    @include for-size(for-big-14) {grid-template-columns: repeat(auto-fit, minmax(100px, auto)); gap: 20px 20px;}
+    @include for-size(for-big-13) {grid-template-columns: repeat(auto-fit, minmax(120px, auto)); gap: 40px 20px;}
+    @include for-size(for-big-12) {grid-template-columns: repeat(auto-fit, minmax(125px, auto));}
+    @include for-size(for-big-11) {grid-template-columns: repeat(auto-fit, minmax(150px, auto));}
+    @include for-size(for-big-1) {grid-template-columns: repeat(auto-fit, minmax(150px, auto)); gap: 40px 20px;}  
+    
 }
 img{
     width: 220px;

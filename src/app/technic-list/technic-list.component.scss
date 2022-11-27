@@ -49,18 +49,18 @@
         }
         .technic__pagination{
           margin: 0;
-          @include for-size(for-big-15) {padding-top: 60px; padding-left: 10%;}
-          @include for-size(for-big-14) {padding-top: 60px; padding-left: 12.5%;}
-          @include for-size(for-big-13) {padding-top: 60px; padding-left: 14%;}
-          @include for-size(for-big-12) {padding-top: 60px; padding-left: 17%;}
-          @include for-size(for-big-11) {padding-top: 60px; padding-left: 20%;}
-          @include for-size(for-big-10) {padding-top: 60px; padding-left: 23%;}
-          @include for-size(for-big-9) {padding-top: 60px; padding-left: 30%;}
-          @include for-size(for-big-8) {padding-top: 70px; padding-left: 14%;}
-          @include for-size(for-big-7) {padding-top: 90px; padding-left: 17%;}
-          @include for-size(for-big-6) {padding-top: 90px; padding-left: 20%;}
-          @include for-size(for-big-5) {padding-top: 90px; padding-left: 23%;}
-          @include for-size(for-big-4) {padding-top: 40px; padding-left: 27%;}
+          @include for-size(for-big-15) {padding-top: 50px; padding-left: 28%;}
+          @include for-size(for-big-14) {padding-top: 50px; padding-left: 30%;}
+          @include for-size(for-big-13) {padding-top: 60px; padding-left: 21%;}
+          @include for-size(for-big-12) {padding-top: 60px; padding-left: 24%;}
+          @include for-size(for-big-11) {padding-top: 60px; padding-left: 27%;}
+          @include for-size(for-big-10) {padding-top: 60px; padding-left: 30%;}
+          @include for-size(for-big-9) {padding-top: 60px; padding-left: 35%;}
+          @include for-size(for-big-8) {padding-top: 60px; padding-left: 22%;}
+          @include for-size(for-big-7) {padding-top: 60px; padding-left: 22%;}
+          @include for-size(for-big-6) {padding-top: 70px; padding-left: 25%;}
+          @include for-size(for-big-5) {padding-top: 90px; padding-left: 25%;}
+          @include for-size(for-big-4) {padding-top: 40px; padding-left: 30%;}
           @include for-size(for-big-1) {padding-top: 40px; padding-left: 27%;} 
           
         }
