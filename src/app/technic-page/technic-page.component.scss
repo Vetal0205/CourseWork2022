@@ -1,23 +1,34 @@
 @import '../../styles.scss';
 .main{
     padding-top: 100px;
-    background: url('../../assets/car_background.png');
+    background: url('../../assets/car_background.png') top/ cover no-repeat;
     height: 500px;
     color: white;
     h1{
         padding-top: 50px;
-        font-size: 40px;
-        padding-left: 150px;
+        @include for-size(for-big-15) {font-size: 30px; padding-left: 50px;}
+        @include for-size(for-big-12) {font-size: 30px; padding-left: 50px;}
+        @include for-size(for-big-11) {font-size: 30px; padding-left: 150px;}
+        @include for-size(for-big-9) {font-size: 30px;}
+        @include for-size(for-big-8) {font-size: 40px; }
+        @include for-size(for-big-1) {font-size: 40px; padding-left: 150px;} 
     }
     h2{
-        font-size: 100px;
         text-transform: uppercase;
         color: $orange_color;
-        padding-left: 150px;
+        @include for-size(for-big-15) {font-size: 50px; padding-left: 50px;}
+        @include for-size(for-big-12) {font-size: 50px; padding-left: 50px;}
+        @include for-size(for-big-11) {font-size: 70px; padding-left: 150px;}
+        @include for-size(for-big-9) {font-size: 70px;}
+        @include for-size(for-big-8) {font-size: 100px; }
+        @include for-size(for-big-1) {font-size: 100px; padding-left: 150px;}
     }
 }
 .technic-box{
-    background: url('../../assets/Background_main.png') top/ cover no-repeat;
+    @include for-size(for-big-15) {background: url('../../assets/Main_Background_mini.png') top/ cover no-repeat;}
+    @include for-size(for-big-9) {background: url('../../assets/Main_Background_mini.png') top/ cover no-repeat;}
+    @include for-size(for-big-8) {background: url('../../assets/Background_main.png') top/ cover no-repeat;}
+    @include for-size(for-big-1) {background: url('../../assets/Background_main.png') top/ cover no-repeat;}
     
 }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IAuto } from '../interfaces/i-auto';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-technic-item',
@@ -12,6 +13,10 @@ export class TechnicItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    Aos.init({
+      startEvent: 'load',
+      once: false
+    });
   }
 
 }

@@ -3,71 +3,93 @@
 .technic-block{
     display: flex;
     flex-wrap: wrap;
-    @include for-size(for-big-12) {padding-left: 0; gap: 150px; height: 1200px;}
-    @include for-size(for-big-8) {padding-left: 0; gap: 150px; height: 1200px;}
-    @include for-size(for-big-7) {padding-left: 20px; gap: 40px; height: 850px;}
-    @include for-size(for-big-6) {padding-left: 20px; gap: 50px; height: 850px;}
-    @include for-size(for-big-5) {padding-left: 50px; gap: 50px; height: 900px;}
-    @include for-size(for-big-4) {padding-left: 100px; gap: 50px;}
-    @include for-size(for-laptops) {padding-left: 100px; gap: 50px; height: 900px;}
-    @include for-size(for-big-3) {padding-left: 150px; gap: 50px; height: 900px;}
-    @include for-size(for-big-2) {padding-left: 180px; gap: 50px; height: 1000px;}
-    @include for-size(for-big-1) {padding-left: 200px; gap: 50px; height: 1100px;}
+    @include for-size(for-big-15) {height: 1100px; padding-left: 0px;}
+    @include for-size(for-big-11) {height: 1100px; padding-left: 0px;}
+    @include for-size(for-big-10) {height: 1150px; padding-left: 0px;}
+    @include for-size(for-big-9) {height: 1300px; padding-left: 0px;}
+    @include for-size(for-big-8) {height: 770px; padding-left: 30px;}
+    @include for-size(for-big-7) {height: 770px; padding-left: 80px;}
+    @include for-size(for-big-6) {height: 830px; padding-left: 80px;}
+    @include for-size(for-big-5) {height: 830px; padding-left: 100px;}
+    @include for-size(for-big-4) {height: 900px; padding-left: 150px;}
+    @include for-size(for-big-1) {height: 900px; padding-left: 150px;} 
     
     .container{
+        display: grid;
         margin: 0px;
         margin-top: 50px;
-        height: 500px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 50px;
-        @include for-size(for-big-12) {gap: 5px; width: 100%; margin-left: 5vw;}
-        @include for-size(for-big-11) {gap: 5px; width: 100%; margin-left: 7vw;}
-        @include for-size(for-big-10) {gap: 5px; width: 100%; margin-left: 10vw;}
-        @include for-size(for-big-9) {gap: 5px; width: 100%; margin-left: 10vw;}
-        @include for-size(for-big-8) {gap: 5px; width: 100%; margin-left: 15vw;}
-        @include for-size(for-big-7) {gap: 5px; width: 70%; padding-left: 30px; margin-left: 0px;}
-        @include for-size(for-big-6) {gap: 5px; width: 70%; padding-left: 70px;}
-        @include for-size(for-big-5) {gap: 15px; width: 70%; padding-left: 100px;}
-        @include for-size(for-big-4) {gap: 25px; width: 60%; padding-left: 0px;}
-        @include for-size(for-laptops) {gap: 30px;}
-        @include for-size(for-big-3) {gap: 40px;}
-        @include for-size(for-big-2) {gap: 60px;}
-        @include for-size(for-big-1) {gap: 70px; width: 60%; padding-left: 0px; margin-left: 0px;}  
-        app-technic-item{
-            @include for-size(for-big-7) {width: 250px; height: 200px;}
-            @include for-size(for-big-1) {width: 250px; height: 250px;}  
+        height: 700px;
+        @include for-size(for-big-15) {padding-left: 6%; width: 100%;}
+        @include for-size(for-big-14) {padding-left: 8%; width: 100%;}
+        @include for-size(for-big-13) {padding-left: 10%; width: 100%;}
+        @include for-size(for-big-12) {padding-left: 12%; width: 100%;}
+        @include for-size(for-big-11) {padding-left: 10%; width: 100%;}
+        @include for-size(for-big-10) {padding-left: 10%; width: 100%;}
+        @include for-size(for-big-9) {padding-left: 10%; width: 100%;}
+        @include for-size(for-big-8) {padding-left: 0%; width: 70%;}
+        @include for-size(for-big-1) {padding-left: 0%; width: 70%;} 
+
+        .technic__container{
+          display: flex;
+          flex-wrap: wrap;
+          @include for-size(for-big-15) {gap: 20px; width: 460px;}
+          @include for-size(for-big-14) {gap: 20px; width: 490px;}
+          @include for-size(for-big-13) {gap: 20px; width: 520px;}
+          @include for-size(for-big-12) {gap: 20px; width: 580px;}
+          @include for-size(for-big-11) {gap: 20px; width: 640px;}
+          @include for-size(for-big-10) {gap: 30px; width: 720px;}
+          @include for-size(for-big-9) {gap: 50px; width: 850px;}
+          @include for-size(for-big-8) {gap: 20px; width: 640px;}
+          @include for-size(for-big-7) {gap: 20px; width: 640px;}
+          @include for-size(for-big-6) {gap: 30px; width: 720px;}
+          @include for-size(for-big-5) {gap: 30px; width: 720px;}
+          @include for-size(for-big-4) {gap: 50px; width: 850px;}
+          @include for-size(for-big-1) {gap: 50px; width: 850px;} 
+
         }
         .technic__pagination{
-          @include for-size(for-big-12) {padding-top: 60px;}
-          @include for-size(for-big-2) {padding-top: 60px;}
-          @include for-size(for-big-1) {padding-top: 0px;} 
-          padding-left: 26%;
+          margin: 0;
+          @include for-size(for-big-15) {padding-top: 60px; padding-left: 10%;}
+          @include for-size(for-big-14) {padding-top: 60px; padding-left: 12.5%;}
+          @include for-size(for-big-13) {padding-top: 60px; padding-left: 14%;}
+          @include for-size(for-big-12) {padding-top: 60px; padding-left: 17%;}
+          @include for-size(for-big-11) {padding-top: 60px; padding-left: 20%;}
+          @include for-size(for-big-10) {padding-top: 60px; padding-left: 23%;}
+          @include for-size(for-big-9) {padding-top: 60px; padding-left: 30%;}
+          @include for-size(for-big-8) {padding-top: 70px; padding-left: 14%;}
+          @include for-size(for-big-7) {padding-top: 90px; padding-left: 17%;}
+          @include for-size(for-big-6) {padding-top: 90px; padding-left: 20%;}
+          @include for-size(for-big-5) {padding-top: 90px; padding-left: 23%;}
+          @include for-size(for-big-4) {padding-top: 40px; padding-left: 27%;}
+          @include for-size(for-big-1) {padding-top: 40px; padding-left: 27%;} 
+          
         }
     }
     .filters{
-        padding-top: 150px;
-        @include for-size(for-big-12) {width: 1200px; height: 450px;}
-        @include for-size(for-big-8) {width: 1200px; height: 450px;}
-        @include for-size(for-big-7) {width: 300px; height: 700px;}
-        @include for-size(for-big-6) {width: 300px;}
-        @include for-size(for-big-5) {width: 340px;}
-        @include for-size(for-big-4) {width: 400px;}
-        @include for-size(for-big-1) {width: 400px; height: 700px;} 
-        
         display: grid;
+        @include for-size(for-big-15) {width: 100%; height: 250px; margin-top: -100px; }
+        @include for-size(for-big-12) {width: 100%; height: 250px; margin-top: -100px; }
+        @include for-size(for-big-11) {width: 100%; height: 250px; margin-top: 50px; }
+        @include for-size(for-big-9) {width: 100%; height: 250px; margin-top: 50px; }
+        @include for-size(for-big-8) {width: 300px; height: 550px; margin-top: 150px; }
+        @include for-size(for-big-7) {width: 300px;}
+        @include for-size(for-big-6) {width: 350px;}
+        @include for-size(for-big-1) {width: 350px; height: 550px; margin-top: 150px; } 
+        
         .filters__buttons{
           @include for-size(for-big-15) {display: flex; flex-wrap: wrap; justify-content: center;}
-          @include for-size(for-big-8) {display: flex; flex-wrap: wrap; justify-content: center;}
-          @include for-size(for-big-7) {display: block; flex-wrap: nowrap;}
+          @include for-size(for-big-9) {display: flex; flex-wrap: wrap; justify-content: center;}
+          @include for-size(for-big-8) {display: block; flex-wrap: nowrap;}
           @include for-size(for-big-1) {display: block; flex-wrap: nowrap;} 
           
         }
         h1{
-            @include for-size(for-big-12) {font-size: 40px;}
+            @include for-size(for-big-15) {font-size: 40px; text-align: center;}
+            @include for-size(for-big-9) {font-size: 40px; text-align: center;}
+            @include for-size(for-big-8) {font-size: 40px; text-align: left;}
             @include for-size(for-big-5) {font-size: 40px;}
             @include for-size(for-big-4) {font-size: 60px;}
-            @include for-size(for-big-1) {font-size: 60px;} 
+            @include for-size(for-big-1) {font-size: 60px; text-align: left;} 
             
             text-transform: uppercase;
             font-weight: 900;
@@ -93,20 +115,22 @@
             -ms-flex-item-align: center;
             align-self: center;
 
-            
-            margin-left: 50px;
             padding-top: 14px;
-            padding-left: 45px;
             font-weight: 400;
             margin: 20px;
             height: 60px;
 
-            @include for-size(for-big-12) {width: 96%; font-size: 18px; padding-left: 40%;}
-            @include for-size(for-big-8) {width: 96%; font-size: 18px; padding-left: 40%;}
+            @include for-size(for-big-15) {width: 230px; font-size: 18px; padding-left: 25px; margin-left: 28%;}
+            @include for-size(for-big-14) {width: 230px; font-size: 18px; padding-left: 25px; margin-left: 31%;}
+            @include for-size(for-big-13) {width: 230px; font-size: 18px; padding-left: 25px; margin-left: 35%;}
+            @include for-size(for-big-12) {width: 230px; font-size: 18px; padding-left: 25px; margin-left: 35%;}
+            @include for-size(for-big-11) {width: 230px; font-size: 18px; padding-left: 25px; margin-left: 39%;}
+            @include for-size(for-big-9) {width: 230px; font-size: 18px; padding-left: 25px; margin-left: 39%;}
+            @include for-size(for-big-8) {width: 230px; font-size: 18px; padding-left: 25px; margin-left: 20px;}
             @include for-size(for-big-7) {width: 230px; font-size: 18px; padding-left: 25px;}
             @include for-size(for-big-5) {width: 230px; font-size: 18px; padding-left: 25px;}
             @include for-size(for-big-4) {width: 300px; font-size: 20px; padding-left: 45px;}
-            @include for-size(for-big-1) {width: 300px; font-size: 20px; padding-left: 45px;} 
+            @include for-size(for-big-1) {width: 300px; font-size: 20px; padding-left: 45px; margin-left: 20px;} 
 
             text-decoration: none;
             text-align: center;

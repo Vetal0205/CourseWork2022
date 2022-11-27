@@ -1,11 +1,14 @@
 @import '../../styles.scss';
 
 button{
-    @include for-size(for-big-12) {font-size: 15px; width: 130px;}
+    @include for-size(for-big-15) {font-size: 18px; width: 180px;}
+    @include for-size(for-big-14) {font-size: 20px; width: 200px;}
+    @include for-size(for-big-13) {font-size: 20px; width: 220px;}
+    @include for-size(for-big-12) {font-size: 20px; width: 250px;}
     @include for-size(for-big-11) {font-size: 16px; width: 150px;}
-    @include for-size(for-big-10) {font-size: 16px; width: 150px;}
+    @include for-size(for-big-10) {font-size: 18px; width: 180px;}
     @include for-size(for-big-9) {font-size: 20px; width: 200px;}
-    @include for-size(for-big-8) {font-size: 20px; width: 200px;}
+    @include for-size(for-big-8) {font-size: 20px; width: 250px;}
     @include for-size(for-big-7) {font-size: 20px; width: 250px;}
     @include for-size(for-big-6) {font-size: 20px; width: 250px;}
     @include for-size(for-big-5) {font-size: 20px; width: 250px;}
