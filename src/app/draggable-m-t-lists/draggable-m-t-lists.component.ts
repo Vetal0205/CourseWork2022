@@ -15,11 +15,16 @@ export class DraggableMTListsComponent implements OnInit {
   allTechnicList: ITechForMission[] = [];
   eventChanged!:Event;
 
+  techheader__showing: boolean=true;
+
   pageAlltech = 1;
   pageSizeA = 6;
   pageSizes = [6, 9, 12];
   pageAllListLength!: number;
 
+  techheader__showingFunction(){
+    this.techheader__showing = false;
+  }
   handlePageChange(event: number): void {
     this.pageAlltech = event;
 
@@ -67,6 +72,7 @@ export class DraggableMTListsComponent implements OnInit {
       console.log(event.currentIndex);
       console.log(event.container.data);
       console.log(event.previousContainer.data);
+      this.techheader__showingFunction();
     }
     this.pageAllListLength = this.allTechnicList.length;
   }

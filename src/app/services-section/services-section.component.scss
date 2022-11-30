@@ -11,11 +11,9 @@ $orange_color: #d5b23f;
     top: -110px;
     margin: 0;
     position: relative;
-    @include for-size(for-big-15) {height: 3350px;}
-    @include for-size(for-big-12) {height: 3350px;}
-    @include for-size(for-big-11) {height: 1800px;}
-    @include for-size(for-big-7) {height: 1800px;}
-    @include for-size(for-big-6) {height: 1300px;}
+    @include for-size(for-big-15) {height: 2350px;}
+    @include for-size(for-big-12) {height: 2350px;}
+    @include for-size(for-big-11) {height: 1300px;}
     @include for-size(for-big-1) {height: 1300px;}
     background: url('../../assets/content_background.png') top / cover no-repeat;
     z-index: 2;
@@ -61,10 +59,10 @@ $orange_color: #d5b23f;
     @include for-size(for-big-9) {margin-left: 8%; width: 1045px;}
     @include for-size(for-big-8) {margin-left: 5%; width: 1045px;}
     @include for-size(for-big-7) {margin-left: 7%; width: 1545px;}
-    @include for-size(for-big-6) {margin-left: 6%;}
-    @include for-size(for-big-5) {margin-left: 10%;}
-    @include for-size(for-big-4) {margin-left: 10%;}
-    @include for-size(for-laptops) {margin-left: 7%;}
+    @include for-size(for-big-6) {margin-left: 12%;}
+    @include for-size(for-big-5) {margin-left: 15%;}
+    @include for-size(for-big-4) {margin-left: 8%;}
+    @include for-size(for-laptops) {margin-left: 8%;}
     @include for-size(for-big-3) {margin-left: 172.5px;}
     @include for-size(for-big-2) {margin-left: 212.5px;}
     @include for-size(for-big-1) {margin-left: 252.5px;}
@@ -83,10 +81,10 @@ $orange_color: #d5b23f;
             @include for-size(for-big-9) {width: 400px; height: 400px;}
             @include for-size(for-big-8) {width: 450px; height: 400px;}
             @include for-size(for-big-7) {width: 500px; height: 400px;}
-            @include for-size(for-big-6) {width: 350px; height: 400px;}
-            @include for-size(for-big-5) {width: 350px; height: 400px;}
-            @include for-size(for-big-4) {width: 400px; height: 400px;}
-            @include for-size(for-big-1) {width: 400px; height: 400px;}
+            @include for-size(for-big-6) {width: 500px; height: 400px;}
+            @include for-size(for-big-5) {width: 500px; height: 400px;}
+            @include for-size(for-big-4) {width: 600px; height: 400px;}
+            @include for-size(for-big-1) {width: 600px; height: 400px;}
             
             box-shadow: rgba(0, 0, 0, 0.5) 0px 15px 15px 0px;
             margin-bottom: 65px;
@@ -100,8 +98,8 @@ $orange_color: #d5b23f;
                 @include for-size(for-big-7) {padding-left: 205px;}
                 @include for-size(for-big-6) {padding-left: 130px;}
                 @include for-size(for-big-5) {padding-left: 130px;}
-                @include for-size(for-big-4) {padding-left: 150px;}
-                @include for-size(for-big-1) {padding-left: 150px;}
+                @include for-size(for-big-4) {padding-left: 250px;}
+                @include for-size(for-big-1) {padding-left: 250px;}
                 padding-top: 30px;
             }
             h1{
@@ -132,8 +130,8 @@ $orange_color: #d5b23f;
                 @include for-size(for-big-7) {padding-left: 140px;}
                 @include for-size(for-big-6) {padding-left: 70px;}
                 @include for-size(for-big-5) {padding-left: 70px;}
-                @include for-size(for-big-4) {padding-left: 90px;}
-                @include for-size(for-big-1) {padding-left: 90px;}
+                @include for-size(for-big-4) {padding-left: 190px;}
+                @include for-size(for-big-1) {padding-left: 190px;}
 
                 font-size: 35px;
                 color: $bg_color;

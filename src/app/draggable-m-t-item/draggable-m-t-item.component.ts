@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ITechForMission } from '../interfaces/itech-for-mission';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-draggable-m-t-item',
@@ -13,6 +14,10 @@ export class DraggableMTItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    Aos.init({
+      startEvent: 'load',
+      once: false
+    });
   }
   outputUpdate(event:Event) {
     console.log(event)

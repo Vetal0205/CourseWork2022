@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges, } from '
 import { IMission } from '../interfaces/i-mission';
 import { ITechForMission } from '../interfaces/itech-for-mission';
 import { IDistance } from '../interfaces/idistance';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-add-mission-form',
@@ -30,6 +31,10 @@ export class AddMissionFormComponent implements  OnInit {
     this.outputUpdate();
   }
   ngOnInit(): void {
+    Aos.init({
+      startEvent: 'load',
+      once: false
+    });
   }
   ngOnChanges(changes:SimpleChanges){
     if(changes['eventChanged'].currentValue != changes['eventChanged'].previousValue){

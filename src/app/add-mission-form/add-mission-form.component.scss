@@ -10,29 +10,69 @@
     .technic-price{
         width: 100%;
         height: 215px;
-        input{
-            background-color: $btn_color;
-            width: 150px;
-            height: 44px;
-            border-radius: 6px;
-            border: 3px solid black;
-            color: $font_white;
+        input {
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: transparent;
+            border: 2px solid $orange_color;
+            border-radius: 0.6em;
+            color: $orange_color;
             cursor: pointer;
-            font-size: 10px;
-        }
-        .technic-price__box{
-            p{
-                font-size: 18px;
-            }
-        }
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-align-self: center;
+            -ms-flex-item-align: center;
+            align-self: center;
+
+            padding-top: 14px;
+            font-weight: 400;
+            height: 60px;
+
+            @include for-size(for-big-15) {width: 230px; font-size: 18px; padding-left: 25px;}
+            @include for-size(for-big-14) {width: 230px; font-size: 18px; padding-left: 25px;}
+            @include for-size(for-big-13) {width: 230px; font-size: 18px; padding-left: 25px;}
+            @include for-size(for-big-12) {width: 230px; font-size: 18px; padding-left: 25px;}
+            @include for-size(for-big-11) {width: 230px; font-size: 18px; padding-left: 25px;}
+            @include for-size(for-big-9) {width: 230px; font-size: 18px; padding-left: 25px;}
+            @include for-size(for-big-8) {width: 230px; font-size: 18px; padding-left: 25px;}
+            @include for-size(for-big-7) {width: 230px; font-size: 18px; padding-left: 25px;}
+            @include for-size(for-big-5) {width: 230px; font-size: 18px; padding-left: 25px;}
+            @include for-size(for-big-4) {width: 300px; font-size: 20px; padding-left: 45px;}
+            @include for-size(for-big-1) {width: 300px; font-size: 20px; padding-left: 45px;} 
+
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+          }
+          input:hover, input:focus {
+            color: #fff;
+            outline: 0;
+          }
+          .btn-submit {
+            -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+            transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+          }
+          .btn-submit:hover {
+            box-shadow: 0 0 40px 40px $orange_color inset;
+          }
     }
-    .technic-box{
-        width: 120px;
-        img{
-            width: 95px; height: 80px;
+    .technic-price__box{
+        .p__svg-icons{
+            width: 32px;
+            height: 32px;
+            margin-right: 20px;
+
+            -webkit-transition-duration: 0.6s;
+            transition-duration: 0.6s;
         }
-        input{
-            width: 50px;
+        .p__svg-icons:hover{
+            transform: scale(1.25);
         }
     }
 }

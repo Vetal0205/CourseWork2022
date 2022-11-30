@@ -9,7 +9,7 @@
         (onAddMission)="addMission($event)">
     </app-add-mission-form>
     <div class="mission-container">
-        <div class="techheader">
+        <div class="techheader" *ngIf="techheader__showing">
             <h2>Перетягніть техніку з списку в поле нижче для формування наряду</h2>
         </div>
         <div cdkDropList #missionList="cdkDropList" [cdkDropListData]="technicForMissionList"
@@ -20,7 +20,7 @@
             </app-draggable-m-t-item>
             <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
         </div>
-        <div class="techheader">
+        <div class="techheader" *ngIf="techheader__showing">
             <p><i>*Примітка: Максимум може бути 7 видів техніки</i></p>
         </div>
     </div>
