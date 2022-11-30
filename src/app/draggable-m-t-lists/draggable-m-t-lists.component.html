@@ -5,15 +5,23 @@
 
 <section class="mission-block">
 
-    <app-add-mission-form [techForMission]="technicForMissionList" [eventChanged]="eventChanged" (onAddMission)="addMission($event)">
+    <app-add-mission-form [techForMission]="technicForMissionList" [eventChanged]="eventChanged"
+        (onAddMission)="addMission($event)">
     </app-add-mission-form>
     <div class="mission-container">
+        <div class="techheader">
+            <h2>Перетягніть техніку з списку в поле нижче для формування наряду</h2>
+        </div>
         <div cdkDropList #missionList="cdkDropList" [cdkDropListData]="technicForMissionList"
-            [cdkDropListConnectedTo]="[technicList]" class="technic-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="enterPredicate">
-            <app-draggable-m-t-item *ngFor="let tech of technicForMissionList"  [tech]=" tech" [all]="true"
-                class="technic_item__drag" (amountChanged)="onAmountInputChange($event)">
+            [cdkDropListConnectedTo]="[technicList]" class="technic-list" (cdkDropListDropped)="drop($event)"
+            [cdkDropListEnterPredicate]="enterPredicate">
+            <app-draggable-m-t-item *ngFor="let tech of technicForMissionList" [tech]=" tech" [all]="true"
+                class=".technic-box__item" (amountChanged)="onAmountInputChange($event)">
             </app-draggable-m-t-item>
-            <!-- <img src="assets\placeholder.png" class="mission-form__placeholder"> -->
+            <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+        </div>
+        <div class="techheader">
+            <p><i>*Примітка: Максимум може бути 7 видів техніки</i></p>
         </div>
     </div>
 
@@ -28,6 +36,7 @@
                 totalItems: pageAllListLength
             }" [tech]="tech" [all]="false">
             </app-draggable-m-t-item>
+            <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
         </div>
 
         <div *ngIf="allTechnicList.length > 0" class="pagination__footer">
