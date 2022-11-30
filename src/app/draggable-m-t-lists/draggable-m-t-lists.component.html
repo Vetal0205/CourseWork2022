@@ -16,6 +16,7 @@
             <!-- <img src="assets\placeholder.png" class="mission-form__placeholder"> -->
         </div>
     </div>
+
     <div class="technic-container">
         <div cdkDropList #technicList="cdkDropList" [cdkDropListData]="allTechnicList" class="technic-list"
             (cdkDropListDropped)="drop($event)" [cdkDropListConnectedTo]="[missionList]">
