@@ -8,20 +8,24 @@
     border-radius: 10px;
     @include for-size(for-big-15) {width: 90px; height: 75px;}
     @include for-size(for-big-14) {width: 100px; height: 85px;}
-    @include for-size(for-big-13) {width: 125px; height: 105px;}
+    @include for-size(for-big-13) {width: 100px; height: 85px;}
     @include for-size(for-big-12) {width: 125px; height: 105px;}
     @include for-size(for-big-11) {width: 150px; height: 125px;}
-    @include for-size(for-big-1) {width: 150px; height: 125px;} 
+    @include for-size(for-big-3) {width: 150px; height: 125px;}
+    @include for-size(for-big-2) {width: 160px; height: 130px;}
+    @include for-size(for-big-1) {width: 175px; height: 145px;} 
     
     .content{
         border-radius: 10px;
         margin-bottom: 60px;
         @include for-size(for-big-15) {width: 90px; height: 75px;}
         @include for-size(for-big-14) {width: 100px; height: 85px;}
-        @include for-size(for-big-13) {width: 125px; height: 105px;}
+        @include for-size(for-big-13) {width: 100px; height: 85px;}
         @include for-size(for-big-12) {width: 125px; height: 105px;}
         @include for-size(for-big-11) {width: 150px; height: 125px;}
-        @include for-size(for-big-1) {width: 150px; height: 125px;}  
+        @include for-size(for-big-3) {width: 150px; height: 125px;}
+        @include for-size(for-big-2) {width: 160px; height: 130px;}
+        @include for-size(for-big-1) {width: 175px; height: 145px;}  
         -webkit-transition-duration: 0.6s;
         transition-duration: 0.6s;
 

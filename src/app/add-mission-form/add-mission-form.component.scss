@@ -5,11 +5,22 @@
     flex-wrap: wrap;
     height: 215px;
     width: auto;
-    padding-left: 15px;
     padding-top: 40px;
+    padding-left: 15px;
+
     .technic-price{
-        width: 100%;
-        height: 215px;
+        width: 600px;
+        height: 285px;
+        @include for-size(for-big-15) {margin-left: 0%;}
+        @include for-size(for-big-13) {margin-left: 0%;}
+        @include for-size(for-big-12) {margin-left: 6%;}
+        @include for-size(for-big-11) {margin-left: 14%;}
+        @include for-size(for-big-10) {margin-left: 20%;}
+        @include for-size(for-big-9) {margin-left: 22%;}
+        @include for-size(for-big-8) {margin-left: 28%;}
+        @include for-size(for-big-7) {margin-left: 28%;}
+        @include for-size(for-big-6) {margin-left: 0%;}
+        @include for-size(for-big-1) {margin-left: 0%;}
         input {
             box-sizing: border-box;
             -webkit-appearance: none;
