@@ -1,20 +1,22 @@
 <div *ngIf="technique" class="technic-item__detail">
     <div class="technic-item__detail-box">
         <h2>{{technique.name | uppercase}} деталі</h2>
-        <img src="{{technique.image}}" alt="{{technique.name}}">
+        <div class="technic-item__img">
+            <img src="{{technique.image}}" alt="{{technique.name}}">
+        </div>
     </div>
     <div class="content">
-        <p>Дальність їзди на повний бак топлива: {{technique.fuel_range}}</p>
-        <p>Витрата палива: {{technique.fuel_consumption}}</p>
-        <p>Об'єм баку: {{technique.fuel_tank}}</p>
-        <p>Швидкість: {{technique.speed}}</p>
-        <p>Місткість: {{technique.crew}}</p>
+        <p><img src="../../assets/Count_For_Technic-Detail/Count_1.png" (mouseenter)="mouseEnter_count_1()" [@heartBeat]="count_icon_1" [@enter]>Дальність їзди на повний бак топлива: {{technique.fuel_range}}</p>
+        <p><img src="../../assets/Count_For_Technic-Detail/Count_2.png" (mouseenter)="mouseEnter_count_2()" [@heartBeat]="count_icon_2" [@enter]>Витрата палива: {{technique.fuel_consumption}}</p>
+        <p><img src="../../assets/Count_For_Technic-Detail/Count_3.png" (mouseenter)="mouseEnter_count_3()" [@heartBeat]="count_icon_3" [@enter]>Об'єм баку: {{technique.fuel_tank}}</p>
+        <p><img src="../../assets/Count_For_Technic-Detail/Count_4.png" (mouseenter)="mouseEnter_count_4()" [@heartBeat]="count_icon_4" [@enter]>Швидкість: {{technique.speed}}</p>
+        <p><img src="../../assets/Count_For_Technic-Detail/Count_5.png" (mouseenter)="mouseEnter_count_5()" [@heartBeat]="count_icon_5" [@enter]>Місткість: {{technique.crew}}</p>
         <!-- <p>Тип техніки: {{technique.type}}</p> -->
-        <p>Потужність: {{technique.power}}</p>
-        <p>Вага: {{technique.weight}}</p>
-        <p>Місце виробництва: {{technique.production}}</p>
+        <p><img src="../../assets/Count_For_Technic-Detail/Count_6.png" (mouseenter)="mouseEnter_count_6()" [@heartBeat]="count_icon_6" [@enter]>Потужність: {{technique.power}}</p>
+        <p><img src="../../assets/Count_For_Technic-Detail/Count_7.png" (mouseenter)="mouseEnter_count_7()" [@heartBeat]="count_icon_7" [@enter]>Вага: {{technique.weight}}</p>
+        <p><img src="../../assets/Count_For_Technic-Detail/Count_8.png" (mouseenter)="mouseEnter_count_8()" [@heartBeat]="count_icon_8" [@enter]>Місце виробництва: {{technique.production}}</p>
         <div class="line"></div>
-        <button type="button" (click)="goBack()">Назад</button>
+        <button type="button" (click)="goBack()" class="Btn_Back">Назад</button>
     </div>
 </div>
 

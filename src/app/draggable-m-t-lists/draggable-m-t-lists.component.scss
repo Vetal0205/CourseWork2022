@@ -44,19 +44,19 @@
     }
 }
 .mission-block{
-    @include for-size(for-big-15) {padding-left: 10px; padding-right: 10px; height: 1840px; background: url('../../assets/Main_Missions_mini.png')top/ cover no-repeat;} 
+    @include for-size(for-big-15) {padding-left: 10px; padding-right: 10px; height: 1880px; background: url('../../assets/Main_Missions_mini.png')top/ cover no-repeat;} 
     @include for-size(for-big-14) {padding-left: 20px; padding-right: 20px; height: 1840px;}  
     @include for-size(for-big-13) {padding-left: 20px; padding-right: 30px; height: 2140px;} 
     @include for-size(for-big-9) {padding-left: 20px; padding-right: 30px; height: 2140px; background: url('../../assets/Main_Missions_mini.png')top/ cover no-repeat;} 
     @include for-size(for-big-8) {padding-left: 20px; padding-right: 20px; height: 2000px; background: url('../../assets/Main_Missions.png')top/ cover no-repeat;} 
     @include for-size(for-big-7) {padding-left: 20px; padding-right: 20px; height: 2000px;}  
-    @include for-size(for-big-6) {padding-left: 20px; padding-right: 20px; height: 1750px;}  
+    @include for-size(for-big-6) {padding-left: 20px; padding-right: 20px; height: 1850px;}  
     @include for-size(for-big-5) {padding-left: 50px; padding-right: 20px;} 
     @include for-size(for-big-4) {padding-left: 80px; padding-right: 20px;} 
     @include for-size(for-laptops) {padding-left: 100px; padding-right: 50px;} 
     @include for-size(for-big-3) {padding-left: 180px; padding-right: 100px;} 
     @include for-size(for-big-2) {padding-left: 240px; padding-right: 150px;}  
-    @include for-size(for-big-1) {padding-left: 200px; padding-right: 200px; height: 1750px; background: url('../../assets/Main_Missions.png')top/ cover no-repeat;}  
+    @include for-size(for-big-1) {padding-left: 200px; padding-right: 200px; height: 1850px; background: url('../../assets/Main_Missions.png')top/ cover no-repeat;}  
     padding-top: 50px;
     
     display: block;
