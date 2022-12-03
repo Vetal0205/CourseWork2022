@@ -162,8 +162,12 @@ img{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding-left: 10%;
     padding-top: 50px;
+    @include for-size(for-big-15) {padding-left: 26%;}
+    @include for-size(for-big-10) {padding-left: 26%;}
+    @include for-size(for-big-9) {padding-left: 36%;}
+    @include for-size(for-big-1) {padding-left: 36%;}  
+
 }
 .selector__count{
     margin-top: -15px;

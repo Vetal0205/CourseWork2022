@@ -6,8 +6,7 @@
 .technic-item__background{
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 
-    0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     @include for-size(for-big-15) {width: 140px; height: 115px;}
     @include for-size(for-big-14) {width: 150px; height: 125px;}
     @include for-size(for-big-13) {width: 160px; height: 135px;}
@@ -21,13 +20,12 @@
     @include for-size(for-big-5) {width: 220px; height: 180px;}
     @include for-size(for-big-4) {width: 250px; height: 200px;}
     @include for-size(for-laptops) {width: 250px; height: 200px;} 
-    
-    -webkit-transition-duration: 0.6s;
-    transition-duration: 0.6s;
+
     .content{
         border-radius: 10px;
-        
         margin-bottom: 60px; 
+        -webkit-transition-duration: 0.6s;
+        transition-duration: 0.6s;
         @include for-size(for-big-15) {width: 140px; height: 115px;}
         @include for-size(for-big-14) {width: 150px; height: 125px;}
         @include for-size(for-big-13) {width: 160px; height: 135px;}
@@ -41,10 +39,12 @@
         @include for-size(for-big-5) {width: 220px; height: 180px;}
         @include for-size(for-big-4) {width: 250px; height: 200px;}
         @include for-size(for-laptops) {width: 250px; height: 200px;} 
+        
     }
 }
-.technic-item__background:hover{
+.content:hover{
     transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .description{
