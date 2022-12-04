@@ -1,18 +1,3 @@
-FROM node:16-alpine AS builder
-ARG CONFIGURATION='dev'
-
-WORKDIR /app
-
-COPY package.json .
-
-RUN npm install --legacy-peer-deps
-
-COPY . .
-
-# Build the application
-RUN npm run build --prod
-
-
 ######  Use NgInx alpine image  ###### 
 FROM nginx:stable-alpine
 
@@ -20,10 +5,11 @@ FROM nginx:stable-alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy nginx config file
-COPY /nginx.conf /etc/nginx/nginx.conf
+COPY /nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy dist folder fro build stage to nginx public folder
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY /dist/course-work-2022/ /usr/share/nginx/html
+
+EXPOSE 4200:80
 
 # Start NgInx service
-CMD ["nginx", "-g", "daemon off;"]
