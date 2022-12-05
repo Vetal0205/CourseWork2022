@@ -315,7 +315,7 @@
       "image": "/assets/Grad.png"
     },
     {
-      "id": 18,
+      "id": 19,
       "type": "RVFS",
       "name": "M142 HIMARS",
       "power": "290к.с. ",
@@ -332,7 +332,7 @@
       "image": "/assets/HIMARS.png"
     },
     {
-      "id": 19,
+      "id": 20,
       "type": "RVFS",
       "name": "M270 MLRS",
       "power": "500к.с. ",
@@ -349,7 +349,7 @@
       "image": "/assets/M270MLRS.png"
     },
     {
-      "id": 20,
+      "id": 21,
       "type": "RVFS",
       "name": "БМ-30 Смерч",
       "power": "525к.с. ",
@@ -366,7 +366,7 @@
       "image": "/assets/BM-30Smerch.png"
     },
     {
-      "id": 21,
+      "id": 22,
       "type": "RVFS",
       "name": "MARS-II",
       "power": "515к.с. ",
