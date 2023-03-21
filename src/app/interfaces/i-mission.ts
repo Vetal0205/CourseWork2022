@@ -6,5 +6,5 @@ export interface IMission {
     price:number;
     distance:number;
     duration?:string;
-    technique:ITechForMission[];
+    cars:ITechForMission[];
 }

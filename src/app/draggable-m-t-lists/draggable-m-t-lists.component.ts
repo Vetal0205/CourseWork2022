@@ -3,6 +3,7 @@ import { CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray, transferArrayItem }
 import { TechnicService } from '../services/technic.service';
 import { ITechForMission } from '../interfaces/itech-for-mission';
 import { IMission } from '../interfaces/i-mission';
+import { MissionsService } from '../services/missions.service';
 
 @Component({
   selector: 'app-draggable-m-t-lists',
@@ -10,7 +11,7 @@ import { IMission } from '../interfaces/i-mission';
   styleUrls: ['./draggable-m-t-lists.component.scss']
 })
 export class DraggableMTListsComponent implements OnInit {
-  constructor(private service: TechnicService) { }
+  constructor(private techService: TechnicService, private missionService: MissionsService) { }
   technicForMissionList: ITechForMission[] = [];
   allTechnicList: ITechForMission[] = [];
   eventChanged!:Event;
@@ -41,7 +42,7 @@ export class DraggableMTListsComponent implements OnInit {
     this.getTechnic();
   }
   getTechnic() {
-    this.service.getTechnic().subscribe((technics) => {
+    this.techService.getTechnic().subscribe((technics) => {
       technics.forEach((tech, index) => {
         let { id, type, name, fuel_tank, image, fuel_consumption, speed } = tech;
         let el: ITechForMission = {
@@ -51,11 +52,12 @@ export class DraggableMTListsComponent implements OnInit {
         this.allTechnicList.push(el);
       });
       this.pageAllListLength = this.allTechnicList.length;
-      console.log(this.pageAllListLength);
     });
   }
   addMission(mission: IMission) {
-    this.service.addMission(mission).subscribe((res) => { console.log(res) })
+    // this.technicForMissionList.map(val => mission.technique.push(Object.assign({}, val)));   
+    console.log(mission); 
+    this.missionService.addMission(mission).subscribe((res) => {  })
   }
   drop(event: CdkDragDrop<ITechForMission[]>) {
     if (event.previousContainer === event.container) {
@@ -67,11 +69,7 @@ export class DraggableMTListsComponent implements OnInit {
         event.previousIndex + ((this.pageAlltech - 1) * this.pageSizeA),
         event.currentIndex,
       );
-      console.log(this.pageAlltech);
-      console.log(event.previousIndex + ((this.pageAlltech - 1) * this.pageSizeA));
-      console.log(event.currentIndex);
-      console.log(event.container.data);
-      console.log(event.previousContainer.data);
+    
       this.techheader__showingFunction();
     }
     this.pageAllListLength = this.allTechnicList.length;

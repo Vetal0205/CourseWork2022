@@ -1,6 +1,7 @@
 import { Component,ViewChild, OnInit } from '@angular/core';
 import { IAuto } from '../interfaces/i-auto';
 import { IFilter } from '../interfaces/ifilter';
+import { FiltersService } from '../services/filters.service.service';
 import { TechnicService } from '../services/technic.service';
 
 
@@ -23,11 +24,11 @@ export class TechnicListComponent implements OnInit {
 
 
 
-    constructor(private service: TechnicService) { }
+    constructor(private techService: TechnicService, private filterService: FiltersService) { }
 
     ngOnInit(): void {
-        this.service.getFilters().subscribe((filters) => { this.filterList = filters; });
-        this.service.getTechnic().subscribe((technics) => {
+        this.filterService.getFilters().subscribe((filters) => { this.filterList = filters; });
+        this.techService.getTechnic().subscribe((technics) => {
             this.allTechnicList = technics;
             this.filterLength = this.allTechnicList.length;
             this.pagelistLength = this.allTechnicList.length;
@@ -38,7 +39,7 @@ export class TechnicListComponent implements OnInit {
         this.page = event;
     }
     update() {
-        this.service.getTechnic().subscribe((technics) => { this.allTechnicList = technics; this.pagelistLength = this.allTechnicList.length; this.page = 1 });
+        this.techService.getTechnic().subscribe((technics) => { this.allTechnicList = technics; this.pagelistLength = this.allTechnicList.length; this.page = 1 });
 
     }
     listFilter(filter: IFilter) {

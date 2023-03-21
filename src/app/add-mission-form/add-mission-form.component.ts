@@ -80,7 +80,7 @@ export class AddMissionFormComponent implements  OnInit {
         route: `${this.distanceEl.from} - ${this.distanceEl.from}`,
         fuel: this.totalFuel,
         price: this.totalSum,
-        technique: this.techForMission,
+        cars: this.techForMission,
         distance: this.distanceEl.distance
       }
     } catch (error) {
