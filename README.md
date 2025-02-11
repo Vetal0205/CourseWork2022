@@ -20,7 +20,7 @@ The web application provides:
 ### **Technologies Used**
 The project is built using modern web development technologies:
 - **Frontend:** Angular (TypeScript, SCSS, HTML5)
-- **Backend & API:** Node.js, JSON server
+- **Backend & API:** Spring Boot (Java, PostgreSQL)
 - **Mapping & Route Calculation:** Google Maps Directions API, Maps JavaScript API
 - **Containerization & Deployment:** Docker, DockerHub
 - **UI Enhancements:** Angular Drag and Drop module
@@ -60,37 +60,6 @@ The project is built using modern web development technologies:
 
 ---
 
-## Development Workflow
-
-### **Project Timeline**
-The project was developed following a structured timeline:
-- **Concept Design & Research** (October 2022)
-- **Frontend UI Design** using Webflow (November 2022)
-- **HTML & SCSS-based Web Layout** (November 2022)
-- **Database Creation & JSON Server Setup** (November 2022)
-- **Integration with Angular Framework** (November 2022)
-- **Functionality Implementation (Route Calculation, Drag-and-Drop, Fuel Estimation)** (November 2022)
-- **Adaptive UI Adjustments & Testing** (November 2022)
-- **Docker Deployment & Finalization** (December 2022)
-
-### **Team Contributions**
-The project was developed collaboratively:
-- **Frontend Development:** UI/UX design, Angular components, adaptive layout.
-- **Backend Development:** JSON database, data fetching, API integration.
-- **Mapping & Routing:** Google Maps API integration.
-- **Deployment:** Docker containerization, final testing.
-
----
-
-## Future Enhancements
-The application has the potential to be further developed for real-world military and logistics use:
-- **Real-time fuel pricing updates** from external sources.
-- **More advanced route optimization** with alternative path suggestions.
-- **User authentication & access control** for secure usage.
-- **Integration with live GPS tracking** for convoy monitoring.
-
----
-
 # How to Run "Logical Force of Ukraine" Web Application
 
 This guide provides step-by-step instructions on how to set up and run the **"Logical Force of Ukraine"** web application, both locally and using Docker.
@@ -120,31 +89,13 @@ cd CourseWork2022
 
 ---
 
-## 2. Running the Backend (JSON Server)
+## 2. Running the Backend (Spring Boot)
 
-The backend uses JSON Server to simulate a REST API for vehicle data.
+The backend for this project is built with Spring Boot and is available in a separate repository:
 
-### **Start Backend Locally**
-1. **Navigate to the backend directory:**
-   ```bash
-   cd json-server
-   ```
+👉 [CourseWork 2022 Backend Repository](https://github.com/Vetal0205/CourseWork2022.Backend)
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Start the backend server:**
-   ```bash
-   npm run server
-   ```
-
-4. **Verify the API is running:**
-   Open `http://localhost:3000` in your browser or use:
-   ```bash
-   curl http://localhost:3000
-   ```
+Follow the setup instructions in the backend repository before proceeding with the frontend.
 
 ---
 
@@ -152,7 +103,7 @@ The backend uses JSON Server to simulate a REST API for vehicle data.
 
 1. **Navigate to the project root directory:**
    ```bash
-   cd ..
+   cd CourseWork2022
    ```
 
 2. **Install dependencies:**
@@ -169,6 +120,7 @@ The backend uses JSON Server to simulate a REST API for vehicle data.
        production: false,
        GOOGLE_MAPS_API_KEY_FOR_DISTANCE_MATRIX: 'YOUR_DISTANCE_MATRIX_API_KEY',
        GOOGLE_MAPS_API_KEY_FOR_JS_INIT: 'YOUR_JS_API_KEY',
+       API_BASE_URL: 'http://localhost:8080/back-end/api'
      };
      ```
 
@@ -184,40 +136,23 @@ The backend uses JSON Server to simulate a REST API for vehicle data.
 
 You can also run the application using Docker containers.
 
-### **Running JSON Server in Docker**
-1. **Navigate to the backend directory:**
-   ```bash
-   cd json-server
-   ```
-
-2. **Build the Docker image:**
-   ```bash
-   docker build -t json-server .
-   ```
-
-3. **Run the container:**
-   ```bash
-   docker run -p 3000:3000 json-server
-   ```
-
-### **Running Angular in Docker**
-1. **Navigate back to the project root directory:**
-   ```bash
-   cd ..
-   ```
-
-2. **Build the Angular application:**
+1. **Build the Angular application:**
    ```bash
    ng build --prod
    ```
 
-3. **Build the Docker image:**
+2. **Build the Docker image:**
    ```bash
    docker build -t logical-force-app .
    ```
 
-4. **Run the container:**
+3. **Run the container:**
    ```bash
    docker run -p 4200:80 logical-force-app
    ```
    The application will be accessible at `http://localhost:4200`.
+
+---
+
+## Conclusion
+This frontend application is designed to work with the **CourseWork 2022 Backend**, providing a complete web-based solution for military convoy fuel estimation. Ensure that the backend is running before using the frontend.
