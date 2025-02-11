@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   GOOGLE_MAPS_API_KEY_FOR_DICTANCE_MATRIX: "XXXX", //write your key
-  GOOGLE_MAPS_API_KEY_FOR_JS_INIT: "AIzaSyBOTx-htSCFzXynKYDCd-8DFKDm-q7aB5U" //write your key
+  GOOGLE_MAPS_API_KEY_FOR_JS_INIT: "xxxx" //write your key
 };
 
 /*
