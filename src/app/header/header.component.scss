@@ -1,0 +1,209 @@
+@import "../../styles.scss";
+
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.logo {
+  width: 150px;
+  cursor: pointer;
+  img{
+      @include for-size(for-big-15) {margin-top: 0px; height: 55px;}
+      @include for-size(for-big-14) {margin-top: 0px; height: 55px;}
+      @include for-size(for-big-13) {margin-top: 0px; height: 55px;}
+      @include for-size(for-big-6) {margin-top: 0px; height: 55px;}
+      @include for-size(for-laptops) {margin-top: 0px; height: 55px;}
+      @include for-size(for-big-3) {margin-top: 0px; height: 70px;}
+      @include for-size(for-large-1) {margin-top: 0px; height: 70px;}
+
+      position: relative;
+      transform: translateX(150%);
+      height: 55px;
+      width: auto;
+
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+  }
+  h2{
+      @include for-size(for-big-15) {padding-top: 20px; font-size: 14px;}
+      @include for-size(for-big-14) {padding-top: 20px; font-size: 16px;}
+      @include for-size(for-big-13) {padding-top: 20px; font-size: 18px;}
+      @include for-size(for-big-12) {padding-top: 15px; font-size: 20px;}
+      @include for-size(for-big-7) {padding-top: 15px; font-size: 20px;}
+      @include for-size(for-big-6) {padding-top: 19px; font-size: 20px;}
+      @include for-size(for-big-5) {padding-top: 19px; font-size: 20px;}
+      @include for-size(for-big-4) {padding-top: 19px; font-size: 20px;}
+      @include for-size(for-laptops) {padding-top: 19px; font-size: 20px;}
+      @include for-size(for-big-3) {padding-top: 25px; font-size: 25px;}
+      @include for-size(for-large-1) {padding-top: 25px; font-size: 25px;}
+
+      position: absolute;
+      margin-left: 70px;
+      color: #fff;
+      opacity: 0;
+
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+  }
+}
+.logo:hover{
+  img{
+      transform: translateX(0%);
+  }
+  h2{
+      opacity: 1;
+  }
+}
+
+.top-nav {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to left, #575656, #363636);
+  color: #FFF;
+  @include for-size(for-big-15) {height: 75px;}
+  @include for-size(for-big-12) {height: 75px;}
+  @include for-size(for-big-11) {height: 75px;}
+  @include for-size(for-laptops) {height: 75px;}
+  @include for-size(for-big-3) {height: 100px;}
+  @include for-size(for-large-2) {height: 100px;}
+  padding: 1em;
+  z-index: 1500;
+  width: 100%;
+}
+
+.menu {  
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+  a {
+    @include for-size(for-big-15) {font-size: 18px;}
+    @include for-size(for-big-9) {font-size: 18px;}
+    @include for-size(for-big-8) {font-size: 20px;}
+    @include for-size(for-big-1) {font-size: 20px;}
+    @include for-size(for-large-4) {font-size: 22px;}
+    @include for-size(for-large-2) {font-size: 25px;}
+
+    cursor: pointer;
+    color: $font_white;
+    text-decoration: none;
+    padding-right: 40px;
+  
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+  }
+  
+  a:hover {
+    color: $orange_color;
+    background-size: 58% 2px;
+  }
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 1000px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 75px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid rgb(61, 61, 61);
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}

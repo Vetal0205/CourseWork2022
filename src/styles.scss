@@ -1,0 +1,128 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$course-work-2022-primary: mat.define-palette(mat.$indigo-palette);
+$course-work-2022-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$course-work-2022-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$course-work-2022-theme: mat.define-light-theme((
+  color: (
+    primary: $course-work-2022-primary,
+    accent: $course-work-2022-accent,
+    warn: $course-work-2022-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($course-work-2022-theme);
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img{
+    vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+html { overflow-x: hidden; }
+html,
+body{
+    height: 100%;
+    line-height: 1;
+    font-size: 18px;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+$header_color: #363636;
+$font_white: #fff;
+$transparent_color: rgba(28,28,28,0);
+$btn_color: #2a333b;
+$bg_color: #0b1d26;
+$orange_color: #d5b23f;
+
+@mixin for-size($size) {
+    @if $size == for-big-16   {
+        @media (max-width: 498px) { @content; }
+    } @else if $size == for-big-15 {
+        @media (min-width: 499px) { @content; }
+    }@else if $size == for-big-14  {
+        @media (min-width: 550px) { @content; }
+    }@else if $size == for-big-13  {
+        @media (min-width: 600px) { @content; }
+    }@else if $size == for-big-12  {
+        @media (min-width: 700px) { @content; }
+    } @else if $size == for-big-11  {
+        @media (min-width: 800px) { @content; }
+    } @else if $size == for-big-10 {
+        @media (min-width: 900px) { @content; }
+    } @else if $size == for-big-9  {
+        @media (min-width: 1000px) { @content; }
+    } @else if $size == for-big-8  {
+        @media (min-width: 1100px) { @content; }
+    } @else if $size == for-big-7  {
+        @media (min-width: 1200px) { @content; }
+    } @else if $size == for-big-6 {
+        @media (min-width: 1300px) { @content; }
+    } @else if $size == for-big-5  {
+        @media (min-width: 1400px) { @content; }
+    } @else if $size == for-big-4  {
+        @media (min-width: 1500px) { @content; }
+    } @else if $size == for-laptops  {
+        @media (min-width: 1520px) { @content; }
+    } @else if $size == for-big-3  {
+        @media (min-width: 1600px) { @content; }
+    }  @else if $size == for-big-2 {
+        @media (min-width: 1700px) { @content; }
+    } @else if $size == for-big-1  {
+        @media (min-width: 1800px) { @content; }
+    } @else if $size == for-large-4  {
+        @media (min-width: 1900px) { @content; }
+    } @else if $size == for-large-3  {
+        @media (min-width: 1920px) { @content; }
+    } @else if $size == for-large-2  {
+        @media (min-width: 2000px) { @content; }
+    } @else if $size == for-large-1  {
+        @media (min-width: 2100px) { @content; }
+    }
+}@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

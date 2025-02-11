@@ -1,0 +1,152 @@
+@import '../../styles.scss';
+
+.technic-block{
+    display: flex;
+    flex-wrap: wrap;
+    @include for-size(for-big-15) {height: 1100px; padding-left: 0px;}
+    @include for-size(for-big-11) {height: 1100px; padding-left: 0px;}
+    @include for-size(for-big-10) {height: 1150px; padding-left: 0px;}
+    @include for-size(for-big-9) {height: 1300px; padding-left: 0px;}
+    @include for-size(for-big-8) {height: 770px; padding-left: 30px;}
+    @include for-size(for-big-7) {height: 770px; padding-left: 80px;}
+    @include for-size(for-big-6) {height: 830px; padding-left: 80px;}
+    @include for-size(for-big-5) {height: 830px; padding-left: 100px;}
+    @include for-size(for-big-4) {height: 900px; padding-left: 150px;}
+    @include for-size(for-big-1) {height: 900px; padding-left: 150px;} 
+    
+    .container{
+        display: grid;
+        margin: 0px;
+        margin-top: 50px;
+        height: 700px;
+        @include for-size(for-big-15) {padding-left: 6%; width: 100%;}
+        @include for-size(for-big-14) {padding-left: 8%; width: 100%;}
+        @include for-size(for-big-13) {padding-left: 10%; width: 100%;}
+        @include for-size(for-big-12) {padding-left: 12%; width: 100%;}
+        @include for-size(for-big-11) {padding-left: 10%; width: 100%;}
+        @include for-size(for-big-10) {padding-left: 10%; width: 100%;}
+        @include for-size(for-big-9) {padding-left: 10%; width: 100%;}
+        @include for-size(for-big-8) {padding-left: 0%; width: 70%;}
+        @include for-size(for-big-1) {padding-left: 0%; width: 70%;} 
+
+        .technic__container{
+          display: flex;
+          flex-wrap: wrap;
+          @include for-size(for-big-15) {gap: 20px; width: 460px;}
+          @include for-size(for-big-14) {gap: 20px; width: 490px;}
+          @include for-size(for-big-13) {gap: 20px; width: 520px;}
+          @include for-size(for-big-12) {gap: 20px; width: 580px;}
+          @include for-size(for-big-11) {gap: 20px; width: 640px;}
+          @include for-size(for-big-10) {gap: 30px; width: 720px;}
+          @include for-size(for-big-9) {gap: 50px; width: 850px;}
+          @include for-size(for-big-8) {gap: 20px; width: 640px;}
+          @include for-size(for-big-7) {gap: 20px; width: 640px;}
+          @include for-size(for-big-6) {gap: 30px; width: 720px;}
+          @include for-size(for-big-5) {gap: 30px; width: 720px;}
+          @include for-size(for-big-4) {gap: 50px; width: 850px;}
+          @include for-size(for-big-1) {gap: 50px; width: 850px;} 
+
+        }
+        .technic__pagination{
+          margin: 0;
+          @include for-size(for-big-15) {padding-top: 50px; padding-left: 28%;}
+          @include for-size(for-big-14) {padding-top: 50px; padding-left: 30%;}
+          @include for-size(for-big-13) {padding-top: 60px; padding-left: 21%;}
+          @include for-size(for-big-12) {padding-top: 60px; padding-left: 24%;}
+          @include for-size(for-big-11) {padding-top: 60px; padding-left: 27%;}
+          @include for-size(for-big-10) {padding-top: 60px; padding-left: 30%;}
+          @include for-size(for-big-9) {padding-top: 60px; padding-left: 35%;}
+          @include for-size(for-big-8) {padding-top: 60px; padding-left: 22%;}
+          @include for-size(for-big-7) {padding-top: 60px; padding-left: 22%;}
+          @include for-size(for-big-6) {padding-top: 70px; padding-left: 25%;}
+          @include for-size(for-big-5) {padding-top: 90px; padding-left: 25%;}
+          @include for-size(for-big-4) {padding-top: 40px; padding-left: 30%;}
+          @include for-size(for-big-1) {padding-top: 40px; padding-left: 27%;} 
+          
+        }
+    }
+    .filters{
+        display: grid;
+        @include for-size(for-big-15) {width: 100%; height: 250px; margin-top: -100px; }
+        @include for-size(for-big-12) {width: 100%; height: 250px; margin-top: -100px; }
+        @include for-size(for-big-11) {width: 100%; height: 250px; margin-top: 50px; }
+        @include for-size(for-big-9) {width: 100%; height: 250px; margin-top: 50px; }
+        @include for-size(for-big-8) {width: 300px; height: 550px; margin-top: 150px; }
+        @include for-size(for-big-7) {width: 300px;}
+        @include for-size(for-big-6) {width: 350px;}
+        @include for-size(for-big-1) {width: 350px; height: 550px; margin-top: 150px; } 
+        
+        .filters__buttons{
+          @include for-size(for-big-15) {display: flex; flex-wrap: wrap; justify-content: center;}
+          @include for-size(for-big-9) {display: flex; flex-wrap: wrap; justify-content: center;}
+          @include for-size(for-big-8) {display: block; flex-wrap: nowrap;}
+          @include for-size(for-big-1) {display: block; flex-wrap: nowrap;} 
+          
+        }
+        h1{
+            @include for-size(for-big-15) {font-size: 40px; text-align: center;}
+            @include for-size(for-big-9) {font-size: 40px; text-align: center;}
+            @include for-size(for-big-8) {font-size: 40px; text-align: left;}
+            @include for-size(for-big-5) {font-size: 40px;}
+            @include for-size(for-big-4) {font-size: 60px;}
+            @include for-size(for-big-1) {font-size: 60px; text-align: left;} 
+            
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: $header_color;
+            
+        }
+        button {
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: transparent;
+            border: 2px solid $orange_color;
+            border-radius: 0.6em;
+            color: $orange_color;
+            cursor: pointer;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-align-self: center;
+            -ms-flex-item-align: center;
+            align-self: center;
+
+            padding-top: 14px;
+            font-weight: 400;
+            margin: 20px;
+            height: 60px;
+
+            @include for-size(for-big-15) {width: 230px; font-size: 18px; padding-left: 25px; margin-left: 28%;}
+            @include for-size(for-big-14) {width: 230px; font-size: 18px; padding-left: 25px; margin-left: 31%;}
+            @include for-size(for-big-13) {width: 230px; font-size: 18px; padding-left: 25px; margin-left: 35%;}
+            @include for-size(for-big-12) {width: 230px; font-size: 18px; padding-left: 25px; margin-left: 35%;}
+            @include for-size(for-big-11) {width: 230px; font-size: 18px; padding-left: 25px; margin-left: 39%;}
+            @include for-size(for-big-9) {width: 230px; font-size: 18px; padding-left: 25px; margin-left: 39%;}
+            @include for-size(for-big-8) {width: 230px; font-size: 18px; padding-left: 25px; margin-left: 20px;}
+            @include for-size(for-big-7) {width: 230px; font-size: 18px; padding-left: 25px;}
+            @include for-size(for-big-5) {width: 230px; font-size: 18px; padding-left: 25px;}
+            @include for-size(for-big-4) {width: 300px; font-size: 20px; padding-left: 45px;}
+            @include for-size(for-big-1) {width: 300px; font-size: 20px; padding-left: 45px; margin-left: 20px;} 
+
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 700;
+          }
+          button:hover, .btn:focus {
+            color: #fff;
+            outline: 0;
+          }
+          .Filters {
+            -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+            transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+          }
+          .Filters:hover {
+            box-shadow: 0 0 40px 40px $orange_color inset;
+          }
+    }
+}

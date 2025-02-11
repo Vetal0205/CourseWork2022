@@ -1,0 +1,141 @@
+@import '../../styles.scss';
+
+$header_color: #363636;
+$font_white: #fff;
+$transparent_color: rgba(28,28,28,0);
+$btn_color: #2a333b;
+$bg_color: #0b1d26;
+$orange_color: #d5b23f;
+
+.Comments{
+    top: -110px;
+    position: relative;
+    @include for-size(for-big-15) {height: 1200px;}
+    @include for-size(for-big-7) {height: 1200px;}
+    @include for-size(for-big-6) {height: 650px;}
+    @include for-size(for-big-1) {height: 650px;}
+    width: 100%;
+    background-color: $bg_color;
+}
+.comments-title{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $font_white;
+    width: 500px;
+    @include for-size(for-big-15) {margin-left: 140px;}
+    @include for-size(for-big-14) {margin-left: 160px;}
+    @include for-size(for-big-13) {margin-left: 180px;}
+    @include for-size(for-big-12) {margin-left: 220px;}
+    @include for-size(for-big-11) {margin-left: 280px;}
+    @include for-size(for-big-10) {margin-left: 340px;}
+    @include for-size(for-big-9) {margin-left: 400px;}
+    @include for-size(for-big-8) {margin-left: 460px;}
+    @include for-size(for-big-6) {margin-left: 460px;}
+    @include for-size(for-big-5) {margin-left: 500px;}
+    @include for-size(for-big-4) {margin-left: 560px;}
+    @include for-size(for-big-3) {margin-left: 600px;}
+    @include for-size(for-big-2) {margin-left: 640px;}
+    @include for-size(for-big-1) {margin-left: 680px;}
+    @include for-size(for-large-4) {margin-left: 720px}
+    @include for-size(for-large-2) {margin-left: 760px}
+    padding-top: 50px;
+    font-size: 80px;
+    .comments-title__colored{
+        color: $orange_color;
+    }
+}
+.comments-box{
+    display: flex;
+    flex-wrap: wrap;
+    @include for-size(for-big-15) {margin-left: 52.5px; gap: 35px;}
+    @include for-size(for-big-14) {margin-left: 72.5px; gap: 35px;}
+    @include for-size(for-big-13) {margin-left: 102.5px; gap: 35px;}
+    @include for-size(for-big-8) {margin-left: 102.5px; gap: 35px;}
+    @include for-size(for-big-7) {margin-left: 72.5px; gap: 35px;}
+    @include for-size(for-big-6) {margin-left: 72.5px; gap: 35px;}
+    @include for-size(for-big-5) {margin-left: 82.5px; gap: 45px;}
+    @include for-size(for-big-4) {margin-left: 102.5px; gap: 65px;}
+    @include for-size(for-big-3) {margin-left: 102.5px; gap: 65px;}
+    @include for-size(for-big-2) {margin-left: 122.5px; gap: 65px;}
+    @include for-size(for-big-1) {margin-left: 172.5px; gap: 65px;}
+    @include for-size(for-large-4) {margin-left: 202.5px; gap: 65px;}
+    @include for-size(for-large-2) {margin-left: 252.5px; gap: 65px;}
+    padding-top: 50px;
+    .comments-box__content{
+        padding: 23px 23px 23px 23px;
+        @include for-size(for-big-15) {width: 400px; height: 300px;}
+        @include for-size(for-big-14) {width: 425px; height: 300px;}
+        @include for-size(for-big-13) {width: 450px; height: 300px;}
+        @include for-size(for-big-12) {width: 550px; height: 300px;}
+        @include for-size(for-big-11) {width: 650px; height: 300px;}
+        @include for-size(for-big-10) {width: 750px; height: 300px;}
+        @include for-size(for-big-9) {width: 850px; height: 300px;}
+        @include for-size(for-big-8) {width: 950px; height: 300px;}
+        @include for-size(for-big-7) {width: 1050px; height: 300px;}
+        @include for-size(for-big-6) {width: 380px; height: 400px;}
+        @include for-size(for-big-5) {width: 400px; height: 400px;}
+        @include for-size(for-big-4) {width: 400px; height: 400px;}
+        @include for-size(for-big-3) {width: 450px; height: 400px;}
+        @include for-size(for-big-1) {width: 450px; height: 400px;}
+        
+        background-color: $font_white;
+        border-radius: 12px;
+        color: $bg_color;
+        div{
+            @include for-size(for-big-15) {height: 100px;}
+            @include for-size(for-big-11) {height: 100px;}
+            @include for-size(for-big-10) {height: 80px;}
+            @include for-size(for-big-7) {height: 80px;}
+            @include for-size(for-big-6) {height: 160px;}
+            @include for-size(for-big-1) {height: 160px;}
+        }
+        p{
+            text-align: center;
+            @include for-size(for-big-15) {font-size: 15px;}
+            @include for-size(for-big-14) {font-size: 16px;}
+            @include for-size(for-big-12) {font-size: 16px;}
+            @include for-size(for-big-11) {font-size: 18px;}
+            @include for-size(for-big-1) {font-size: 18px;}
+        }
+        img{
+            @include for-size(for-big-15) {padding-left: 130px; padding-top: 20px;}
+            @include for-size(for-big-14) {padding-left: 140px; padding-top: 20px;}
+            @include for-size(for-big-13) {padding-left: 150px; padding-top: 20px;}
+            @include for-size(for-big-12) {padding-left: 210px; padding-top: 10px;}
+            @include for-size(for-big-11) {padding-left: 250px; padding-top: 10px;}
+            @include for-size(for-big-10) {padding-left: 300px; padding-top: 10px;}
+            @include for-size(for-big-9) {padding-left: 350px; padding-top: 10px;}
+            @include for-size(for-big-8) {padding-left: 400px; padding-top: 10px;}
+            @include for-size(for-big-7) {padding-left: 450px; padding-top: 10px;}
+            @include for-size(for-big-6) {padding-left: 110px; padding-top: 30px;}
+            @include for-size(for-big-5) {padding-left: 130px;}
+            @include for-size(for-big-4) {padding-left: 130px;}
+            @include for-size(for-big-3) {padding-left: 150px;}
+            @include for-size(for-big-1) {padding-left: 150px; padding-top: 30px;}
+            
+        }
+        h1{
+            
+            font-weight: 900;
+            text-align: center;
+            @include for-size(for-big-15) {font-size: 28px; padding-top: 10px;}
+            @include for-size(for-big-14) {font-size: 28px; padding-top: 10px;}
+            @include for-size(for-big-13) {font-size: 30px; padding-top: 10px;}
+            @include for-size(for-big-12) {font-size: 30px; padding-top: 20px;}
+            @include for-size(for-big-7) {font-size: 30px;}
+            @include for-size(for-big-6) {font-size: 24px;}
+            @include for-size(for-big-5) {font-size: 28px;}
+            @include for-size(for-big-4) {font-size: 28px;}
+            @include for-size(for-big-3) {font-size: 30px;}
+            @include for-size(for-big-1) {font-size: 30px; padding-top: 20px;}
+            
+
+            cursor: default;
+        }
+    }
+}

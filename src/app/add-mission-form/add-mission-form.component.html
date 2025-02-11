@@ -1,0 +1,15 @@
+<div class="map-box" >
+    <app-map (onGetDistance)="onDistanceGet($event)"></app-map>
+</div>
+<form #missionForm="ngForm"(ngSubmit)="onSubmit()" class="add-form" *ngIf="totalFuel" data-aos="fade-up">
+    <div class="technic-price">
+        <div class="technic-price__box">
+            <p><img src="../../assets/Road.svg" class="p__svg-icons">Загальна відстань: {{distanceEl.distance}} км</p>
+            <p><img src="../../assets/Fuel.svg" class="p__svg-icons">Загальний обсяг палива: {{totalFuel}} літрів</p>
+            <p><img src="../../assets/Money.svg" class="p__svg-icons">Ціна палива: {{totalSum}} гривень (для ЗСУ за курсом {{this.fuelPrice}} грн за літр)</p>
+            <p *ngIf="distanceEl.duration"><img src="../../assets/Time.svg" class="p__svg-icons">Тривалість поїздки: {{distanceEl.duration}}</p>
+        </div>
+        <input type="submit" name="submit" value="Відправити Наряд" class="btn btn-submit">
+        
+    </div>
+</form>

@@ -1,0 +1,20 @@
+<div class="technic-block">
+    <div class="container">
+        <div class="technic__container"> 
+            <app-technic-item *ngFor="let tech of allTechnicList | paginate: 
+            { 
+            itemsPerPage: pageSize,
+            currentPage: page,
+            totalItems: pagelistLength 
+            }" [tech]="tech"></app-technic-item>
+        </div>
+        <pagination-controls class="technic__pagination" *ngIf="allTechnicList" previousLabel="" nextLabel="" [responsive]="true" (pageChange)="handlePageChange($event)"></pagination-controls>
+    </div>
+    <div class="filters">
+        <h1>Категорії</h1>
+        <div class="filters__buttons">
+            <app-button *ngFor="let filter of filterList" [filterIn]='filter' (filterOut)="listFilter(filter)"></app-button>
+        </div>
+        <button (click)="update()" class="Filters">Прибрати фільтри</button>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="mission-main">
+    <h1>Головна | Наряди</h1>
+    <h2>Наряди</h2>
+</div>
+
+<section class="mission-block">
+
+    <app-add-mission-form [techForMission]="technicForMissionList" [eventChanged]="eventChanged"
+        (onAddMission)="addMission($event)">
+    </app-add-mission-form>
+    <div class="mission-container">
+        <div class="techheader" *ngIf="techheader__showing">
+            <h2>Перетягніть техніку з списку в поле нижче для формування наряду</h2>
+        </div>
+        <div cdkDropList #missionList="cdkDropList" [cdkDropListData]="technicForMissionList"
+            [cdkDropListConnectedTo]="[technicList]" class="technic-list__form" (cdkDropListDropped)="drop($event)"
+            [cdkDropListEnterPredicate]="enterPredicate">
+            <app-draggable-m-t-item *ngFor="let tech of technicForMissionList" [tech]=" tech" [all]="true"
+                class=".technic-box__item" (amountChanged)="onAmountInputChange($event)">
+            </app-draggable-m-t-item>
+            <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+        </div>
+        <div class="techheader" *ngIf="techheader__showing">
+            <p><i>*Примітка: Максимум може бути 7 видів техніки</i></p>
+        </div>
+    </div>
+
+    <div class="technic-container">
+        <div cdkDropList #technicList="cdkDropList" [cdkDropListData]="allTechnicList" class="technic-list"
+            (cdkDropListDropped)="drop($event)" [cdkDropListConnectedTo]="[missionList]">
+            <app-draggable-m-t-item *ngFor="let tech of allTechnicList | paginate: 
+            { 
+                id:'forAllTech',
+                itemsPerPage: pageSizeA,
+                currentPage: pageAlltech,
+                totalItems: pageAllListLength
+            }" [tech]="tech" [all]="false">
+            </app-draggable-m-t-item>
+            <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+        </div>
+
+        <div *ngIf="allTechnicList.length > 0" class="pagination__footer">
+            <select (change)="handlePageSizeChange($event)" class="selector__count">
+                <option *ngFor="let size of pageSizes" [ngValue]="pageSizeA">{{size}}</option>
+            </select>
+            <pagination-controls id="forAllTech" previousLabel="" nextLabel="" [responsive]="true"
+                (pageChange)="handlePageChange($event)"></pagination-controls>
+        </div>
+    </div>
+</section>

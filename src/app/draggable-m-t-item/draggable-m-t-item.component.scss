@@ -1,0 +1,71 @@
+@import '../../styles.scss';
+*{
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.technic-item__background{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    @include for-size(for-big-15) {width: 90px; height: 75px;}
+    @include for-size(for-big-14) {width: 100px; height: 85px;}
+    @include for-size(for-big-13) {width: 100px; height: 85px;}
+    @include for-size(for-big-12) {width: 125px; height: 105px;}
+    @include for-size(for-big-11) {width: 150px; height: 125px;}
+    @include for-size(for-big-3) {width: 150px; height: 125px;}
+    @include for-size(for-big-2) {width: 160px; height: 130px;}
+    @include for-size(for-big-1) {width: 175px; height: 145px;} 
+    
+    .content{
+        margin-bottom: 60px;
+        @include for-size(for-big-15) {width: 90px; height: 75px;}
+        @include for-size(for-big-14) {width: 100px; height: 85px;}
+        @include for-size(for-big-13) {width: 100px; height: 85px;}
+        @include for-size(for-big-12) {width: 125px; height: 105px;}
+        @include for-size(for-big-11) {width: 150px; height: 125px;}
+        @include for-size(for-big-3) {width: 150px; height: 125px;}
+        @include for-size(for-big-2) {width: 160px; height: 130px;}
+        @include for-size(for-big-1) {width: 175px; height: 145px;}  
+        -webkit-transition-duration: 0.6s;
+        transition-duration: 0.6s;
+
+    }
+    .content:hover{
+        transform: scale(1.15);
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 40px 4px;
+    }
+    input{
+        width: 55px;
+        border-radius: 6px;
+        padding-left: 15px;
+        @include for-size(for-big-15) {margin-left: 20.5px;}
+        @include for-size(for-big-14) {margin-left: 22.5px;}
+        @include for-size(for-big-13) {margin-left: 27.5px;}
+        @include for-size(for-big-12) {margin-left: 47.5px;}
+        @include for-size(for-big-11) {margin-left: 47.5px;}
+        @include for-size(for-big-1) {margin-left: 47.5px;} 
+        border: 1px solid $header_color;
+    }
+}
+
+.description{
+    height: 10px;
+    text-align: center;
+    @include for-size(for-big-15) {width: 90px;}
+    @include for-size(for-big-14) {width: 100px;}
+    @include for-size(for-big-13) {width: 125px;}
+    @include for-size(for-big-12) {width: 125px;}
+    @include for-size(for-big-11) {width: 150px;}
+    @include for-size(for-big-3) {width: 150px;}
+    @include for-size(for-big-2) {width: 160px;}
+    @include for-size(for-big-1) {width: 175px;}  
+
+    a{
+        color: $header_color;
+        padding: 0;
+        margin: 0;
+        @include for-size(for-big-15) {font-size: 15px;}
+        @include for-size(for-big-14) {font-size: 15px;}
+        @include for-size(for-big-13) {font-size: 18px;}
+        @include for-size(for-big-1) {font-size: 18px;}
+
+    }
+}

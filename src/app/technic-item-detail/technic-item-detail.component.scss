@@ -1,0 +1,166 @@
+@import '../../styles.scss';
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+.technic-item__img {
+	position: relative;
+	z-index: 0;
+    height: auto;
+    border-radius: 3%/3%;
+    @include for-size(for-big-15) {width: 460px;}
+    @include for-size(for-big-14) {width: 460px;}
+    @include for-size(for-big-13) {width: 510px;}
+    @include for-size(for-big-12) {width: 610px;}
+    @include for-size(for-big-11) {width: 610px;}
+    @include for-size(for-big-10) {width: 710px;}
+	@include for-size(for-big-6) {width: 710px;}
+    @include for-size(for-big-5) {width: 460px;}
+    @include for-size(for-big-4) {width: 510px;}
+    @include for-size(for-laptops) {width: 510px;}
+    @include for-size(for-big-3) {width: 610px;}
+    @include for-size(for-big-2) {width: 610px;}
+    @include for-size(for-big-1) {width: 610px;}
+	overflow: hidden;
+    padding: 5px 5px 5px 5px;
+    img{
+        height: auto;
+        border-radius: 3%;
+        @include for-size(for-big-15) {width: 450px;}
+        @include for-size(for-big-14) {width: 450px;}
+        @include for-size(for-big-13) {width: 500px;}
+        @include for-size(for-big-12) {width: 600px;}
+        @include for-size(for-big-11) {width: 600px;}
+        @include for-size(for-big-10) {width: 700px;}
+        @include for-size(for-big-6) {width: 700px;}
+        @include for-size(for-big-5) {width: 450px;}
+        @include for-size(for-big-4) {width: 500px;}
+        @include for-size(for-laptops) {width: 500px;}
+        @include for-size(for-big-3) {width: 600px;}
+        @include for-size(for-big-2) {width: 600px;}
+        @include for-size(for-big-1) {width: 600px;}
+
+    }
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #377af5;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#ebdd39, #ebdd39),linear-gradient(#377af5, #377af5), linear-gradient(#ebdd39, #ebdd39);
+		animation: rotate 4s linear infinite;
+	}
+	&::after {
+        border-radius: 3%/3%;
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: white;
+	}
+}
+  
+.technic-item__detail{
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    @include for-size(for-big-15) {gap: 50px; height: 1450px; background: url('../../assets/content_background_mini.png') top / cover no-repeat; padding-left: 3%;}
+    @include for-size(for-big-14) {gap: 50px; height: 1450px; padding-left: 5%;}
+    @include for-size(for-big-13) {gap: 50px; height: 1450px; padding-left: 10%;}
+    @include for-size(for-big-12) {gap: 50px; height: 1450px; padding-left: 5%;}
+    @include for-size(for-big-11) {gap: 50px; height: 1450px; padding-left: 10%;}
+    @include for-size(for-big-10) {gap: 50px; height: 1450px; padding-left: 10%;}
+    @include for-size(for-big-9) {gap: 50px; height: 1450px; padding-left: 15%;}
+    @include for-size(for-big-8) {gap: 50px; height: 1450px; padding-left: 20%;}
+    @include for-size(for-big-6) {gap: 50px; height: 1450px; background: url('../../assets/content_background_mini.png') top / cover no-repeat; padding-left: 20%;}
+    @include for-size(for-big-5) {gap: 50px; height: 900px; background: url('../../assets/content_background_big.png') top / cover no-repeat; padding-left: 50px;}
+    @include for-size(for-big-4) {gap: 100px;}
+    @include for-size(for-big-3) {gap: 100px;}
+    @include for-size(for-big-2) {gap: 150px;}
+    @include for-size(for-big-1) {gap: 200px; height: 900px; background: url('../../assets/content_background_big.png') top / cover no-repeat; padding-left: 50px;}
+
+    .technic-item__detail-box{
+        text-align: center;
+        h2{
+            font-size: 30px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+    .content{
+        @include for-size(for-big-15) {font-size: 15px; line-height: 30px; padding-top: 0px;}
+        @include for-size(for-big-13) {font-size: 15px; line-height: 30px; padding-top: 0px;}
+        @include for-size(for-big-12) {font-size: 16px; line-height: 30px; padding-top: 0px;}
+        @include for-size(for-big-6) {font-size: 16px; line-height: 30px; padding-top: 0px;}
+        @include for-size(for-big-5) {font-size: 16px; line-height: 30px; padding-top: 140px;}
+        @include for-size(for-big-4) {font-size: 16px; line-height: 30px;}
+        @include for-size(for-laptops) {font-size: 16px; line-height: 30px;}
+        @include for-size(for-big-3) {font-size: 16px; line-height: 25px;}
+        @include for-size(for-big-2) {font-size: 16px; line-height: 25px;}
+        @include for-size(for-big-1) {font-size: 16px; line-height: 25px; padding-top: 140px;}
+        img{
+            width: 35px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .line{
+            width: 100%;
+            height: 3px;
+            background-color: $header_color;
+        }
+        button {
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: transparent;
+            border: 2px solid $orange_color;
+            border-radius: 0.6em;
+            color: $orange_color;
+            cursor: pointer;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-align-self: center;
+            -ms-flex-item-align: center;
+            align-self: center;
+
+            padding-top: 14px;
+            font-weight: 400;
+            margin: 20px;
+            height: 60px;
+            width: 300px; font-size: 20px; padding-left: 110px; margin-left: 20px;
+
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 700;
+          }
+          button:hover, .btn:focus {
+            color: #fff;
+            outline: 0;
+          }
+          .Btn_Back {
+            -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+            transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+          }
+          .Btn_Back:hover {
+            box-shadow: 0 0 40px 40px $orange_color inset;
+          }
+    }
+}
